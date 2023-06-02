@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PreMarriageCourseController extends Controller
 {
-    public function indexCourse(){
-        return view ('ManagePreMarriageCourse.TermsCondition');
+    public function indexRegister(){
+        return view ('ManageMarriageRegisteration.MarriageRegisterationForm');
     }
 }
