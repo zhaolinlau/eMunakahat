@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class MarriageRegistrationController extends Controller
 {
-    public function indexRegister(){
-        return view ('ManageMarriageRegisteration.MarriageRegisterationForm');
+    public function indexRegister()
+    {
+        return view('ManageMarriageRegisteration.MarriageRegisterationForm');
     }
 }
