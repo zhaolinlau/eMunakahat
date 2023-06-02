@@ -26,49 +26,49 @@
             <br>
             <h5 style="color: white;">Kursus Pra-Perkahwinan</h5>
             <br>
-            <div class="container text-left">
+            <div class="container ">
                 <div class="row ">
                     <div class="col">
                         <div class="border border-5 p-3 rounded-end rounded-start">
-                        <form class="row g-3">
-                            
-                            <div class="col-auto">
-                                <label for="icNumber">No.K/P Pasangan:</label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
-                                <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
-                                <div class="invalid-feedback">
-                                  Sila masukkan Nombor IC yang sah.
-                                </div>
-                              </div>
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-success mb-3">Cari</button>
-                            </div>
-                            </form>    
-                            <table class="table table-bordered bg-light border-dark" style="color: black;">
-                                <thead class="table-dark border-light">
-                                    <tr >
-                                    <th scope="col">Bil</th>
-                                    <th scope="col">No. Kad Pengenalan</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">No. Siri Taklimat</th>
-                                    <th scope="col">Tarikh Mohon</th>
-                                    <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>123456789012</td>
-                                        <td>John Doe</td>
-                                        <td>1</td>
-                                        <td>2023-06-02</td>
-                                        <td>Daftar</td>
-                                      </tr>
-                                </tbody>
-                                </table>
-                                <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
+                          <form style="align-content: center" >
+                            <table style="align-content: center">
+                            <tr>
+                            <td>Anjuran</td>
+                            <td><input type="text" name="anjuran" /></td>
+                            </tr>
+                            <tr>
+                            <td>Tempat</td>
+                            <td><input type="text" name="tempat" /></td>
+                            </tr>
+                            <tr>
+                            <td>Tarikh</td>
+                            <td><input type="date" name="tarikh" /></td>
+                            </tr>
+                            <tr>
+                            <td>Masa</td>
+                            <td><input type="time" name="masa" /></td>
+                            </tr>
+                            <tr>
+                            <td>Kapasiti Peserta</td>
+                            <td><input type="number" name="kapasiti_peserta" /></td>
+                            </tr>
+                            <tr>
+                            <td>Siri Taklimat</td>
+                            <td><input type="text" name="siri_taklimat" /></td>
+                            </tr>
+                            <tr>
+                            <td>Pegawai</td>
+                            <td><input type="text" name="pegawai" /></td>
+                            </tr>
+                            <tr>
+                            <td>No. Telefon</td>
+                            <td><input type="text" name="no_telefon" /></td>
+                            </tr>
+                            </table>
+                            </form>
+
+                        <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
+                                
                         </div>
                     </div> 
                 </div>
@@ -118,6 +118,7 @@
 </div>
 
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 <style>
 body {
     background-image: url("img/bg.jpg");
@@ -128,6 +129,11 @@ body {
     background-color: #56BFA0;
     border-color: #D2F4EA;
 }    
+td {
+  margin: 10px;
+  padding: 5px
+}
+
+
 </style>
 @endsection
-

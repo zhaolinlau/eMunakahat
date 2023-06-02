@@ -42,12 +42,36 @@
                             <div class="col-auto">
                                 <button type="submit" class="btn btn-success mb-3">Cari</button>
                             </div>
-                            </form>    
-                        
-                            
-                                <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
+                        </form>
+                            <table class="table table-bordered bg-light border-dark" style="color: black;">
+                                <thead class="table-dark border-light">
+                                    <tr >
+                                    <th scope="col">Bil</th>
+                                    <th scope="col">Anjuran</th>
+                                    <th scope="col">Tempat</th>
+                                    <th scope="col">Tarikh</th>
+                                    <th scope="col">Kapasiti Peserta</th>
+                                    <th scope="col">Kekosongan</th>
+                                    <th scope="col">Papar Lanjut</th>
+                                    <th scope="col">Daftar Penyertaan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>1</td>
+                                    <td>Majlis Anugerah Kecemerlangan</td>
+                                    <td>Dewan Besar</td>
+                                    <td>20 Jun 2023</td>
+                                    <td>100</td>
+                                    <td>50</td>
+                                    <td><a href="{{ route('user.viewOrganization') }}">Papar Lanjut</a></td>
+                                    <td><a href="#">Daftar Penyertaan</a></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+
+                                    <a class="btn btn-success " href="{{ route('user.viewOrganization') }}" role="button">Kembali</a>
                                 
-                            
                         </div>
                     </div> 
                 </div>
