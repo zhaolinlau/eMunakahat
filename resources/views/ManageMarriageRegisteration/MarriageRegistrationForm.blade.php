@@ -67,7 +67,7 @@
 
                   <div class="col-12">
                     <button type="submit" class="btn btn-success" role="button">Daftar</button>
-                    <a class="btn btn-success" href="">Kembali</a>
+                    <a class="btn btn-success" href="{{ route('Register_list') }}">Kembali</a>
                   </div>
                 </form>
 
@@ -114,7 +114,7 @@
         </div>
       </div>
     </div>
-
+    <script src="{{ mix('resources/js/validation.js') }}"></script>
     <script>
       const year = new Date().getFullYear()
       document.getElementById('year').innerHTML = year;

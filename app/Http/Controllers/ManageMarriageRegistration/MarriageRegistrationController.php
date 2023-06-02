@@ -16,6 +16,11 @@ class MarriageRegistrationController extends Controller
     {
         return view('ManageMarriageRegisteration.MarriageRegistrationList');
     }
+
+    public function indexForm()
+    {
+        return view('ManageMarriageRegisteration.MarriageRegistrationFormNew');
+    }
 }
 
 
