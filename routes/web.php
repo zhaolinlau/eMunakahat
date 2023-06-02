@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PreMarriageCourseController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -40,4 +41,5 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
 	Route::get('/user', [HomeController::class, 'indexUser'])->name('user.home');
+	Route::get('/Terms&Condition',[PreMarriageCourseController::class, 'indexCourse'])->name('homepage');
 });
