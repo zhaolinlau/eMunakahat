@@ -41,5 +41,6 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
 	Route::get('/user', [HomeController::class, 'indexUser'])->name('user.home');
-	Route::get('/Terms&Condition',[PreMarriageCourseController::class, 'indexCourse'])->name('homepage');
+	Route::get('/Terms&Condition',[PreMarriageCourseController::class, 'indexCourse'])->name('user.terms');
+	Route::get('/Organization',[PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
 });
