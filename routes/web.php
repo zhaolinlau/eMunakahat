@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManagePreMarriageCourse\PreMarriageCourseController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ManageMarriageRegistration\MarriageRegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +46,6 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/Organization',[PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
 	Route::get('/CourseStatus',[PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
 	Route::get('/MarriageRegistration',[MarriageRegistrationController::class,'indexRegister'])->name('Register_form');
+	Route::get('/MarriageRegistration',[MarriageRegistrationController::class,'indexList'])->name('Register_list');
 
 });
