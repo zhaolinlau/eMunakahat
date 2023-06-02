@@ -64,13 +64,13 @@
                                     <td>20 Jun 2023</td>
                                     <td>100</td>
                                     <td>50</td>
-                                    <td><a href="#">Papar Lanjut</a></td>
+                                    <td><a href="{{ route('user.viewOrganization') }}">Papar Lanjut</a></td>
                                     <td><a href="#">Daftar Penyertaan</a></td>
                                     </tr>
                                 </tbody>
                                 </table>
 
-                                    <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
+                                    <a class="btn btn-success " href="{{ route('user.viewOrganization') }}" role="button">Kembali</a>
                                 
                         </div>
                     </div> 

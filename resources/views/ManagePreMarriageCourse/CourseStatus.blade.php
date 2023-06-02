@@ -33,13 +33,15 @@
                         <form class="row g-3">
                             
                             <div class="col-auto">
-                                <label for="id" class="text-center" style="color: white">No. Kad Pengenalan</label>
-                                <input type="text" readonly class="form-control-plaintext" id="organization" value="">
+                                <label for="icNumber">No.K/P Pasangan:</label>
                             </div>
                             <div class="col-auto">
-                                <label for="ic" class="visually-hidden"></label>
-                                <input type="text" class="form-control" id="ic" placeholder="">
-                            </div>
+                                <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
+                                <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
+                                <div class="invalid-feedback">
+                                  Sila masukkan Nombor IC yang sah.
+                                </div>
+                              </div>
                             <div class="col-auto">
                                 <button type="submit" class="btn btn-success mb-3">Cari</button>
                             </div>
