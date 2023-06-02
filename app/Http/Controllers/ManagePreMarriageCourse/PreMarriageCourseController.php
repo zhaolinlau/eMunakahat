@@ -14,4 +14,8 @@ class PreMarriageCourseController extends Controller
     public function indexOrganization(){
         return view ('ManagePreMarriageCourse.OrganizationList');
     }
+
+    public function indexCourseStatus(){
+        return view ('ManagePreMarriageCourse.CourseStatus');
+    }
 }

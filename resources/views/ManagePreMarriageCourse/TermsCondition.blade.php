@@ -45,7 +45,7 @@
                             <p class="text-start" style="color: white">11. Peserta yang hadir ke kursus juga hendaklah mematuhi langkah-langkah keselamatan yang telah ditetapkan oleh pihak penganjur dan Pejabat Agama Islam Daerah.</p>
                             <p class="text-start" style="color: white">12. Sebarang masalah berkaitan kursus, sila rujuk/maklum kepada urusetia bertugas. Peserta hendaklah mematuhi segala peraturan dan arahan dari semasa ke semasa oleh urusetia.</p>                          
                             
-                                <a class="btn btn-success " href="premarriagecourseSearch.php" role="button">Semak</a>
+                                <a class="btn btn-success " href="{{ route('user.courseStatus') }}" role="button">Semak</a>
                                 <a class="btn btn-success float-end" href="{{ route('user.organization') }}" role="button">Daftar Baru</a>
                             
                         </div>

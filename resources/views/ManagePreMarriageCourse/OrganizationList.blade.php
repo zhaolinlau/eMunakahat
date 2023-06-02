@@ -45,7 +45,7 @@
                             </form>    
                         
                             
-                                <a class="btn btn-success " href="premarriagecourse.php" role="button">Kembali</a>
+                                <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
                                 
                             
                         </div>
@@ -75,7 +75,7 @@
             </form>
             <br>
             <a class="nav-link" href="">Profile</a>
-            <a class="nav-link"  href="premarriagecourse.php">Kursus Pra Perkahwinan</a>
+            <a class="nav-link"  href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
             <a class="nav-link"  href="">Permohonan Berkahwin</a>
             <a class="nav-link"  href="">Pendaftaran Perkahwinan</a>
             <a class="nav-link"  href="">Khidmat Nasihat</a>
