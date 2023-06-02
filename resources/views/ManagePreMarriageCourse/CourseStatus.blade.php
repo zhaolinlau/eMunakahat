@@ -43,10 +43,29 @@
                                 <button type="submit" class="btn btn-success mb-3">Cari</button>
                             </div>
                             </form>    
-                        
-                            
+                            <table class="table table-bordered bg-light border-dark" style="color: black;">
+                                <thead class="table-dark border-light">
+                                    <tr >
+                                    <th scope="col">Bil</th>
+                                    <th scope="col">No. Kad Pengenalan</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">No. Siri Taklimat</th>
+                                    <th scope="col">Tarikh Mohon</th>
+                                    <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>123456789012</td>
+                                        <td>John Doe</td>
+                                        <td>1</td>
+                                        <td>2023-06-02</td>
+                                        <td>Daftar</td>
+                                      </tr>
+                                </tbody>
+                                </table>
                                 <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
-                            
                         </div>
                     </div> 
                 </div>
