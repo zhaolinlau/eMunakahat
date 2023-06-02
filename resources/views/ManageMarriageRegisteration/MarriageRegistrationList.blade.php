@@ -41,3 +41,60 @@
                       Sila masukkan Nombor IC yang sah.
                     </div>
                   </div>
+
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasResponsive"
+                  aria-labelledby="offcanvasResponsiveLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">
+                      <span class="d-none d-lg-flex">Menu</span>
+                      <span class="d-lg-none">e-Munakahat</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+                      aria-label="Close"></button>
+                  </div>
+              
+                  <div class="offcanvas-body">
+                    <nav class="nav nav-pills flex-column">
+                      <form action="" class="d-lg-none" method="get">
+                        <div class="input-group">
+                          <input class="form-control" type="text" placeholder="Search">
+                          <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                      </form>
+                      <br>
+                      <a class="nav-link" href="">Profile</a>
+                      <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
+                      <a class="nav-link" href="">Permohonan Berkahwin</a>
+                      <a class="nav-link" href="{{ route('Register_form') }}">Pendaftaran Perkahwinan</a>
+                      <a class="nav-link" href="">Khidmat Nasihat</a>
+                    </nav>
+                  </div>
+              
+                  <div class="container">
+                    <div class="row">
+                      <div class="col text-center">
+                        Copyright &COPY; <span id="year"></span> e-Munakahat. All Rights Reserved.
+                      </div>
+                    </div>
+                  </div>
+              
+                  <script>
+                    const year = new Date().getFullYear()
+                    document.getElementById('year').innerHTML = year;
+                  </script>
+                </div>
+              
+                <style>
+                  body {
+                    background-image: url("img/bg.jpg");
+                    background-size: cover;
+                  }
+              
+                  .border {
+                    border: 5px solid #000;
+                    background-color: #56BFA0;
+                    border-color: #D2F4EA;
+                  }
+                </style>
+              
+              @endsection
