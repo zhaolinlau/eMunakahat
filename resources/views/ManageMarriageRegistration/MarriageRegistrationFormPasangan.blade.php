@@ -33,21 +33,21 @@
               <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
                 <h5 class="text-center" style="color: white">Borang Pendaftaran Perkahwinan</h5>
                 <!--upper tab-->
-                <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                      type="button" role="tab" aria-controls="pills-home" aria-selected="true">Maklumat
-                      Pemohon</button>
+                <ul class="nav nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
+                  <li class="nav-item bg-dark-green border border-white" role="presentation">
+                    <a class="nav-link text-white" href="{{ route('Register_newForm') }}">Maklumat
+                      Pemohon
+                    </a>
                   </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                      type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Maklumat
-                      Pasangan</button>
+                  <li class="nav-item border border-white" role="presentation">
+                    <a class="nav-link bg-success text-white active" href="{{ route('Register_FormPasangan') }}">
+                      Maklumat Pasangan
+                    </a>
                   </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                      type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Maklumat
-                      Perkahwinan</button>
+                  <li class="nav-item bg-dark-green border border-white" role="presentation">
+                    <a class="nav-link text-white" href="{{ route('MaklumatPerkahwinan') }}">Maklumat
+                      Perkahwinan
+                    </a>
                   </li>
                 </ul>
                 <!--form for ic-->
@@ -81,43 +81,43 @@
                   </div>
 
                   <!--
-                    <div class="col-md-3">
-                      <label for="tarikh">Tarikh Lahir:</label>
-                      <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required>
-                      <div class="invalid-feedback">
-                        Sila masukkan tarikh.
-                      </div>
-                    </div>
-
-                      <div class="col-4">
-                        <label for="Bulan">Bulan Lahir:</label>
-                        <select class="form-select" id="Bulan" required>
-                          <option value="" hidden selected>Pilih Bulan</option>
-                          <option value="1">Januari</option>
-                          <option value="2">Februari</option>
-                          <option value="3">Mac</option>
-                          <option value="4">April</option>
-                          <option value="5">Mei</option>
-                          <option value="6">Jun</option>
-                          <option value="7">Julai</option>
-                          <option value="8">Ogos</option>
-                          <option value="9">September</option>
-                          <option value="10">October</option>
-                          <option value="11">November</option>
-                          <option value="12">Disember</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Sila Pilih Bulan.
+                        <div class="col-md-3">
+                          <label for="tarikh">Tarikh Lahir:</label>
+                          <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required>
+                          <div class="invalid-feedback">
+                            Sila masukkan tarikh.
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-3">
-                        <label for="Tahun">Tahun Lahir:</label>
-                        <input type="text" class="form-control" id=Tahun" required>
-                        <div class="invalid-feedback">
-                          Sila masukkan Tahun lahir.
-                        </div>
-                      </div>-->
+                          <div class="col-4">
+                            <label for="Bulan">Bulan Lahir:</label>
+                            <select class="form-select" id="Bulan" required>
+                              <option value="" hidden selected>Pilih Bulan</option>
+                              <option value="1">Januari</option>
+                              <option value="2">Februari</option>
+                              <option value="3">Mac</option>
+                              <option value="4">April</option>
+                              <option value="5">Mei</option>
+                              <option value="6">Jun</option>
+                              <option value="7">Julai</option>
+                              <option value="8">Ogos</option>
+                              <option value="9">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">Disember</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Sila Pilih Bulan.
+                            </div>
+                          </div>
+
+                          <div class="col-3">
+                            <label for="Tahun">Tahun Lahir:</label>
+                            <input type="text" class="form-control" id=Tahun" required>
+                            <div class="invalid-feedback">
+                              Sila masukkan Tahun lahir.
+                            </div>
+                          </div>-->
 
                   <div class="col-md-3">
                     <label for="tarikh">Umur</label>
@@ -280,7 +280,7 @@
                           float: right;
                         }
                       </style>
-                      
+
                       <label for="inputField" class="float-right">Sila isi semua ruangan diatas</label>
 
 
@@ -364,38 +364,3 @@
     }
   </style>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
