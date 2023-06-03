@@ -31,45 +31,82 @@
                     <div class="col">
                         <div class="border border-5 p-3 rounded-end rounded-start">
                           <form>
-                            <table style="margin-left: auto; margin-right: auto;">
-                            <tr>
-                            <td>Anjuran </td>
-                            <td><input type="text" name="anjuran" /></td>
-                            </tr>
-                            <tr>
-                            <td>Tempat</td>
-                            <td><input type="text" name="tempat" /></td>
-                            </tr>
-                            <tr>
-                            <td>Tarikh</td>
-                            <td><input type="date" name="tarikh" /></td>
-                            </tr>
-                            <tr>
-                            <td>No. Kad Pengenalan</td>
-                            <td><input type="text" class="form-control" id="ic" pattern="[0-9]{12}" required></td>
-                            </tr>
-                            <tr>
-                            <td>Masa</td>
-                            <td><input type="time" name="masa" /></td>
-                            </tr>
-                            <tr>
-                            <td>Kapasiti Peserta</td>
-                            <td><input type="number" name="kapasiti_peserta" /></td>
-                            </tr>
-                            <tr>
-                            <td>Siri Taklimat</td>
-                            <td><input type="text" name="siri_taklimat" /></td>
-                            </tr>
-                            <tr>
-                            <td>Pegawai</td>
-                            <td><input type="text" name="pegawai" /></td>
-                            </tr>
-                            <tr>
-                            <td>No. Telefon</td>
-                            <td><input type="text" name="no_telefon" /></td>
-                            </tr>
-                            </table>
-                            </form>
+                            <div class="row mb-3">
+                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="anjuran" id="anjuran">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tempat" id="tempat">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tarikh" id="tarikh">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="anjuran" id="anjuran">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tempat" id="tempat">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tarikh" id="tarikh">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="anjuran" id="anjuran">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tempat" id="tempat">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tarikh" id="tarikh">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="anjuran" id="anjuran">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tempat" id="tempat">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" name="tarikh" id="tarikh">
+                              </div>
+                            </div>
+                            
+                            
+  
+                          </form>
                             <br>
                             <a class="btn btn-success" href="{{ route('user.terms') }}">Kembali</a>  
                         </div>
