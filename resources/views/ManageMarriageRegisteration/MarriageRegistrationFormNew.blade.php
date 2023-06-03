@@ -72,6 +72,12 @@
 
                     </div>
 
+                    <div class="col-md-4">
+                    <label for="tarikh" >Tarikh Lahir</label>
+                    <input type="date" class="form-control" name="tarikh" id="tarikh">
+                  </div>
+
+                    <!--
                   <div class="col-md-3">
                     <label for="tarikh">Tarikh Lahir:</label>
                     <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required> 
@@ -108,7 +114,7 @@
                       <div class="invalid-feedback">
                         Sila masukkan Tahun lahir.
                       </div>
-                    </div>
+                    </div>--> 
 
                   <div class="col-md-3">
                     <label for="tarikh">Umur:</label> 
@@ -178,20 +184,74 @@
                         </select>
                       </div>
                     </div>
-                    </div>
-                  </div>
 
-                  <div class="col- mb-3">
-                    <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" name="tempat" id="tempat">
+                    <div class="col- mb-3">
+                      <label for="Jawatan" class="col-sm-2 col-form-label">Pekerjaaan / Jawatan</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" name="Jawatan" id="Jawatan">
+                        <div class="invalid-feedback">
+                          Sila masukkan Pekerjaan
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col- mb-3">
-                    <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" name="tempat" id="tempat">
+                    <div class="col- mb-3">
+                      <label for="Pendapatan" class="col-sm-2 col-form-label">Pendapatan</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" name="Pendapatan" id="Pendapatan">
+                        <div class="invalid-feedback">
+                          Sila masukkan Pendapatan
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="AlamatKP ">Alamat K/P:</label>
+                      <input type="text" class="form-control" id="AlamatKP " required>
+                      <small class="form-text text-muted">Sila masukkan Alamat mengikut kad Pengenalan.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Alamat.
+                      </div>
+
+                      <div class="col-12">
+                        <label for="Alamat ">Alamat Semasa:</label>
+                        <input type="text" class="form-control" id="Alamat " required>
+                        <small class="form-text text-muted">Sila masukkan Alamat Semasa anda.</small>
+                        <div class="invalid-feedback">
+                          Sila masukkan Alamat.
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="NoTel">No Telefon:</label> 
+                          <input type="text" class="form-control" id="NoTel" pattern="[0-9]{11}"required> 
+                          <small class="form-text text-muted">Sila masukkan No telefon</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor Tel yang sah.
+                          </div>
+                        </div>
+      
+                          <div class="col-6">
+                            <label for="Status">Status Perkahwinan:</label>
+                            <select class="form-select" id="Status" required>
+                              <option value="" hidden selected>pilih</option>
+                              <option value="1">Melayu</option>
+                              <option value="2">Cina</option>
+                              <option value="3">India</option>
+                              <option value="4">Bangladesh</option> 
+                            </select>
+                            <div class="invalid-feedback">
+                              Sila Pilih Status.
+                            </div>
+                          </div>
+
+
+
+
+
+
+
+
+
                     </div>
                   </div>
 
@@ -202,6 +262,7 @@
                 </form>
 
               </div>
+              
 
 
             </div>
