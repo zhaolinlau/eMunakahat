@@ -31,7 +31,7 @@
                     <div class="col">
                         <div class="border border-5 p-3 rounded-end rounded-start">
                         <form>
-                            <div class="col-10">
+                            <div class="col-6" style="margin-left: auto; margin-right: auto;">
                                 <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
                                 <input type="text" class="form-control" name="anjuran" id="anjuran">
                               
@@ -56,8 +56,6 @@
                                 <label for="NoTelefon" class="col-sm col-form-label">No Telefon</label>
                                 <input type="text" class="form-control" name="NoTelefon" id="NoTelefon">
 
-                                <label for="NoTelefon" class="col-sm col-form-label">No Telefon</label>
-                                <input type="number" class="form-control" name="NoTelefon" id="NoTelefon">
                             </div>
 
                            <!-- <table style="margin-left: auto; margin-right: auto;">

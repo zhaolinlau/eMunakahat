@@ -28,15 +28,15 @@
             <br>
             <div class="container ">
                 <div class="row ">
-                    <div class="col">
-                        <div class="border border-5 p-3 rounded-end rounded-start">
+                    <div class="col" >
+                      <div class="border border-5 p-3 rounded-end rounded-start">
                           <form>
-                            <div class="col-10">
+                            <div class="col-10" style="margin-left: auto; margin-right: auto;">
                               <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
                               <input type="text" class="form-control" name="anjuran" id="anjuran">
                             </div>
                             <div class="row">
-                              <div class="col-5">
+                              <div class="col-4" style="margin-left: auto; margin-right: auto;">
                                 <label for="Tempat" class="col-sm-2 col-form-label">Tempat</label>
                                 <input type="text" class="form-control" name="Tempat" id="Tempat">
                                 
@@ -65,7 +65,7 @@
                                 <input type="file" class="form-control" name="NoResitBayaran" id="NoResitBayaran">
                               </div>
                             
-                              <div class="col-5 mb-3">
+                              <div class="col-4 mb-3" style="margin-left: auto; margin-right: auto;">
                                 <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
                                 <input type="date" class="form-control" name="tarikh" id="tarikh">
                                 
@@ -113,8 +113,10 @@
                              </div>
                             </form>
                             <br>
+                            
                             <a class="btn btn-success" href="{{ route('user.terms') }}">Kembali</a>  
-                        </div>
+                            <a class="btn btn-success float-end"  href="">Hantar</a>
+                          </div>
                     </div> 
                 </div>
             </div>                     
