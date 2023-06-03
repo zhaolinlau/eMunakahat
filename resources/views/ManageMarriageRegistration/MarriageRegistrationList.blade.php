@@ -33,10 +33,7 @@
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start">
                 <h5 class="text-center" style="color: white">Carian Pendaftaran Perkahwinan</h5>
-                
-
                   <div class="container">
-                    
                     <table class="table" id="marriageTable">
                       <thead>
                         <tr>
