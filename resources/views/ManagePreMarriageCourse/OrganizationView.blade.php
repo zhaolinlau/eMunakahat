@@ -30,10 +30,10 @@
                 <div class="row ">
                     <div class="col">
                         <div class="border border-5 p-3 rounded-end rounded-start">
-                          <form style="align-content: center" >
-                            <table style="align-content: center">
+                          <form>
+                            <table style="margin-left: auto; margin-right: auto;">
                             <tr>
-                            <td>Anjuran</td>
+                            <td>Anjuran </td>
                             <td><input type="text" name="anjuran" /></td>
                             </tr>
                             <tr>
@@ -66,9 +66,8 @@
                             </tr>
                             </table>
                             </form>
-
-                        <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
-                                
+                            <br>
+                            <a class="btn btn-success" href="{{ route('user.terms') }}">Kembali</a>  
                         </div>
                     </div> 
                 </div>
@@ -133,7 +132,6 @@ td {
   margin: 10px;
   padding: 5px
 }
-
 
 </style>
 @endsection
