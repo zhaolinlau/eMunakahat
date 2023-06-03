@@ -188,7 +188,7 @@
                     <div class="col- mb-3">
                       <label for="Jawatan" class="col-sm-2 col-form-label">Pekerjaaan / Jawatan</label>
                       <div class="col-sm-5">
-                        <input type="text" class="form-control" name="Jawatan" id="Jawatan">
+                        <input type="text" class="form-control" id="Jawatan" required>
                         <div class="invalid-feedback">
                           Sila masukkan Pekerjaan
                         </div>
@@ -198,9 +198,9 @@
                     <div class="col- mb-3">
                       <label for="Pendapatan" class="col-sm-2 col-form-label">Pendapatan</label>
                       <div class="col-sm-5">
-                        <input type="text" class="form-control" name="Pendapatan" id="Pendapatan">
+                        <input type="text" class="form-control" id="Pendapatan" required>
                         <div class="invalid-feedback">
-                          Sila masukkan Pendapatan
+                          Sila Masukkan Pendapatan.
                         </div>
                       </div>
                     </div>
@@ -234,10 +234,11 @@
                             <label for="Status">Status Perkahwinan:</label>
                             <select class="form-select" id="Status" required>
                               <option value="" hidden selected>pilih</option>
-                              <option value="1">Melayu</option>
-                              <option value="2">Cina</option>
-                              <option value="3">India</option>
-                              <option value="4">Bangladesh</option> 
+                              <option value="1">Anak Dara</option>
+                              <option value="2">Balu</option>
+                              <option value="3">Janda</option>
+                              <option value="4">Janda Berhias</option> 
+                              <option value="5">Thayyib</option> 
                             </select>
                             <div class="invalid-feedback">
                               Sila Pilih Status.
