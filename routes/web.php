@@ -51,6 +51,5 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/RegistrationList',[MarriageRegistrationController::class,'indexList'])->name('Register_list');
 	Route::get('/RegistrationForm',[MarriageRegistrationController::class,'indexForm'])->name('Register_newForm');
 	Route::get('/RegistrationFormPasangan',[MarriageRegistrationController::class,'indexFormPasangan'])->name('Register_FormPasangan');
-
-
+	Route::get('/RegistrationMaklumat', [MarriageRegistrationController::class, 'indexMaklumat'])->name('MaklumatPerkahwinan');
 });
