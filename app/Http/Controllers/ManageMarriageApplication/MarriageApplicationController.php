@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ManageMarriageRegistration;
+namespace App\Http\Controllers\ManageMarriageApplication;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
