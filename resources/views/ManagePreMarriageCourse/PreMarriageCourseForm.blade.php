@@ -85,25 +85,6 @@
                                 <input type="text" class="form-control" name="tarikh" id="tarikh">
                               </div>
                             </div>
-                            <div class="row mb-3">
-                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="anjuran" id="anjuran">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tempat" id="tempat">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tarikh" id="tarikh">
-                              </div>
-                            </div>
-                            
                             
   
                           </form>
