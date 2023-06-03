@@ -54,7 +54,7 @@
                                     <td>28 - 29 JANUARI 2023</td>
                                     <td>100</td>
                                     <td>54</td>
-                                    <td><button class="btn"><i class="fa-solid fa-eye fa-xl"></i></button></td>
+                                    <td><button class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></button></td>
                                     <td><button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button></td>
                                   <tr>
                                     <td>2</td>
@@ -70,17 +70,18 @@
                                 </tbody>
                               </table>
                               <div class="col-12">
-                                <button type="button" class="btn btn-success" href="{{ route('user.viewOrganization') }}" role="button">Kembali</button>
+                                <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
                               </div>
                             </div>
                                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
                                 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
                                 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+                                
                                 <script>
                                     $(document).ready(function() {
-                                      $('#marriageTable').DataTable();
+                                      $('#organizationTable').DataTable();
                                     });
-                                  </script>
+                                </script>
                         </div> 
                     </div>
                 </div>                     
