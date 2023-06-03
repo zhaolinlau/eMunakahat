@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManagePreMarriageCourse\PreMarriageCourseController;
+use App\Http\Controllers\ManageMarriageRegistration\MarriageApplicationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ManageMarriageRegistration\MarriageRegistrationController;
 
@@ -37,7 +38,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
-	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
+Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
@@ -47,6 +48,13 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/ViewOrganization',[PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
 	Route::get('/CourseStatus',[PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
 	Route::get('/CourseForm',[PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
+
+	Route::get('/ApplicationConsent',[MarriageApplicationController::class, 'indexConsent'])->name('user.ApplicationConsent');
+	Route::get('/ApplicationHiv',[MarriageApplicationController::class, 'indexHiv'])->name('user.ApplicationHiv');
+	Route::get('/ApplicationResident',[MarriageApplicationController::class, 'indexResident'])->name('user.ApplicationResident');
+	Route::get('/ApplicationPermission',[MarriageApplicationController::class, 'indexPermission'])->name('user.ApplicationPermission');
+	Route::get('/ApplicationChecklist',[MarriageApplicationController::class, 'indexChecklist'])->name('user.ApplicationChecklist');
+
 	Route::get('/MarriageRegistration',[MarriageRegistrationController::class,'indexRegister'])->name('Register_form');
 	Route::get('/RegistrationList',[MarriageRegistrationController::class,'indexList'])->name('Register_list');
 	Route::get('/RegistrationForm',[MarriageRegistrationController::class,'indexForm'])->name('Register_newForm');
