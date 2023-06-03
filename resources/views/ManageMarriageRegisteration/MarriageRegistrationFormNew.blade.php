@@ -245,6 +245,14 @@
                         </div>
                       </div>
 
+                      <style>
+                        .float-right {
+                          float: right;
+                        }
+                      </style>
+                      
+                      <label for="inputField" class="float-right">Sila isi semua ruangan diatas</label>
+
 
                     </div>
                   </div>
