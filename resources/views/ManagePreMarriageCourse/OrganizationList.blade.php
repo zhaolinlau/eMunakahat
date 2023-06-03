@@ -65,7 +65,7 @@
                                     <td>100</td>
                                     <td>50</td>
                                     <td><a href="{{ route('user.viewOrganization') }}">Papar Lanjut</a></td>
-                                    <td><a href="#">Daftar Penyertaan</a></td>
+                                    <td><a href="{{ route('user.courseForm') }}">Daftar Penyertaan</a></td>
                                     </tr>
                                 </tbody>
                                 </table>
