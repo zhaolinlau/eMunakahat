@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 <nav class="navbar shadow-sm fixed-top" style="background-color: #2F9577">
     <div class="container-fluid">
         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="fa-solid fa-bars fa-xl"></i></button>
@@ -30,45 +31,51 @@
                 <div class="row ">
                     <div class="col">
                         <div class="border border-5 p-3 rounded-end rounded-start">
-                        <form class="row g-3">
-                            
-                            <div class="col-auto">
-                                <label for="icNumber">No.K/P Pasangan:</label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
-                                <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
-                                <div class="invalid-feedback">
-                                  Sila masukkan Nombor IC yang sah.
-                                </div>
-                              </div>
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-success mb-3">Cari</button>
-                            </div>
-                            </form>    
-                            <table class="table table-bordered bg-light border-dark" style="color: black;">
-                                <thead class="table-dark border-light">
+                            <h5 class="text-center" style="color: white">Semakan Status Kursus Pra Perkahwinan</h5>
+                            <div class="container">
+                                <table class="table" id="statusTable">
+                                <thead>
                                     <tr >
-                                    <th scope="col">Bil</th>
-                                    <th scope="col">No. Kad Pengenalan</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">No. Siri Taklimat</th>
-                                    <th scope="col">Tarikh Mohon</th>
-                                    <th scope="col">Status</th>
-                                    </tr>
+                                        <th>Bil</th>
+                                        <th>No. Kad Pengenalan</th>
+                                        <th>Nama</th>
+                                        <th>No. Siri Taklimat</th>
+                                        <th>Tarikh Mohon</th>
+                                        <th>Status</th>
+                                        </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>123456789012</td>
+                                        <td>011198762565</td>
                                         <td>John Doe</td>
-                                        <td>1</td>
+                                        <td>1345</td>
                                         <td>2023-06-02</td>
-                                        <td>Daftar</td>
-                                      </tr>
+                                        <td>LULUS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>019991837341</td>
+                                        <td>Hidayah</td>
+                                        <td>8005</td>
+                                        <td>2022-06-02</td>
+                                        <td>GAGAL</td>
+                                    </tr>
+                                    <!-- Add more table rows here -->
                                 </tbody>
                                 </table>
-                                <a class="btn btn-success " href="{{ route('user.terms') }}" role="button">Kembali</a>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-success" role="button" href="{{ route('user.terms') }}">Kembali </button>
+                                </div>
+                            </div>
+                            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                            <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+                            <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>   
+                            <script>
+                                $(document).ready(function() {
+                                    $('#statusTable').DataTable();
+                                });
+                            </script>
                         </div>
                     </div> 
                 </div>
@@ -102,7 +109,6 @@
             <a class="nav-link"  href="">Khidmat Nasihat</a>
         </nav>
     </div>
-    
     <div class="container">
         <div class="row">
             <div class="col text-center">
@@ -118,6 +124,7 @@
 </div>
 
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 <style>
 body {
     background-image: url("img/bg.jpg");
