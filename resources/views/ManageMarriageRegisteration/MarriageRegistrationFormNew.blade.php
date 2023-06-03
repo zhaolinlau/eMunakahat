@@ -30,9 +30,9 @@
         <div class="container text-left">
           <div class="row ">
             <div class="col">
-              <div class="border border-5 p-3 rounded-end rounded-start">
+              <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
                 <h5 class="text-center" style="color: white">Borang Pendaftaran Perkahwinan</h5>
-                 <!--upper tab-->
+                <!--upper tab-->
                 <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                   <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
@@ -74,7 +74,7 @@
 
                   <div class="col-md-3">
                     <label for="tarikh">Tarikh Lahir:</label>
-                    <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required> 
+                    <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required>
                     <div class="invalid-feedback">
                       Sila masukkan tarikh.
                     </div>
@@ -111,8 +111,8 @@
                   </div>
 
                   <div class="col-md-3">
-                    <label for="tarikh">Umur:</label> 
-                    <input type="text" class="form-control" id="tarikh" pattern="[0-99]{2}"required> 
+                    <label for="tarikh">Umur:</label>
+                    <input type="text" class="form-control" id="tarikh" pattern="[0-99]{2}"required>
                     <div class="invalid-feedback">
                       Sila masukkan umur
                     </div>
@@ -144,7 +144,7 @@
                       <option value="" hidden selected>pilih</option>
                       <option value="1">Warganegara</option>
                       <option value="2">Bukan Warganegara</option>
-                      
+
                     </select>
                     <div class="invalid-feedback">
                       Sila Pilih warganegara.
@@ -163,50 +163,83 @@
                         <option value="5">STPM/HSC/Sijil</option>
                         <option value="5">SPM/MCE</option>
                         <option value="6">PT3/PMR/SRP/LC</option>
+                        <option value="7">UPSR</option>
+                        <option value="8">Tiada</option>
                       </select>
                     </div>
                   </div>
 
-                  <div class="col- mb-3">
-                    <label for="tempat" class="col-sm-2 col-form-label">Sektor Pekerjaan</label>
-                    <div class="col-sm-5">
-                        <select class="form-select" id="TarafPendidikan" required>
-                          <option value="" hidden selected>pilih</option>
-                          <option value="1">Sektor Awam</option>
-                          <option value="2">Sektor Swasta</option>
-                          <option value="3">Sendirian</option>
-                        </select>
-                      </div>
+                  <div class="col-5">
+                    <label for="Sektor">Sektor Pekerjaan:</label>
+                    <select class="form-select" id="Sektor" required>
+                      <option value="" hidden selected>pilih</option>
+                      <option value="1">Sektor Awam</option>
+                      <option value="2">Sektor Swasta</option>
+                      <option value="3">Sendirian</option>
+                      <option value="4">Pesara</option>
+                      <option value="5">Tidak Bekerja</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Sila Pilih Sektor Pekerjaan.
                     </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label for="Pendapatan">Pendapatan</label>
+                    <input type="text" class="form-control" id="Pendapatan" required>
+                    <div class="invalid-feedback">
+                      Sila masukkan Pendapatan
                     </div>
                   </div>
 
                   <div class="col- mb-3">
-                    <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" name="tempat" id="tempat">
+                    <label for="alamatKP" class="col-sm-7 col-form-label">Alamat Kad Pengenalan </label>
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" name="alamatKP" id="alamatKP">
+                      <small class="form-text text-muted">Sila masukkan Alamat mengikut Kad pengenalan.</small>
                     </div>
                   </div>
 
                   <div class="col- mb-3">
-                    <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" name="tempat" id="tempat">
+                    <label for="alamat" class="col-sm-7 col-form-label">Alamat Semasa </label>
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" name="alamat" id="alamat">
+                      <small class="form-text text-muted">Sila masukkan Alamat semasa.</small>
                     </div>
                   </div>
 
-                  <div class="col-12">
-                    <button type="submit" class="btn btn-success" role="button">Daftar</button>
-                    <a class="btn btn-success" href="{{ route('Register_list') }}">Kembali</a>
+                  <div class="col-4">
+                    <label for="noTel">No.Telefon:</label>
+                    <input type="text" class="form-control" id="noTel" pattern="[0-9]{11}" required>
+                    <small class="form-text text-muted">Sila masukkan No Telefon.</small>
+                    <div class="invalid-feedback">
+                      Sila masukkan Nombor Telefon yang sah.
+                    </div>
+
+
+
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-success" role="button">Daftar</button>
+                      <a class="btn btn-success" href="{{ route('Register_list') }}">Kembali</a>
+                    </div>
+
+
                   </div>
-                </form>
 
               </div>
+
+
             </div>
+
+
+            </form>
+
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasResponsive"
@@ -263,7 +296,6 @@
       border-color: #D2F4EA;
     }
   </style>
-
 @endsection
 
 
@@ -352,7 +384,7 @@
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
 
-                   borang maklumat pemohon 
+                   borang maklumat pemohon
                   <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                     aria-labelledby="pills-MaklumatPemohon-tab">
                     <form action="" method="post" class="row g-2 needs-validation" novalidate>
@@ -372,13 +404,13 @@
                         </div>
                       </div>
                   </div>
-                  <!-- tarikh lahir 
+                  <!-- tarikh lahir
                   <div class="row">
                     <div class="col">
                       <label for="birthDay">Tarikh Lahir:</label>
                       <select class="form-select" id="birthDay" name="birthDay">
                         <option selected disabled>Day</option>
-                        <!-- Add options for birth days 
+                        <!-- Add options for birth days
                       </select>
                     </div>
                     <div class="col">
@@ -466,7 +498,7 @@
                   </form>
                 </div>
 
-                maklumat pasangan 
+                maklumat pasangan
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                   aria-labelledby="pills-MaklumatPasangan-tab">...
 
@@ -482,7 +514,7 @@
 
                 </div>
 
-                maklumat perkahwinan 
+                maklumat perkahwinan
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                   aria-labelledby="pills-MaklumatPerkahwinan-tab">...</div>
               </div>
