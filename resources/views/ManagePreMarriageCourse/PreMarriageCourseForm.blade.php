@@ -31,63 +31,87 @@
                     <div class="col">
                         <div class="border border-5 p-3 rounded-end rounded-start">
                           <form>
-                            <div class="row mb-3">
+                            <div class="col-10">
                               <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="anjuran" id="anjuran">
-                              </div>
+                              <input type="text" class="form-control" name="anjuran" id="anjuran">
                             </div>
-                            <div class="row mb-3">
-                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tempat" id="tempat">
+                            <div class="row">
+                              <div class="col-5">
+                                <label for="Tempat" class="col-sm-2 col-form-label">Tempat</label>
+                                <input type="text" class="form-control" name="Tempat" id="Tempat">
+                                
+                                <label for="ic" class="col-sm col-form-label">No Kad Pengenalan</label>
+                                <input type="text" class="form-control" name="ic" id="ic">
+                                
+                                <label for="alamat" class="col-sm col-form-label">Alamat</label>
+                                <input type="text" class="form-control" name="alamat" id="alamat">
+                                <label for="NoTelefon" class="col-sm col-form-label">No Telefon</label>
+                                <input type="text" class="form-control" name="NoTelefon" id="NoTelefon">
+                                <label for="TarafPendidikan" class="col-sm col-form-label">Taraf Pendidikan</label>
+                                    <select class="form-select" id="TarafPendidikan" required>
+                                      <option value="" hidden selected>Sila Pilih</option>
+                                      <option value="1">PHD</option>
+                                      <option value="2">Master</option>
+                                      <option value="3">Ijazah</option>
+                                      <option value="4">Diploma</option>
+                                      <option value="5">STPM/HSC/Sijil</option>
+                                      <option value="5">SPM/MCE</option>
+                                      <option value="6">PT3/PMR/SRP/LC</option>
+                                    </select>
+
+                                <label for="CadanganTarikh" class="col-sm col-form-label">Cadangan Tarikh Akad Nikah</label>
+                                <input type="date" class="form-control" name="CadanganTarikh" id="CadanganTarikh">
+                                <label for="NoResitBayaran" class="col-sm col-form-label">No Resit Bayaran</label>
+                                <input type="file" class="form-control" name="NoResitBayaran" id="NoResitBayaran">
                               </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tarikh" id="tarikh">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="anjuran" id="anjuran">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tempat" id="tempat">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tarikh" id="tarikh">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="anjuran" id="anjuran">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tempat" id="tempat">
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                              <div class="col-sm-5">
-                                <input type="text" class="form-control" name="tarikh" id="tarikh">
-                              </div>
-                            </div>
                             
-  
-                          </form>
+                              <div class="col-5 mb-3">
+                                <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                                <input type="date" class="form-control" name="tarikh" id="tarikh">
+                                
+                                <label for="pemohon" class="col-sm col-form-label">Nama Pemohon</label>
+                                <input type="text" class="form-control" name="pemohon" id="pemohon">
+                                
+                                <label for="Bulan" class="col-sm-2 col-form-label">Jantina</label>
+                                <select class="form-select" id="Bulan" required>
+                                  <option value="" hidden selected>Sila Pilih</option>
+                                  <option value="1">Lelaki</option>
+                                  <option value="2">Perempuan</option>
+                                </select>
+                                
+                                <label for="Negeri" class="col-sm-2 col-form-label">Negeri</label>
+                                <select class="form-select" name="Negeri" id="Negeri">
+                                  <option value="Selangor">Selangor</option>
+                                  <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                  <option value="Pahang">Pahang</option>
+                                  <option value="Terengganu">Terengganu</option>
+                                  <option value="Kelantan">Kelantan</option>
+                                  <option value="Sarawak">Sarawak</option>
+                                  <option value="Sabah">Sabah</option>
+                                  <option value="Labuan">Labuan</option>
+                                  </select>
+                                  
+                                  <label for="SektorPekerjaan" class="col-sm col-form-label">Sektor Pekerjaan</label>
+                                  <select class="form-select" id="SektorPekerjaan" required>
+                                    <option value="" hidden selected>Sila Pilih</option>
+                                    <option value="1">Sektor Awam</option>
+                                    <option value="2">Sektor Swasta</option>
+                                    <option value="3">Sendirian</option>
+                                  </select>
+                                <label for="kebenaran" class="col-sm col-form-label">Kebenaran Jabatan Agama Islam Negeri</label>
+                                <select class="form-select" name="kebenaran" id="kebenaran">
+                                  <option value="Selangor">Selangor</option>
+                                  <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                  <option value="Pahang">Pahang</option>
+                                  <option value="Terengganu">Terengganu</option>
+                                  <option value="Kelantan">Kelantan</option>
+                                  <option value="Sarawak">Sarawak</option>
+                                  <option value="Sabah">Sabah</option>
+                                  <option value="Labuan">Labuan</option>
+                                  </select>
+                              </div>
+                             </div>
+                            </form>
                             <br>
                             <a class="btn btn-success" href="{{ route('user.terms') }}">Kembali</a>  
                         </div>

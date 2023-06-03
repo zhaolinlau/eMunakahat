@@ -51,92 +51,92 @@
                   </li>
                 </ul>
                 <!--form for ic-->
-                <form action="" method="post" class="row g-3 needs-validation" novalidate>
-                  <div class="col-4">
-                    <label for="icNumber">No.K/P Pasangan:</label>
-                    <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
-                    <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
-                    <div class="invalid-feedback">
-                      Sila masukkan Nombor IC yang sah.
-                    </div>
+                  <form action="" method="post" class="row g-3 needs-validation" novalidate>
+                    <div class="col-4">
+                      <label for="icNumber">No.K/P Pasangan:</label>
+                      <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
+                      <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor IC yang sah.
+                      </div>
 
-                  </div>
-                  <!--form for name-->
-                  <div class="col-md-7">
-                    <label for="name">Nama Pemohon:</label>
-                    <input type="text" class="form-control" id="name" required>
-                    <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
-                    <div class="invalid-feedback">
-                      Sila masukkan Nama.
                     </div>
+                    <!--form for name-->
+                    <div class="col-md-7">
+                      <label for="name">Nama Pemohon:</label>
+                      <input type="text" class="form-control" id="name" required>
+                      <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nama.
+                      </div>
 
-                  </div>
+                    </div>
 
                   <div class="col-md-3">
                     <label for="tarikh">Tarikh Lahir:</label>
-                    <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required>
+                    <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required> 
                     <div class="invalid-feedback">
                       Sila masukkan tarikh.
                     </div>
                   </div>
 
-                  <div class="col-4">
-                    <label for="Bulan">Bulan Lahir:</label>
-                    <select class="form-select" id="Bulan" required>
-                      <option value="" hidden selected>Pilih Bulan</option>
-                      <option value="1">Januari</option>
-                      <option value="2">Februari</option>
-                      <option value="3">Mac</option>
-                      <option value="4">April</option>
-                      <option value="5">Mei</option>
-                      <option value="6">Jun</option>
-                      <option value="7">Julai</option>
-                      <option value="8">Ogos</option>
-                      <option value="9">September</option>
-                      <option value="10">October</option>
-                      <option value="11">November</option>
-                      <option value="12">Disember</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Sila Pilih Bulan.
+                    <div class="col-4">
+                      <label for="Bulan">Bulan Lahir:</label>
+                      <select class="form-select" id="Bulan" required>
+                        <option value="" hidden selected>Pilih Bulan</option>
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Mac</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Julai</option>
+                        <option value="8">Ogos</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">Disember</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Sila Pilih Bulan.
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-3">
-                    <label for="Tahun">Tahun Lahir:</label>
-                    <input type="text" class="form-control" id=Tahun" required>
-                    <div class="invalid-feedback">
-                      Sila masukkan Tahun lahir.
+                    <div class="col-3">
+                      <label for="Tahun">Tahun Lahir:</label>
+                      <input type="text" class="form-control" id=Tahun" required>
+                      <div class="invalid-feedback">
+                        Sila masukkan Tahun lahir.
+                      </div>
                     </div>
-                  </div>
 
                   <div class="col-md-3">
-                    <label for="tarikh">Umur:</label>
-                    <input type="text" class="form-control" id="tarikh" pattern="[0-99]{2}"required>
+                    <label for="tarikh">Umur:</label> 
+                    <input type="text" class="form-control" id="tarikh" pattern="[0-99]{2}"required> 
                     <div class="invalid-feedback">
                       Sila masukkan umur
                     </div>
                   </div>
 
-                  <div class="col-4">
-                    <label for="Bangsa">Bangsa:</label>
-                    <select class="form-select" id="Bangsa" required>
-                      <option value="" hidden selected>pilih</option>
-                      <option value="1">Melayu</option>
-                      <option value="2">Cina</option>
-                      <option value="3">India</option>
-                      <option value="4">Bangladesh</option>
-                      <option value="5">Pakistan</option>
-                      <option value="6">Indonesian</option>
-                      <option value="7">Arab</option>
-                      <option value="8">Bumiputera Sabah</option>
-                      <option value="9">Bumiputera Sarawak</option>
-                      <option value="10">Lain-lain</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Sila Pilih Bangsa.
+                    <div class="col-4">
+                      <label for="Bangsa">Bangsa:</label>
+                      <select class="form-select" id="Bangsa" required>
+                        <option value="" hidden selected>pilih</option>
+                        <option value="1">Melayu</option>
+                        <option value="2">Cina</option>
+                        <option value="3">India</option>
+                        <option value="4">Bangladesh</option>
+                        <option value="5">Pakistan</option>
+                        <option value="6">Indonesian</option>
+                        <option value="7">Arab</option>
+                        <option value="8">Bumiputera Sabah</option>
+                        <option value="9">Bumiputera Sarawak</option>
+                        <option value="10">Lain-lain</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Sila Pilih Bangsa.
+                      </div>
                     </div>
-                  </div>
 
                   <div class="col-5">
                     <label for="Bangsa">Warganegara:</label>
@@ -144,7 +144,7 @@
                       <option value="" hidden selected>pilih</option>
                       <option value="1">Warganegara</option>
                       <option value="2">Bukan Warganegara</option>
-
+                      
                     </select>
                     <div class="invalid-feedback">
                       Sila Pilih warganegara.
@@ -163,68 +163,43 @@
                         <option value="5">STPM/HSC/Sijil</option>
                         <option value="5">SPM/MCE</option>
                         <option value="6">PT3/PMR/SRP/LC</option>
-                        <option value="7">UPSR</option>
-                        <option value="8">Tiada</option>
                       </select>
                     </div>
                   </div>
 
-                  <div class="col-5">
-                    <label for="Sektor">Sektor Pekerjaan:</label>
-                    <select class="form-select" id="Sektor" required>
-                      <option value="" hidden selected>pilih</option>
-                      <option value="1">Sektor Awam</option>
-                      <option value="2">Sektor Swasta</option>
-                      <option value="3">Sendirian</option>
-                      <option value="4">Pesara</option>
-                      <option value="5">Tidak Bekerja</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Sila Pilih Sektor Pekerjaan.
+                  <div class="col- mb-3">
+                    <label for="tempat" class="col-sm-2 col-form-label">Sektor Pekerjaan</label>
+                    <div class="col-sm-5">
+                        <select class="form-select" id="TarafPendidikan" required>
+                          <option value="" hidden selected>pilih</option>
+                          <option value="1">Sektor Awam</option>
+                          <option value="2">Sektor Swasta</option>
+                          <option value="3">Sendirian</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-
-                  <div class="col-md-5">
-                    <label for="Pendapatan">Pendapatan</label>
-                    <input type="text" class="form-control" id="Pendapatan" required>
-                    <div class="invalid-feedback">
-                      Sila masukkan Pendapatan
                     </div>
                   </div>
 
                   <div class="col- mb-3">
-                    <label for="alamatKP" class="col-sm-7 col-form-label">Alamat Kad Pengenalan </label>
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" name="alamatKP" id="alamatKP">
-                      <small class="form-text text-muted">Sila masukkan Alamat mengikut Kad pengenalan.</small>
+                    <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" name="tempat" id="tempat">
                     </div>
                   </div>
 
                   <div class="col- mb-3">
-                    <label for="alamat" class="col-sm-7 col-form-label">Alamat Semasa </label>
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" name="alamat" id="alamat">
-                      <small class="form-text text-muted">Sila masukkan Alamat semasa.</small>
+                    <label for="tempat" class="col-sm-2 col-form-label">Tempat</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" name="tempat" id="tempat">
                     </div>
                   </div>
 
-                  <div class="col-4">
-                    <label for="noTel">No.Telefon:</label>
-                    <input type="text" class="form-control" id="noTel" pattern="[0-9]{11}" required>
-                    <small class="form-text text-muted">Sila masukkan No Telefon.</small>
-                    <div class="invalid-feedback">
-                      Sila masukkan Nombor Telefon yang sah.
-                    </div>
-
-
-
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-success" role="button">Daftar</button>
-                      <a class="btn btn-success" href="{{ route('Register_list') }}">Kembali</a>
-                    </div>
-
-
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-success" role="button">Daftar</button>
+                    <a class="btn btn-success" href="{{ route('Register_list') }}">Kembali</a>
                   </div>
+                </form>
 
               </div>
 
