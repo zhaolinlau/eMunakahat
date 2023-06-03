@@ -56,6 +56,7 @@
                                     <td>54</td>
                                     <td><button class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></button></td>
                                     <td><button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button></td>
+                                  </tr>
                                   <tr>
                                     <td>2</td>
                                     <td>PEJABAT AGAMA ISLAM TEMERLOH</td>
