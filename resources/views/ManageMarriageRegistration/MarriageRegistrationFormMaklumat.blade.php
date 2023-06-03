@@ -51,16 +51,13 @@
                   </li>
                 </ul>
                 <!--form for ic-->
-                <form action="" method="post" class="row g-3 needs-validation" novalidate>
-                  <div class="col-4">
-                    <label for="icNumber">No.K/P Pasangan:</label>
-                    <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
-                    <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
-                    <div class="invalid-feedback">
-                      Sila masukkan Nombor IC yang sah.
-                    </div>
+                <h6 class="text-left" style="color: white">MAKLUMAT PERKAHWINAN</h6>
 
+               <div class="col-md-4">
+                    <label for="tarikhmohon">Tarikh Mohon</label>
+                    <input type="date" class="form-control" name="tarikhmohon" id="tarikhmohon">
                   </div>
+
                   <!--form for name-->
                   <div class="col-md-7">
                     <label for="name">Nama Pemohon:</label>
@@ -70,42 +67,72 @@
                       Sila masukkan Nama.
                     </div>
 
-                  </div>
+                    <div class="col-md-5">
+                      <label for="name">Nama Pasangan:</label>
+                      <input type="text" class="form-control" id="name" required>
+                      <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nama.
+                      </div>
 
+                      <div class="col-md-7">
+                        <label for="name">Negara:</label>
+                          <select class="form-select" id="Negara" required>
+                            <option value="" hidden selected>pilih</option>
+                            <option value="1">Melayu</option>
+                            <option value="2">Cina</option>
+                            <option value="3">India</option>
+                            <option value="4">Bangladesh</option>
+                            <option value="5">Pakistan</option>
+                            <option value="6">Indonesian</option>
+                            <option value="7">Arab</option>
+                            <option value="8">Bumiputera Sabah</option>
+                            <option value="9">Bumiputera Sarawak</option>
+                            <option value="10">Lain-lain</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Sila Pilih Negara.
+                          </div>
+                        </div>
+
+                  </div>
+                 
+                  <h6 class="text-left" style="color: white">MAKLUMAT CADANGAN MAJLIS AKAD NIKAH</h6>
+
+                  
                   <div class="col-md-4">
-                    <label for="tarikh">Tarikh Lahir</label>
+                    <label for="tarikh">Tarikh Akad Nikah</label>
                     <input type="date" class="form-control" name="tarikh" id="tarikh">
                   </div>
 
-                  
-
-                  <div class="col-md-3">
-                    <label for="tarikh">Umur:</label>
-                    <input type="text" class="form-control" id="tarikh" pattern="[0-99]{2}"required>
+                  <div class="col-12">
+                    <label for="Alamat ">Alamat Tempat Kahwin</label>
+                    <input type="text" class="form-control" id="Alamat " required>
+                    <small class="form-text text-muted">Sila masukkan Alamat Semasa anda.</small>
                     <div class="invalid-feedback">
-                      Sila masukkan umur
+                      Sila masukkan Alamat.
                     </div>
-                  </div>
 
-                  <div class="col-4">
-                    <label for="Bangsa">Bangsa:</label>
-                    <select class="form-select" id="Bangsa" required>
-                      <option value="" hidden selected>pilih</option>
-                      <option value="1">Melayu</option>
-                      <option value="2">Cina</option>
-                      <option value="3">India</option>
-                      <option value="4">Bangladesh</option>
-                      <option value="5">Pakistan</option>
-                      <option value="6">Indonesian</option>
-                      <option value="7">Arab</option>
-                      <option value="8">Bumiputera Sabah</option>
-                      <option value="9">Bumiputera Sarawak</option>
-                      <option value="10">Lain-lain</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Sila Pilih Bangsa.
+                  <form action="" method="post" class="row g-3 needs-validation" novalidate>
+                    <div class="col-4">
+                      <label for="icNumber">Mas Kahwin</label>
+                      <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
+                      <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor IC yang sah.
+                      </div>
+  
                     </div>
-                  </div>
+                    <!--form for name-->
+                    <div class="col-md-7">
+                      <label for="name">Jenis Mas kKahwin</label>
+                      <input type="text" class="form-control" id="name" required>
+                      <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nama.
+                      </div>
+  
+                    </div>
 
                   <div class="col-5">
                     <label for="Bangsa">Warganegara:</label>
