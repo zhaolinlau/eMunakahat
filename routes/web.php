@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManagePreMarriageCourse\PreMarriageCourseController;
-use App\Http\Controllers\ManageMarriageRegistration\MarriageApplicationController;
+use App\Http\Controllers\ManageMarriageApplication\MarriageApplicationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ManageMarriageRegistration\MarriageRegistrationController;
 
