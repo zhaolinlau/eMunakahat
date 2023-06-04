@@ -135,10 +135,12 @@
                         <label for="TTpendaftar" class="col-sm col-form-label">Tandatangan Pendaftar dan Cap Rasmi</label>
                         <br>
                         <p>_ _ _ _ _ _ _ _ _</p>
-                        <br>
                       </div>
                     </div>
+                    <button class="btn float-md-end"><i class="fa-solid fa-print fa-xl"></i></button>
+                    <br>
                 </div>
+                <br>
                 <a class="btn btn-success " href="" role="button">Kembali</a>
                 <a class="btn btn-success float-end" href="{{ route('user.ApplicationHiv') }}" role="button">Seterusnya</a>
               </div>

@@ -72,7 +72,7 @@
                                 <label for="pemohon" class="col-sm col-form-label">Nama Pemohon</label>
                                 <input type="text" class="form-control" name="pemohon" id="pemohon">
                                 
-                                <label for="Bulan" class="col-sm-2 col-form-label">Jantina</label>
+                                <label for="Jantina" class="col-sm-2 col-form-label">Jantina</label>
                                 <select class="form-select" id="Bulan" required>
                                   <option value="" hidden selected>Sila Pilih</option>
                                   <option value="1">Lelaki</option>

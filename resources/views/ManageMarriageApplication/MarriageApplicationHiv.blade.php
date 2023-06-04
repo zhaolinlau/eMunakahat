@@ -84,18 +84,16 @@
                       <input type="date" class="form-control" name="TarikhHIV" id="TarikhHIV">
                     </div>
                     <div class="col-4 mb-3" style="margin-left: auto; margin-right: auto;">
-                      <label for="TTklinik" class="col-sm col-form-label">Tandatangan Pengamal Perubatan</label>
+                      <label for="TTklinik" class="col-sm col-form-label">Tandatangan Pengamal Perubatan & Cop Jawatan</label>
                       <br>
                       <p>_ _ _ _ _ _ _ _ _</p>
-                      <br>
-                      <label for="CopKlinik" class="col-sm col-form-label">Nama & Cop Jawatan</label>
-                      <br>
-                      <p>_ _ _ _ _ _ _ _ _</p>
-                      <br>
                     </div>
                   </div>
+                  <button class="btn float-md-end"><i class="fa-solid fa-print fa-xl"></i></button>
+                    <br>
                 </div>
-                <a class="btn btn-success " href="" role="button">Kembali</a>
+                <br>
+                <a class="btn btn-success " href="{{ route('user.ApplicationConsent') }}" role="button">Kembali</a>
                 <a class="btn btn-success float-end" href="{{ route('user.ApplicationHiv') }}" role="button">Seterusnya</a>
               </div>
             </div>
