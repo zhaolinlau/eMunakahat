@@ -53,67 +53,94 @@
                 </ul>
                 <!--form -->
                 <h5 class="text-left" style="color: white">Persetujuan Wali</h5>
-                <div class="container" style="word-spacing: 10px;"> 
-                <p>Saya <input type="text" class="form-control-inline" placeholder="Nama Wali" aria-label="Nama Wali"> No.Kad Pengenalan <input type="text" class="form-control-inline" placeholder="IcWali" aria-label="IcWali"> 
-                  adalah <input type="text" class="form-control-inline" placeholder="hubungan" aria-label="hubungan"> kepada <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
-                  dengan ini membuat pengakuan bahawa saya bersetuju dengan perkahwinan di antara <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
-                  dengan <input type="text" class="form-control-inline" placeholder="Nama Pengantin Lelaki" aria-label="Nama Pengantin Lelaki"> dengan mas kahwinnya RM <input type="text" class="form-control-inline" placeholder="Mas Kahwin" aria-label="Mas Kahwin"> 
-                  *tunai/hutang.Saya akan mengakad nikahkan sendiri perkahwinan ini.</p>
-                  
+                <div class="container" style="word-spacing: 10px;">
+                  <p>Saya <input type="text" class="form-control-inline" placeholder="Nama Wali" aria-label="Nama Wali"> No.Kad Pengenalan <input type="text" class="form-control-inline" placeholder="IcWali" aria-label="IcWali"> 
+                    adalah <input type="text" class="form-control-inline" placeholder="hubungan" aria-label="hubungan"> kepada <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
+                    dengan ini membuat pengakuan bahawa saya bersetuju dengan perkahwinan di antara <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
+                    dengan <input type="text" class="form-control-inline" placeholder="Nama Pengantin Lelaki" aria-label="Nama Pengantin Lelaki"> dengan mas kahwinnya RM <input type="text" class="form-control-inline" placeholder="Mas Kahwin" aria-label="Mas Kahwin"> 
+                    *tunai/hutang. Saya akan mengakad nikahkan sendiri perkahwinan ini.
+                  </p>
                   <div class="row">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                    <input type="date"  style="width: 150px" class="form-control" name="tarikh" id="tarikh">
+                    <div class="col-4" style="margin-left: auto; margin-right: auto;">
+                      <label for="Tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                      <input type="date" class="form-control" name="Tarikh" id="Tarikh">
+                    </div>
+                    <div class="col-4 mb-3" style="margin-left: auto; margin-right: auto;">
+                      <label for="tarikh" class="col-sm col-form-label">Tandatangan Wali</label>
+                      <br>
+                      <p>_ _ _ _ _ _ _ _ _</p>
+                      <br>
+                    </div>
                   </div>
-                  <div class="align-content-right">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tandatangan Wali</label>
-                    <p>. . . . . . . . . . . . . . . .</p>
-                  </div>
-                  
                   <h5 class="text-left" style="color: white">Wakalah Wali</h5>
-                <div class="container" style="word-spacing: 10px;"> 
-                <p>Saya <input type="text" class="form-control-inline" placeholder="Nama Wali" aria-label="Nama Wali"> No.Kad Pengenalan <input type="text" class="form-control-inline" placeholder="IcWali" aria-label="IcWali"> 
-                  adalah <input type="text" class="form-control-inline" placeholder="hubungan" aria-label="hubungan"> kepada <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
-                  dengan ini membuat pengakuan bahawa saya bersetuju dengan perkahwinan di antara <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
-                  dengan <input type="text" class="form-control-inline" placeholder="Nama Pengantin Lelaki" aria-label="Nama Pengantin Lelaki"> dengan mas kahwinnya RM <input type="text" class="form-control-inline" placeholder="Mas Kahwin" aria-label="Mas Kahwin"> 
-                  *tunai/hutang.Saya akan mengakad nikahkan sendiri perkahwinan ini.</p>
-                  
+                  <p>Saya <input type="text" class="form-control-inline" placeholder="Nama Wali" aria-label="Nama Wali"> No.Kad Pengenalan <input type="text" class="form-control-inline" placeholder="IcWali" aria-label="IcWali"> 
+                    adalah <input type="text" class="form-control-inline" placeholder="hubungan" aria-label="hubungan"> kepada <input type="text" class="form-control-inline" placeholder="Nama Pengantin Perempuan" aria-label="Nama Pengantin Perempuan"> 
+                    dengan ini mewakilkan kepada <input type="text" class="form-control-inline" placeholder="Nama Wakil" aria-label="Nama Wakil"> No. Kad Pengenalan <input type="text" class="form-control-inline" placeholder="IC Wakil" aria-label="IcWakil">
+                    sebagai <input type="text" class="form-control-inline" placeholder="Jawantan" aria-label="Jawantan"> untuk mengakadnikahkan <input type="text" class="form-control-inline" placeholder="hubungan" aria-label="hubungan"> saya dengan  
+                    <input type="text" class="form-control-inline" placeholder="Nama Pengantin Lelaki" aria-label="Nama Pengantin Lelaki"> dengan mas kahwinnya RM <input type="text" class="form-control-inline" placeholder="Mas Kahwin" aria-label="Mas Kahwin"> 
+                    *tunai/hutang. Saya akan mengakad nikahkan sendiri perkahwinan ini.
+                  </p>
                   <div class="row">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                    <input type="date"  style="width: 150px" class="form-control" name="tarikh" id="tarikh">
+                    <div class="col-4" style="margin-left: auto; margin-right: auto;">
+                      <label for="Tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                      <input type="date" class="form-control" name="Tarikh" id="Tarikh">
+                      <br>
+                      <p>Saya dengan ini menerima wakalah Wali di atas</p>
+                    </div>
+                    <div class="col-4 mb-3" style="margin-left: auto; margin-right: auto;">
+                      <label for="tarikh" class="col-sm col-form-label">Tandatangan Wali</label>
+                      <p>_ _ _ _ _ _ _ _ _</p>
+                      <label for="tarikh" class="col-sm col-form-label">Tandatangan Penerima Wakalah</label>
+                      <p>_ _ _ _ _ _ _ _ _</p>
+                    </div>
                   </div>
-                  <div class="align-content-right">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tandatangan Wali</label>
-                    <p>. . . . . . . . . . . . . . . .</p>
-                  </div>
-                  <h5 class="text-left" style="color: white">Saksi Wakalah Wali</h5>
-                <div class="container" style="word-spacing: 10px;"> 
+                  <h5 class="text-left" style="color: white">Saksi Wakalah Wali</h5> 
                   <div class="row">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                    <input type="date"  style="width: 150px" class="form-control" name="tarikh" id="tarikh">
+                    <div class="col-4" style="margin-left: auto; margin-right: auto;">
+                      <label for="NamaSaksi1" class="col-sm-2 col-form-label">Nama</label>
+                      <input type="date" class="form-control" name="NamaSaksi1" id="NamaSaksi1">
+                      <label for="IcSaksi1" class="col-sm col-form-label">No Kad Pengenalan</label>
+                      <input type="date" class="form-control" name="IcSaksi1" id="IcSaksi1">
+                      <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
+                      <input type="date" class="form-control" name="Alamat" id="Alamat">
+                      <label for="Tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                      <input type="date" class="form-control" name="Tarikh" id="Tarikh">
+                      <br>
+                      <label for="TTsaksi1" class="col-sm col-form-label">Tandatangan Saksi(1)</label>
+                      <p>_ _ _ _ _ _ _ _ _</p>
+                    </div>
+                    <div class="col-4" style="margin-left: auto; margin-right: auto;">
+                      <label for="NamaSaksi2" class="col-sm-2 col-form-label">Nama</label>
+                      <input type="date" class="form-control" name="NamaSaksi2" id="NamaSaksi2">
+                      <label for="IcSaksi2" class="col-sm col-form-label">No Kad Pengenalan</label>
+                      <input type="date" class="form-control" name="IcSaksi1" id="IcSaksi2">
+                      <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
+                      <input type="date" class="form-control" name="Alamat" id="Alamat">
+                      <label for="Tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                      <input type="date" class="form-control" name="Tarikh" id="Tarikh">
+                      <br>
+                      <label for="TTsaksi2" class="col-sm col-form-label">Tandatangan Saksi(2)</label>
+                      <p>_ _ _ _ _ _ _ _ _</p>
+                    </div>
                   </div>
-                  <div class="align-content-right">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tandatangan Saksi(1)</label>
-                    <p>. . . . . . . . . . . . . . . .</p>
-                  </div>
-
                   <h5 class="text-left" style="color: white">Pengesahan Wakalah Wali</h5>
-                <div class="container" style="word-spacing: 10px;"> 
-                <p>Saya <input type="text" class="form-control-inline" placeholder="Pendaftar" aria-label="Pendaftar"> mengesahkan bahawa Wakalah Wali diatas adalah dibuat di hadapan saya di <input type="text" class="form-control-inline" placeholder="Alamat tempat wakalah wali dibuat" aria-label="alamatWakalahWali"> 
-                  dan is mengikut kehendak Hukum Syarak</p>
-                  
-                  <div class="row">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
-                    <input type="date"  style="width: 150px" class="form-control" name="tarikh" id="tarikh">
-                  </div>
-                  <div class="align-content-right">
-                    <label for="tarikh" class="col-sm-2 col-form-label">Tandatangan Pendaftar dan Cap Rasmi</label>
-                    <p>. . . . . . . . . . . . . . . .</p>
-                  </div>
-
+                    <p>Saya <input type="text" class="form-control-inline" placeholder="Pendaftar" aria-label="Pendaftar"> mengesahkan bahawa Wakalah Wali diatas adalah dibuat di hadapan saya di <input type="text" class="form-control-inline" placeholder="Alamat tempat wakalah wali dibuat" aria-label="alamatWakalahWali"> 
+                    dan is mengikut kehendak Hukum Syarak</p>
+                    <div class="row">
+                      <div class="col-4" style="margin-left: auto; margin-right: auto;">
+                        <label for="Tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                        <input type="date" class="form-control" name="Tarikh" id="Tarikh">
+                      </div>
+                      <div class="col-4 mb-3" style="margin-left: auto; margin-right: auto;">
+                        <label for="TTpendaftar" class="col-sm col-form-label">Tandatangan Pendaftar dan Cap Rasmi</label>
+                        <br>
+                        <p>_ _ _ _ _ _ _ _ _</p>
+                        <br>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
-            </form>
           </div>
         </div>
       </div>
