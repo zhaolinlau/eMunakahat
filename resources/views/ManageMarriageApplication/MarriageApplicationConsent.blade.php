@@ -36,19 +36,19 @@
                 <!--upper tab-->
                 <ul class="nav dark-green nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link bg-success text-white active" href="">Persetujuan dan Wakalah Wali</a>
+                    <a class="nav-link bg-success text-white active" href="{{ route('user.ApplicationConsent') }}">Persetujuan dan Wakalah Wali</a>
                   </li>
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link text-white" href="">Permohonan Ujian Saringan HIV</a>
+                    <a class="nav-link text-white" href="{{ route('user.ApplicationHiv') }}">Permohonan Ujian Saringan HIV</a>
                   </li>
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link text-white" href="">Akuan Pemastautinan</a>
+                    <a class="nav-link text-white" href="{{ route('user.ApplicationResident') }}">Akuan Pemastautinan</a>
                   </li>
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link text-white" href="">Permohonan Kebenaran Berkahwin</a>
+                    <a class="nav-link text-white" href="{{ route('user.ApplicationPermission') }}">Permohonan Kebenaran Berkahwin</a>
                   </li>
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link text-white" href="">Senarai Semak</a>
+                    <a class="nav-link text-white" href="{{ route('user.ApplicationChecklist') }}">Senarai Semak</a>
                   </li>
                 </ul>
                 <!--form -->
@@ -139,6 +139,8 @@
                       </div>
                     </div>
                 </div>
+                <a class="btn btn-success " href="" role="button">Kembali</a>
+                <a class="btn btn-success float-end" href="{{ route('user.ApplicationHiv') }}" role="button">Seterusnya</a>
               </div>
             </div>
           </div>
