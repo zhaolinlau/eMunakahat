@@ -94,7 +94,7 @@
                 </div>
                 <br>
                 <a class="btn btn-success " href="{{ route('user.ApplicationConsent') }}" role="button">Kembali</a>
-                <a class="btn btn-success float-end" href="{{ route('user.ApplicationHiv') }}" role="button">Seterusnya</a>
+                <a class="btn btn-success float-end" href="{{ route('user.ApplicationResident') }}" role="button">Seterusnya</a>
               </div>
             </div>
           </div>
