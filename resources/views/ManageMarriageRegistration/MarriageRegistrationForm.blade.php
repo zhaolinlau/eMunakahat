@@ -12,7 +12,6 @@
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-user fa-xl"></i>
-          <span>test</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-end shadow-sm">
           <li><a class="dropdown-item" href="">My Profile</a></li>

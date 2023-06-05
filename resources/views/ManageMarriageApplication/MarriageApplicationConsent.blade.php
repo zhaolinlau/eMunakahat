@@ -13,7 +13,7 @@
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-user fa-xl"></i>
-          <span>test</span>
+          <span></span>
         </a>
         <ul class="dropdown-menu dropdown-menu-end shadow-sm">
           <li><a class="dropdown-item" href="">My Profile</a></li>
@@ -26,13 +26,13 @@
     <div class="row ">
       <div class="col text-left g-5 ">
         <br>
-        <h5 style="color: rgb(254, 253, 253);">Pendaftaran Perkahwinan</h5>
+        <h5 style="color: rgb(254, 253, 253);">PERMOHONAN PERKAHWINAN</h5>
         <br>
         <div class="container text-left">
           <div class="row ">
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
-                <h5 class="text-center" style="color: white">Permohonan Perkahwinan</h5>
+                <h5 class="text-center" style="color: white">Borang Permohonan Perkahwinan</h5>
                 <!--upper tab-->
                 <ul class="nav dark-green nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
@@ -141,7 +141,7 @@
                     <br>
                 </div>
                 <br>
-                <a class="btn btn-success " href="" role="button">Kembali</a>
+                <a class="btn btn-success " href="{{ route('user.ApplicationPerkahwinan') }}" role="button">Kembali</a>
                 <a class="btn btn-success float-end" href="{{ route('user.ApplicationHiv') }}" role="button">Seterusnya</a>
               </div>
             </div>

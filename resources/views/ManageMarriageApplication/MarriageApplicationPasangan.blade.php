@@ -14,7 +14,6 @@
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-user fa-xl"></i>
-          <span>test</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-end shadow-sm">
           <li><a class="dropdown-item" href="">My Profile</a></li>
@@ -27,7 +26,7 @@
     <div class="row ">
       <div class="col text-left g-5 ">
         <br>
-        <h5 style="color: rgb(254, 253, 253);">Pendaftaran Perkahwinan</h5>
+        <h5 style="color: rgb(254, 253, 253);">PERMOHONAN PERKAHWINAN</h5>
         <br>
         <div class="container text-left">
           <div class="row ">
@@ -37,11 +36,11 @@
                 <!--upper tab-->
                 <ul class="nav dark-green nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link text-white active" href="{{ route('user.ApplicationPemohon') }}">Maklumat
+                    <a class="nav-link text-white" href="{{ route('user.ApplicationPemohon') }}">Maklumat
                       Pemohon</a>
                   </li>
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
-                    <a class="nav-link  bg-success text-white" href="{{ route('user.ApplicationPasangan') }}">Maklumat
+                    <a class="nav-link bg-success text-white" href="{{ route('user.ApplicationPasangan') }}">Maklumat
                       Pasangan</a>
                   </li>
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
