@@ -315,8 +315,8 @@
         <br>
         <a class="nav-link" href="">Profile</a>
         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
-        <a class="nav-link" href="">Permohonan Berkahwin</a>
-        <a class="nav-link" href="{{ route('Register_form') }}">Pendaftaran Perkahwinan</a>
+        <a class="nav-link" href="{{ route('user.ApplicationPemohon')}}">Permohonan Berkahwin</a>
+        <a class="nav-link" href="{{ route('user.Registerform') }}">Pendaftaran Perkahwinan</a>
         <a class="nav-link" href="">Khidmat Nasihat</a>
       </nav>
     </div>
