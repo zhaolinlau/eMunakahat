@@ -23,29 +23,39 @@ class MarriageApplicationController extends Controller
         return view('ManageMarriageApplication.user.MarriageApplicationPerkahwinan');
     }
     public function indexConsent()
-  {
-      return view('ManageMarriageApplication.user.MarriageApplicationConsent');
-  }
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationConsent');
+    }
 
-  public function indexHiv()
-  {
-      return view('ManageMarriageApplication.user.MarriageApplicationHiv');
-  }
+    public function indexHiv()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationHiv');
+    }
 
-  public function indexResident()
-  {
-      return view('ManageMarriageApplication.user.MarriageApplicationResident');
-  }
+    public function indexResident()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationResident');
+    }
 
-  public function indexPermission()
-  {
-      return view('ManageMarriageApplication.user.MarriageApplicationPermission');
-  }
+    public function indexPermission()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationPermission');
+    }
 
-  public function indexChecklist()
-  {
-      return view('ManageMarriageApplication.user.MarriageApplicationChecklist');
-  }
+    public function indexChecklist()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationChecklist');
+    }
+
+    public function indexApplicantList()
+    {
+        return view('ManageMarriageApplication.staff.MarriageApplicationList');
+    }
+
+    public function indexApplicantStatus()
+    {
+        return view('ManageMarriageApplication.staff.MarriageApplicationStatus');
+    }
 }
 
 

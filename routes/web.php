@@ -39,6 +39,9 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
 Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
+Route::get('/ApplicationList',[MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
+Route::get('/ApplicationStatus',[MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
+
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
