@@ -230,11 +230,11 @@
                       <div class="row">
                         <div class="col-4" style="margin-left: auto; margin-right: auto;">
                           <label for="NamaSaksi1" class="col-sm col-form-label">Nama Saksi (1)</label>
-                          <input type="date" class="form-control" name="NamaSaksi1" id="NamaSaksi1">
+                          <input type="text" class="form-control" name="NamaSaksi1" id="NamaSaksi1">
                           <label for="IcSaksi1" class="col-sm col-form-label">No Kad Pengenalan Saksi (1)</label>
-                          <input type="date" class="form-control" name="IcSaksi1" id="IcSaksi1">
+                          <input type="number" class="form-control" name="IcSaksi1" id="IcSaksi1">
                           <label for="AlamatSaksi1" class="col-sm col-form-label">Alamat Saksi (1)</label>
-                          <input type="date" class="form-control" name="Alamat" id="AlamatSaksi1">
+                          <input type="text" class="form-control" name="Alamat" id="AlamatSaksi1">
                           <label for="Tarikh" class="col-sm col-form-label">Tarikh</label>
                           <input type="date" class="form-control" name="Tarikh" id="Tarikh">
                           <br>
@@ -243,11 +243,11 @@
                         </div>
                         <div class="col-4" style="margin-left: auto; margin-right: auto;">
                           <label for="NamaSaksi2" class="col-sm col-form-label">Nama Saksi (2)</label>
-                          <input type="date" class="form-control" name="NamaSaksi2" id="NamaSaksi2">
+                          <input type="text" class="form-control" name="NamaSaksi2" id="NamaSaksi2">
                           <label for="IcSaksi2" class="col-sm col-form-label">No Kad Pengenalan Saksi (2)</label>
-                          <input type="date" class="form-control" name="IcSaksi1" id="IcSaksi2">
+                          <input type="number" class="form-control" name="IcSaksi1" id="IcSaksi2">
                           <label for="AlamatSaksi2" class="col-sm col-form-label">Alamat Saksi (2)</label>
-                          <input type="date" class="form-control" name="AlamatSaksi2" id="AlamatSaksi2">
+                          <input type="text" class="form-control" name="AlamatSaksi2" id="AlamatSaksi2">
                           <label for="Tarikh" class="col-sm col-form-label">Tarikh</label>
                           <input type="date" class="form-control" name="Tarikh" id="Tarikh">
                           <br>
