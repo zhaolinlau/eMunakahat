@@ -49,6 +49,9 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/CourseStatus',[PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
 	Route::get('/CourseForm',[PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
 
+	Route::get('/ApplicationPemohon',[MarriageApplicationController::class, 'indexPemohon'])->name('user.ApplicationPemohon');
+	Route::get('/ApplicationPasangan',[MarriageApplicationController::class, 'indexPasangan'])->name('user.ApplicationPasangan');
+	Route::get('/ApplicationPerkahwinan',[MarriageApplicationController::class, 'indexPerkahwinan'])->name('user.ApplicationPerkahwinan');
 	Route::get('/ApplicationConsent',[MarriageApplicationController::class, 'indexConsent'])->name('user.ApplicationConsent');
 	Route::get('/ApplicationHiv',[MarriageApplicationController::class, 'indexHiv'])->name('user.ApplicationHiv');
 	Route::get('/ApplicationResident',[MarriageApplicationController::class, 'indexResident'])->name('user.ApplicationResident');
