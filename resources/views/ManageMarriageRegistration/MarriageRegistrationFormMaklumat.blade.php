@@ -125,7 +125,7 @@
                     </div>
                     <!--form for name-->
                     <div class="col-md-7">
-                      <label for="name">Jenis Mas kKahwin</label>
+                      <label for="name">Jenis Mas Kahwin</label>
                       <input type="text" class="form-control" id="name" required>
                       <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
                       <div class="invalid-feedback">
@@ -292,7 +292,7 @@
         <a class="nav-link" href="">Profile</a>
         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
         <a class="nav-link" href="">Permohonan Berkahwin</a>
-        <a class="nav-link" href="{{ route('Register_form') }}">Pendaftaran Perkahwinan</a>
+        <a class="nav-link" href="{{ route('Register_list') }}">Pendaftaran Perkahwinan</a>
         <a class="nav-link" href="">Khidmat Nasihat</a>
       </nav>
     </div>

@@ -53,7 +53,7 @@
                           <td>23-10-2020</td>
                           <td>TELAH HANTAR</td>
                           <td>
-                          <button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+                          <button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"href="{{ route('Register_newForm') }}"></i></button>
                             <button class="btn"><i class="fa-solid fa-print fa-xl"></i></button>
                             <button class="btn"><i class="fa-solid fa-trash-can fa-xl"></i></button>
                           </td>
@@ -65,7 +65,7 @@
                           <td>23-10-2020</td>
                           <td>TELAH HANTAR</td>
                           <td>
-                            <button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+                            <button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"href="{{ route('Register_newForm') }}"></i></button>
                             <button class="btn"><i class="fa-solid fa-print fa-xl"></i></button>
                             <button class="btn"><i class="fa-solid fa-trash-can fa-xl"></i></button>
                           </td>
@@ -74,7 +74,7 @@
                       </tbody>
                     </table>
                     <div class="col-12">
-                      <button type="button" class="btn btn-success" role="button"href="{{ route('Register_list') }}">Daftar Permohonan Baru </button>
+                      <button type="button" class="btn btn-success" role="button"href="{{ route('Register_form') }}">Daftar Permohonan Baru </button>
                       
                     </div>
                   </div>
@@ -112,7 +112,7 @@
                         <a class="nav-link" href="">Profile</a>
                         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
                         <a class="nav-link" href="">Permohonan Berkahwin</a>
-                        <a class="nav-link" href="{{ route('Register_form') }}">Pendaftaran Perkahwinan</a>
+                        <a class="nav-link" href="{{ route('user.RegisterList') }}">Pendaftaran Perkahwinan</a>
                         <a class="nav-link" href="">Khidmat Nasihat</a>
                       </nav>
                     </div>
