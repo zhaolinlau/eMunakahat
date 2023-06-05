@@ -32,7 +32,7 @@
           <div class="row ">
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
-                <h5 class="text-center" style="color: white">Borang Pendaftaran Perkahwinan</h5>
+                <h5 class="text-center" style="color: white">BORANG PERMOHONAN PERKAHWINAN</h5>
                 <!--upper tab-->
                 <ul class="nav dark-green nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
@@ -165,7 +165,7 @@
                   </div> 
                 </form>
                 <br>
-                <a type="submit" class="btn btn-success float-end" href="{{ route('user.ApplicationPasangan') }}">Seterusnya</a>
+                <a type="submit" class="btn btn-success float-end" href="{{ route('user.ApplicationPerkahwinan') }}">Seterusnya</a>
                 <a class="btn btn-success" href="{{ route('user.ApplicationPemohon') }}">Kembali</a>
               </div>
             </div>

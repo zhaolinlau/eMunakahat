@@ -31,7 +31,7 @@
           <div class="row ">
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
-                <h5 class="text-center" style="color: white">Permohonan Perkahwinan</h5>
+                <h5 class="text-center" style="color: white">BORANG PERMOHONAN PERKAHWINAN</h5>
                 <!--upper tab-->
                 <ul class="nav dark-green nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
@@ -89,7 +89,7 @@
                   </div>
                   <div class="row" style="margin-left: auto; margin-right: auto;">
                     <div class="col-5">
-                      <label for="formFileSm" class="form-label" >BORANG PERMOHONAN UNTUK KEBENARAN BERKAHWIN</label>
+                      <label for="formFileSm" class="form-label" >BORANG PERMOHONAN KEBENARAN BERKAHWIN</label>
                     </div>
                     <div class="col-5">
                       <input class="form form-control-sm" id="formFileSm" type="file">
