@@ -60,6 +60,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/ApplicationPermission',[MarriageApplicationController::class, 'indexPermission'])->name('user.ApplicationPermission');
 	Route::get('/ApplicationChecklist',[MarriageApplicationController::class, 'indexChecklist'])->name('user.ApplicationChecklist');
 
+	Route::get('/LocationList',[PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
 	Route::get('/ApplicationList',[MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
 	Route::get('/ApplicationStatus',[MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
 
