@@ -30,42 +30,60 @@
           <div class="row ">
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto; width: auto;">
-                <h5 class="text-center" style="color: white">SENARAI PEMOHON</h5>
+                <div class="border border-5 p-1 text-bg-dark rounded-end rounded-start" style="height: auto;">
+                  <h5 class="text-center" style="color: white">DAFTAR LOKASI</h5>
+                </div>
+                <form>
+                  <div class="row">
+                    <div class="col-4" style="margin-left: auto; margin-right: auto;">
+                      <label for="Tempat" class="col-sm-2 col-form-label">Tempat</label>
+                      <input type="text" class="form-control" name="Tempat" id="Tempat">                     
+                      <label for="Alamat" class="col-sm col-form-label">Alamat</label>
+                      <input type="text" class="form-control" name="Alamat" id="Alamat">
+                      <label for="Daerah" class="col-sm col-form-label">Daerah</label>
+                      <input type="text" class="form-control" name="Daerah" id="Daerah">
+                      <label for="NoTelefon" class="col-sm col-form-label">No Telefon</label>
+                      <input type="text" class="form-control" name="NoTelefon" id="NoTelefon">
+                      <br>
+                      <a class="btn btn-secondary float-end"  href="">Simpan</a>
+                    </div>
+                    
+                   </div>
+                   
+                  </form>
                 <div class="container">
                   <table class="table" id="applicationStatusTable">
+                    <br>
                   <thead>
                       <tr >
-                          <th>Bil</th>
-                          <th>No. Kad Pengenalan</th>
-                          <th>Nama Pemohon</th>
-                          <th>No. Kad Pengenalan Pasangan</th>
-                          <th>Nama Pasangan</th>
-                          <th>Status</th>
-                          <th>Operasi</th>
-                          </tr>
+                        <th>Bil</th>
+                        <th>Nama Tempat</th>
+                        <th>Alamat</th>
+                        <th>Daerah</th>
+                        <th>No. Telefon</th>
+                        <th>Operasi</th>
+                        </tr>
                   </thead>
                   <tbody>
                       <tr>
                           <td>1</td>
-                          <td>011198762565</td>
-                          <td>John Doe</td>
-                          <td>019987651511</td>
-                          <td>Aulie</td>
-                          <td>Untuk Diluluskan</td>
+                          <td>DEWAN AS SAKINAH</td>
+                          <td>PEJABAT AGAMA ISLAM DAERAH KUANTAN</td>
+                          <td>KUANTAN</td>
+                          <td>097266098</td>
                           <td>
-                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-sm " ></i></a>
+                            <a class="btn" href=""><i class="fa-solid fa-pen-to-square fa-sm " ></i></a>
                             <a class="btn" ><i class="fa-solid fa-trash-can fa-sm"  ></i></a>
                           </td>
                       </tr>
                       <tr>
                           <td>2</td>
-                          <td>019991837341</td>
-                          <td>Hidayah</td>
-                          <td>987761554411</td>
-                          <td>Ahmad Ali</td>
-                          <td>Untuk Diluluskan</td>
+                          <td>DEWAN SEMINAR MAJU</td>
+                          <td>LAPANG BESAR, JALAN BESAR, PUTRA SQUARE, 25300 KUANTAN, PAHANG DARUL MAKMUR</td>
+                          <td>KUANTAN</td>
+                          <td>098882018</td>
                           <td>
-                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-sm " ></i></a>
+                            <a class="btn" href=""><i class="fa-solid fa-pen-to-square fa-sm " ></i></a>
                             <a class="btn" ><i class="fa-solid fa-trash-can fa-sm"  ></i></a>
                           </td>
                       </tr>
@@ -115,10 +133,10 @@
               Kursus Pra Perkahwinan
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Daftar Lokasi</a></li>
-              <li><a class="dropdown-item" href="#">Daftar Maklumat</a></li>
-              <li><a class="dropdown-item" href="#">Senarai Peserta</a></li>
-              <li><a class="dropdown-item" href="#">Kehadiran Peserta</a></li>
+              <li><a class="dropdown-item" href="{{ route('staff.LocationList') }}">Daftar Lokasi</a></li>
+              <li><a class="dropdown-item" href="{{ route('staff.InfoList') }}">Daftar Maklumat</a></li>
+              <li><a class="dropdown-item" href="{{ route('staff.ApplicantList') }}">Senarai Peserta</a></li>
+              <li><a class="dropdown-item" href="{{ route('staff.ApplicantAttendance') }}">Kehadiran Peserta</a></li>
             </ul>
           </div>
           <div class="btn-group" role="group">

@@ -115,7 +115,7 @@
               Kursus Pra Perkahwinan
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Daftar Lokasi</a></li>
+              <li><a class="dropdown-item" href="{{ route('staff.LocationList')}}">Daftar Lokasi</a></li>
               <li><a class="dropdown-item" href="#">Daftar Maklumat</a></li>
               <li><a class="dropdown-item" href="#">Senarai Peserta</a></li>
               <li><a class="dropdown-item" href="#">Kehadiran Peserta</a></li>
