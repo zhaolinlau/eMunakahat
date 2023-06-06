@@ -185,7 +185,7 @@
                       </div>            
                       </div>
                       <br>
-                      <a type="button" class="btn btn-success float-start" role="button" href="{{ route('staff.ApplicationList') }}">Kembali </a>
+                      <a type="button" class="btn btn-secondary float-start" role="button" href="{{ route('staff.ApplicationList') }}">Kembali </a>
                       <div class="d-grid gap-2 d-md-flex justify-content-md-end">                      
                         <a class="btn btn-danger " role="button">GAGAL</a>
                         <a class="btn btn-success float-end " role="button">LULUS</a>

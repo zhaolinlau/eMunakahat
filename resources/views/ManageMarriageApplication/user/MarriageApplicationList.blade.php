@@ -29,7 +29,7 @@
         <div class="container text-left">
           <div class="row ">
             <div class="col">
-              <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
+              <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto; width: auto;">
                 <h5 class="text-center" style="color: white">SENARAI PEMOHON</h5>
                 <div class="container">
                   <table class="table" id="applicationStatusTable">
@@ -53,8 +53,8 @@
                           <td>Aulie</td>
                           <td>Untuk Diluluskan</td>
                           <td>
-                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-xl " ></i></a>
-                            <a class="btn" ><i class="fa-solid fa-trash-can fa-xl"  ></i></a>
+                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-sm " ></i></a>
+                            <a class="btn" ><i class="fa-solid fa-trash-can fa-sm"  ></i></a>
                           </td>
                       </tr>
                       <tr>
@@ -65,8 +65,8 @@
                           <td>Ahmad Ali</td>
                           <td>Untuk Diluluskan</td>
                           <td>
-                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-xl " ></i></a>
-                            <a class="btn" ><i class="fa-solid fa-trash-can fa-xl"  ></i></a>
+                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-sm " ></i></a>
+                            <a class="btn" ><i class="fa-solid fa-trash-can fa-sm"  ></i></a>
                           </td>
                       </tr>
                       <!-- Add more table rows here -->
