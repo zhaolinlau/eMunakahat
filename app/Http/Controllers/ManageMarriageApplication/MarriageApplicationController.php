@@ -49,12 +49,12 @@ class MarriageApplicationController extends Controller
 
     public function indexApplicantList()
     {
-        return view('ManageMarriageApplication.staff.MarriageApplicationList');
+        return view('ManageMarriageApplication.user.MarriageApplicationList');
     }
 
     public function indexApplicantStatus()
     {
-        return view('ManageMarriageApplication.staff.MarriageApplicationStatus');
+        return view('ManageMarriageApplication.user.MarriageApplicationStatus');
     }
 }
 
