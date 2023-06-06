@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <style>
-  </style>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
   <nav class="navbar shadow-sm fixed-top" style="background-color: #ADB0B2">
     <div class="container-fluid">
       <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive"
@@ -54,8 +53,8 @@
                           <td>Aulie</td>
                           <td>Untuk Diluluskan</td>
                           <td>
-                            <button class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-xl " ></i></button>
-                            <button class="btn" ><i class="fa-solid fa-trash-can fa-xl"  ></i></button>
+                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-xl " ></i></a>
+                            <a class="btn" ><i class="fa-solid fa-trash-can fa-xl"  ></i></a>
                           </td>
                       </tr>
                       <tr>
@@ -66,8 +65,8 @@
                           <td>Ahmad Ali</td>
                           <td>Untuk Diluluskan</td>
                           <td>
-                            <button class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-xl " ></i></button>
-                            <button class="btn" ><i class="fa-solid fa-trash-can fa-xl"  ></i></button>
+                            <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i class="fa-solid fa-file-circle-check fa-xl " ></i></a>
+                            <a class="btn" ><i class="fa-solid fa-trash-can fa-xl"  ></i></a>
                           </td>
                       </tr>
                       <!-- Add more table rows here -->
@@ -127,7 +126,7 @@
               Permohonan Berkahwin
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Senarai Pemohon</a></li>
+              <li><a class="dropdown-item" href="{{ route('staff.ApplicationList') }}">Senarai Pemohon</a></li>
             </ul>
           </div>
           <div class="btn-group" role="group">
