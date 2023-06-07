@@ -35,17 +35,17 @@
                 <!--upper tab-->
                 <ul class="nav nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item bg-dark-green border border-white" role="presentation">
-                    <a class="nav-link text-white" href="{{ route('Register_newForm') }}">Maklumat
+                    <a class="nav-link text-white" href="{{ route('user.RegisterNewForm') }}">Maklumat
                       Pemohon
                     </a>
                   </li>
                   <li class="nav-item border border-white" role="presentation">
-                    <a class="nav-link bg-success text-white active" href="{{ route('Register_FormPasangan') }}">
+                    <a class="nav-link bg-success text-white active" href="{{ route('user.RegisterFormPasangan') }}">
                       Maklumat Pasangan
                     </a>
                   </li>
                   <li class="nav-item bg-dark-green border border-white" role="presentation">
-                    <a class="nav-link text-white" href="{{ route('MaklumatPerkahwinan') }}">Maklumat
+                    <a class="nav-link text-white" href="{{ route('user.MaklumatPerkahwinan') }}">Maklumat
                       Perkahwinan
                     </a>
                   </li>

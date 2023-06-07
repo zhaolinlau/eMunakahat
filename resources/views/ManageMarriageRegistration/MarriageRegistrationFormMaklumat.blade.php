@@ -35,17 +35,17 @@
                 <!--upper tab-->
                 <ul class="nav nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item bg-dark-green border border-white" role="presentation">
-                    <a class="nav-link text-white" href="{{ route('Register_newForm') }}">Maklumat
+                    <a class="nav-link text-white" href="{{ route('user.RegisterNewForm') }}">Maklumat
                       Pemohon
                     </a>
                   </li>
                   <li class="nav-item border bg-dark-green border-white" role="presentation">
-                    <a class="nav-link text-white" href="{{ route('Register_FormPasangan') }}">
+                    <a class="nav-link text-white" href="{{ route('user.RegisterFormPasangan') }}">
                       Maklumat Pasangan
                     </a>
                   </li>
                   <li class="nav-item bg-dark-green border border-white" role="presentation">
-                    <a class="nav-link text-white active bg-success" href="{{ route('MaklumatPerkahwinan') }}">Maklumat
+                    <a class="nav-link text-white active bg-success" href="{{ route('user.MaklumatPerkahwinan') }}">Maklumat
                       Perkahwinan
                     </a>
                   </li>
@@ -67,13 +67,17 @@
                       Sila masukkan Nama.
                     </div>
 
-                    <div class="col-md-5">
+                  </div>
+
+                    <div class="col-md-7">
                       <label for="name">Nama Pasangan:</label>
                       <input type="text" class="form-control" id="name" required>
                       <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
                       <div class="invalid-feedback">
                         Sila masukkan Nama.
                       </div>
+
+                    </div>
 
                       <div class="col-md-7">
                         <label for="name">Negara:</label>
@@ -93,7 +97,7 @@
                           <div class="invalid-feedback">
                             Sila Pilih Negara.
                           </div>
-                        </div>
+                        
 
                   </div>
                  
@@ -106,8 +110,8 @@
                   </div>
 
                   <div class="col-12">
-                    <label for="Alamat ">Alamat Tempat Kahwin</label>
-                    <input type="text" class="form-control" id="Alamat " required>
+                    <label for="AlamatKahwin ">Alamat Tempat Kahwin</label>
+                    <input type="text" class="form-control" id="AlamatKahwin " required>
                     <small class="form-text text-muted">Sila masukkan Alamat Semasa anda.</small>
                     <div class="invalid-feedback">
                       Sila masukkan Alamat.
@@ -115,21 +119,19 @@
 
                   <form action="" method="post" class="row g-3 needs-validation" novalidate>
                     <div class="col-4">
-                      <label for="icNumber">Mas Kahwin</label>
-                      <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
-                      <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
+                      <label for="Maskahwin">Mas Kahwin</label>
+                      <input type="text" class="form-control" id="Maskahwin"  required>
                       <div class="invalid-feedback">
-                        Sila masukkan Nombor IC yang sah.
+                        Sila masukkan Maskahwin.
                       </div>
   
                     </div>
                     <!--form for name-->
                     <div class="col-md-7">
-                      <label for="name">Jenis Mas Kahwin</label>
-                      <input type="text" class="form-control" id="name" required>
-                      <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
+                      <label for="JenisMaskahwin">Jenis Mas Kahwin</label>
+                      <input type="text" class="form-control" id="JenisMaskahwin" required>
                       <div class="invalid-feedback">
-                        Sila masukkan Nama.
+                        Sila masukkan Jenis Mas Kahwin.
                       </div>
   
                     </div>
@@ -249,7 +251,7 @@
 
                   <div class="col-12">
                     <button type="submit" class="btn btn-success" role="button">Daftar</button>
-                    <a class="btn btn-success" href="{{ route('Register_list') }}">Kembali</a>
+                    <a class="btn btn-success" href="{{ route('user.RegisterList') }}">Kembali</a>
                   </div>
                 </form>
 
@@ -292,7 +294,7 @@
         <a class="nav-link" href="">Profile</a>
         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
         <a class="nav-link" href="">Permohonan Berkahwin</a>
-        <a class="nav-link" href="{{ route('Register_list') }}">Pendaftaran Perkahwinan</a>
+        <a class="nav-link" href="{{ route('user.RegisterList') }}">Pendaftaran Perkahwinan</a>
         <a class="nav-link" href="">Khidmat Nasihat</a>
       </nav>
     </div>
