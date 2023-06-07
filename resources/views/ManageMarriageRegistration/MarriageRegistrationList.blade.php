@@ -53,7 +53,12 @@
                           <td>23-10-2020</td>
                           <td>TELAH HANTAR</td>
                           <td>
-                          <button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"href="{{ route('user.RegisterNewForm') }}"></i></button>
+                            <button class="btn" onclick="navToNewForm()"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+                            <script>
+                              function navToNewForm(){
+                                window.location.href = "{{ route('user.RegisterNewForm') }}";
+                              }
+                            </script>
                             <button class="btn"><i class="fa-solid fa-print fa-xl"></i></button>
                             <button class="btn"><i class="fa-solid fa-trash-can fa-xl"></i></button>
                           </td>
@@ -65,7 +70,7 @@
                           <td>23-10-2020</td>
                           <td>TELAH HANTAR</td>
                           <td>
-                            <button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"href="{{ route('user.RegisterNewForm') }}"></i></button>
+                            <button class="btn" onclick="navToNewForm()"><i class="fa-solid fa-pen-to-square fa-xl"href="{{ route('user.RegisterNewForm') }}"></i></button>
                             <button class="btn"><i class="fa-solid fa-print fa-xl"></i></button>
                             <button class="btn"><i class="fa-solid fa-trash-can fa-xl"></i></button>
                           </td>
@@ -74,8 +79,13 @@
                       </tbody>
                     </table>
                     <div class="col-12">
-                      <button type="button" class="btn btn-success" role="button"href="{{ route('user.RegisterNewForm') }}">Daftar Permohonan Baru </button>
-                      
+                      <button type="button" class="btn btn-success"  onclick="navToForm()" >Daftar Permohonan Baru </button>
+                      <script>
+
+                      function navToForm(){
+                        window.location.href ="{{ route('user.Registerform') }}";
+                      }
+                      </script>
                     </div>
                   </div>
 
