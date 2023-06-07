@@ -123,6 +123,7 @@
                         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
                         <a class="nav-link" href="">Permohonan Berkahwin</a>
                         <a class="nav-link" href="{{ route('user.RegisterList') }}">Pendaftaran Perkahwinan</a>
+                        <a class="nav-link" href="">Kad Nikah dan Sijil</a>
                         <a class="nav-link" href="">Khidmat Nasihat</a>
                       </nav>
                     </div>
