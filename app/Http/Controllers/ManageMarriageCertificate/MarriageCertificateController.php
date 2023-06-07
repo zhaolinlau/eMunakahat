@@ -11,8 +11,4 @@ class MarriageCertificateController extends Controller
     {
         return view('ManageMarriageCertificate.MarriageCertificate');
     }
-
-   
 }
-
-
