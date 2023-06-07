@@ -13,7 +13,6 @@
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-user fa-xl"></i>
-          <span>test</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-end shadow-sm">
           <li><a class="dropdown-item" href="">My Profile</a></li>
@@ -26,13 +25,13 @@
     <div class="row ">
       <div class="col text-left g-5 ">
         <br>
-        <h5 style="color: rgb(254, 253, 253);">Pendaftaran Perkahwinan</h5>
+        <h5 style="color: rgb(254, 253, 253);">PERMOHONAN PERKAHWINAN</h5>
         <br>
         <div class="container text-left">
           <div class="row ">
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
-                <h5 class="text-center" style="color: white">Permohonan Perkahwinan</h5>
+                <h5 class="text-center" style="color: white">BORANG PERMOHONAN PERKAHWINAN</h5>
                 <!--upper tab-->
                 <ul class="nav dark-green nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                   <li class="nav-item border border-white bg-dark-green" role="presentation">
@@ -230,11 +229,11 @@
                       <div class="row">
                         <div class="col-4" style="margin-left: auto; margin-right: auto;">
                           <label for="NamaSaksi1" class="col-sm col-form-label">Nama Saksi (1)</label>
-                          <input type="date" class="form-control" name="NamaSaksi1" id="NamaSaksi1">
+                          <input type="text" class="form-control" name="NamaSaksi1" id="NamaSaksi1">
                           <label for="IcSaksi1" class="col-sm col-form-label">No Kad Pengenalan Saksi (1)</label>
-                          <input type="date" class="form-control" name="IcSaksi1" id="IcSaksi1">
+                          <input type="number" class="form-control" name="IcSaksi1" id="IcSaksi1">
                           <label for="AlamatSaksi1" class="col-sm col-form-label">Alamat Saksi (1)</label>
-                          <input type="date" class="form-control" name="Alamat" id="AlamatSaksi1">
+                          <input type="text" class="form-control" name="Alamat" id="AlamatSaksi1">
                           <label for="Tarikh" class="col-sm col-form-label">Tarikh</label>
                           <input type="date" class="form-control" name="Tarikh" id="Tarikh">
                           <br>
@@ -243,11 +242,11 @@
                         </div>
                         <div class="col-4" style="margin-left: auto; margin-right: auto;">
                           <label for="NamaSaksi2" class="col-sm col-form-label">Nama Saksi (2)</label>
-                          <input type="date" class="form-control" name="NamaSaksi2" id="NamaSaksi2">
+                          <input type="text" class="form-control" name="NamaSaksi2" id="NamaSaksi2">
                           <label for="IcSaksi2" class="col-sm col-form-label">No Kad Pengenalan Saksi (2)</label>
-                          <input type="date" class="form-control" name="IcSaksi1" id="IcSaksi2">
+                          <input type="number" class="form-control" name="IcSaksi1" id="IcSaksi2">
                           <label for="AlamatSaksi2" class="col-sm col-form-label">Alamat Saksi (2)</label>
-                          <input type="date" class="form-control" name="AlamatSaksi2" id="AlamatSaksi2">
+                          <input type="text" class="form-control" name="AlamatSaksi2" id="AlamatSaksi2">
                           <label for="Tarikh" class="col-sm col-form-label">Tarikh</label>
                           <input type="date" class="form-control" name="Tarikh" id="Tarikh">
                           <br>
@@ -315,8 +314,8 @@
         <br>
         <a class="nav-link" href="">Profile</a>
         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
-        <a class="nav-link" href="">Permohonan Berkahwin</a>
-        <a class="nav-link" href="{{ route('Register_form') }}">Pendaftaran Perkahwinan</a>
+        <a class="nav-link" href="{{ route('user.ApplicationPemohon')}}">Permohonan Berkahwin</a>
+        <a class="nav-link" href="{{ route('user.Registerform') }}">Pendaftaran Perkahwinan</a>
         <a class="nav-link" href="">Khidmat Nasihat</a>
       </nav>
     </div>

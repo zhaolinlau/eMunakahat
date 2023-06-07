@@ -10,42 +10,52 @@ class MarriageApplicationController extends Controller
   
     public function indexPemohon()
     {
-        return view('ManageMarriageApplication.MarriageApplicationPemohon');
+        return view('ManageMarriageApplication.user.MarriageApplicationPemohon');
     }
   
     public function indexPasangan()
     {
-        return view('ManageMarriageApplication.MarriageApplicationPasangan');
+        return view('ManageMarriageApplication.user.MarriageApplicationPasangan');
     }
   
     public function indexPerkahwinan()
     {
-        return view('ManageMarriageApplication.MarriageApplicationPerkahwinan');
+        return view('ManageMarriageApplication.user.MarriageApplicationPerkahwinan');
     }
     public function indexConsent()
-  {
-      return view('ManageMarriageApplication.MarriageApplicationConsent');
-  }
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationConsent');
+    }
 
-  public function indexHiv()
-  {
-      return view('ManageMarriageApplication.MarriageApplicationHiv');
-  }
+    public function indexHiv()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationHiv');
+    }
 
-  public function indexResident()
-  {
-      return view('ManageMarriageApplication.MarriageApplicationResident');
-  }
+    public function indexResident()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationResident');
+    }
 
-  public function indexPermission()
-  {
-      return view('ManageMarriageApplication.MarriageApplicationPermission');
-  }
+    public function indexPermission()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationPermission');
+    }
 
-  public function indexChecklist()
-  {
-      return view('ManageMarriageApplication.MarriageApplicationChecklist');
-  }
+    public function indexChecklist()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationChecklist');
+    }
+
+    public function indexApplicantList()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationList');
+    }
+
+    public function indexApplicantStatus()
+    {
+        return view('ManageMarriageApplication.user.MarriageApplicationStatus');
+    }
 }
 
 
