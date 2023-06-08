@@ -2,14 +2,14 @@
 
 @section('content')
 
-  <head>
+  {{-- <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
-  </head>
+  </head> --}}
 
 
 
-
+  {{-- style for drop-down at tab --}}
   <style>
     .dropdown-menu {
       background-color: #f0f0f0;
@@ -17,7 +17,7 @@
       border: none;
       width: 100%;
       /* Remove border */
-      /* Add box shadow */
+      /* Add width */
     }
 
     .dropdown-menu a.dropdown-item {
@@ -112,45 +112,6 @@
                       Sila isi Tarikh Lahir
                     </div>
                   </div>
-
-                  <!--
-                              <div class="col-md-3">
-                                <label for="tarikh">Tarikh Lahir:</label>
-                                <input type="text" class="form-control" id="tarikh" pattern="[0-31]{2}" required>
-                                <div class="invalid-feedback">
-                                  Sila masukkan tarikh.
-                                </div>
-                              </div>
-
-                                <div class="col-4">
-                                  <label for="Bulan">Bulan Lahir:</label>
-                                  <select class="form-select" id="Bulan" required>
-                                    <option value="" hidden selected>Pilih Bulan</option>
-                                    <option value="1">Januari</option>
-                                    <option value="2">Februari</option>
-                                    <option value="3">Mac</option>
-                                    <option value="4">April</option>
-                                    <option value="5">Mei</option>
-                                    <option value="6">Jun</option>
-                                    <option value="7">Julai</option>
-                                    <option value="8">Ogos</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">Disember</option>
-                                  </select>
-                                  <div class="invalid-feedback">
-                                    Sila Pilih Bulan.
-                                  </div>
-                                </div>
-
-                                <div class="col-3">
-                                  <label for="Tahun">Tahun Lahir:</label>
-                                  <input type="text" class="form-control" id=Tahun" required>
-                                  <div class="invalid-feedback">
-                                    Sila masukkan Tahun lahir.
-                                  </div>
-                                </div>-->
 
                   <div class="col-md-3">
                     <label for="tarikh">Umur</label>
@@ -364,10 +325,10 @@
           <a class="nav-link dropdown-toggle" href="#" id="pendaftaranDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>
           <ul class="dropdown-menu" aria-labelledby="pendaftaranDropdown">
-            <li><a class="nav-link " href="{{ route('user.MarriageCertificate') }}">Kad Nikah</a></li>
-            <li><a class="nav-link" href="#">Carian Pendaftaran</a></li>
+            <li><a class="nav-link " href="{{ route('user.MarriageCard') }}">Kad Nikah</a></li>
+            <li><a class="nav-link" href="{{ route('user.RegisterList') }}">Carian Pendaftaran</a></li>
           </ul>
-          <a class="nav-link" href="">Khidmat Perkahwinan</a>
+          <a class="nav-link" href="">Khidmat Nasihat</a>
 
         </div>
       </nav>
@@ -380,11 +341,13 @@
         </div>
       </div>
     </div>
+
     <script src="{{ mix('resources/js/validation.js') }}"></script>
     <script>
       const year = new Date().getFullYear()
       document.getElementById('year').innerHTML = year;
 
+      // script for dropdown hover
       document.querySelectorAll('.nav-item.dropdown').forEach(function(element) {
         element.addEventListener('mouseenter', function() {
           this.querySelector('.dropdown-menu').classList.add('show');

@@ -9,7 +9,7 @@ class MarriageRegistrationController extends Controller
 {
     public function indexRegister()
     {
-        return view('ManageMarriageRegisteration.MarriageRegistrationForm');
+        return view('ManageMarriageRegistration.MarriageRegistrationForm');
     }
 
     public function indexList()

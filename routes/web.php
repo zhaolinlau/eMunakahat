@@ -7,6 +7,8 @@ use App\Http\Controllers\ManagePreMarriageCourse\PreMarriageCourseController;
 use App\Http\Controllers\ManageMarriageApplication\MarriageApplicationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ManageMarriageRegistration\MarriageRegistrationController;
+use App\Http\Controllers\ManageMarriageCard\MarriageCardController;
+
 
 /*
 |--------------------------------------------------------------------------

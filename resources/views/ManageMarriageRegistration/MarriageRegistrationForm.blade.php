@@ -1,6 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
+  {{-- style for drop-down at left tab --}}
+  <style>
+    .dropdown-menu {
+      background-color: #f0f0f0;
+      /* Set background color */
+      border: none;
+      width: 100%;
+      /* Remove border */
+      /* Add width */
+    }
+
+    .dropdown-menu a.dropdown-item {
+      color: #333;
+      /* Set text color */
+    }
+
+    .dropdown-menu a.dropdown-item:hover {
+      background-color: #e9ecef;
+      /* Set background color on hover */
+    }
+
+    .dropdown-menu a.dropdown-item:focus {
+      outline: none;
+      /* Remove focus outline */
+      background-color: #e9ecef;
+      /* Set background color on focus */
+    }
+  </style>
+
   <nav class="navbar shadow-sm fixed-top" style="background-color: #2F9577">
     <div class="container-fluid">
       <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive"
@@ -65,7 +94,8 @@
                   </div>
 
                   <div class="col-12">
-                    <button type="submit" class="btn btn-success" role="button"  href="{{ route('user.RegisterNewForm') }}">Daftar</button>
+                    <button type="submit" class="btn btn-success" role="button"
+                      href="{{ route('user.RegisterNewForm') }}">Daftar</button>
                     <a class="btn btn-success" href="{{ route('user.RegisterList') }}">Kembali</a>
                   </div>
                 </form>
@@ -97,13 +127,20 @@
             <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
         </form>
+        {{-- left tab navigation --}}
         <br>
         <a class="nav-link" href="">Profile</a>
         <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
-        <a class="nav-link" href="">Permohonan Berkahwin</a>
-        <a class="nav-link" href="{{ route('user.RegisterList') }}">Pendaftaran Perkahwinan</a>
-        <a class="nav-link" href="">Kad Nikah dan Sijil</a>
-        <a class="nav-link" href="">Khidmat Nasihat</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pendaftaranDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>
+          <ul class="dropdown-menu" aria-labelledby="pendaftaranDropdown">
+            <li><a class="nav-link " href="{{ route('user.MarriageCard') }}">Kad Nikah</a></li>
+            <li><a class="nav-link" href="{{ route('user.RegisterList') }}">Carian Pendaftaran</a></li>
+          </ul>
+          <a class="nav-link" href="">Khidmat Nasihat</a>
+
+        </div>
       </nav>
     </div>
 
@@ -118,6 +155,19 @@
     <script>
       const year = new Date().getFullYear()
       document.getElementById('year').innerHTML = year;
+
+      // script for dropdown hover
+      document.querySelectorAll('.nav-item.dropdown').forEach(function(element) {
+        element.addEventListener('mouseenter', function() {
+          this.querySelector('.dropdown-menu').classList.add('show');
+          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', true);
+        });
+
+        element.addEventListener('mouseleave', function() {
+          this.querySelector('.dropdown-menu').classList.remove('show');
+          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+        });
+      });
     </script>
   </div>
 
@@ -133,5 +183,4 @@
       border-color: #D2F4EA;
     }
   </style>
-
 @endsection
