@@ -96,6 +96,24 @@
                           </script>
                           <button class="btn"><i class="fa-solid fa-print fa-xl"></i></button>
                           <button class="btn"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+
+                          <script>
+                            // Get a reference to the delete button
+                            const deleteButton = document.getElementById('deleteButton');
+                          
+                            // Add an event listener to handle the button click
+                            deleteButton.addEventListener('click', function() {
+                              // Call the delete function here
+                              deleteItem();
+                            });
+                          
+                            // Function to handle the deletion
+                            function deleteItem() {
+                              // Perform the deletion logic here
+                              console.log('Item deleted!');
+                              // You can replace the console.log statement with your own code to delete the desired item.
+                            }
+                          </script>
                         </td>
                       </tr>
                       <tr>
