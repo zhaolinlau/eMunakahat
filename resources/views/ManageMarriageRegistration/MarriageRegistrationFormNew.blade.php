@@ -367,6 +367,7 @@
             <li><a class="nav-link " href="{{ route('user.MarriageCertificate') }}">Kad Nikah</a></li>
             <li><a class="nav-link" href="#">Carian Pendaftaran</a></li>
           </ul>
+          <a class="nav-link" href="">Khidmat Perkahwinan</a>
 
         </div>
       </nav>
