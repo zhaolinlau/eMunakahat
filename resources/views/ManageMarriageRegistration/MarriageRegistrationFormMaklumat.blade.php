@@ -84,7 +84,7 @@
                 </ul>
                 <!--form for ic-->
                 <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT PERKAHWINAN</h6>
-
+                <form action="" method="post" class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
                   <label for="tarikhmohon">Tarikh Mohon</label>
                   <input type="date" class="form-control" name="tarikhmohon" id="tarikhmohon">
@@ -149,7 +149,7 @@
                     Sila masukkan Alamat.
                   </div>
 
-                  <form action="" method="post" class="row g-3 needs-validation" novalidate>
+                  
                     <div class="col-4">
                       <label for="Maskahwin">Mas Kahwin</label>
                       <input type="text" class="form-control" id="Maskahwin" required>
@@ -281,7 +281,7 @@
                       </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 mt-3">
                       <button type="submit" class="btn btn-success" role="button">Daftar</button>
                       <a class="btn btn-success" href="{{ route('user.RegisterList') }}">Kembali</a>
                     </div>
@@ -293,8 +293,6 @@
 
               </div>
 
-
-              </form>
 
             </div>
           </div>
