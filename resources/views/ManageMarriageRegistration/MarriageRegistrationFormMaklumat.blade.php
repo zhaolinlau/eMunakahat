@@ -28,6 +28,8 @@
       background-color: #e9ecef;
       /* Set background color on focus */
     }
+
+    
   </style>
 
   <nav class="navbar shadow-sm fixed-top" style="background-color: #2F9577">
@@ -81,7 +83,7 @@
                   </li>
                 </ul>
                 <!--form for ic-->
-                <h6 class="text-left" style="color: white">MAKLUMAT PERKAHWINAN</h6>
+                <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT PERKAHWINAN</h6>
 
                 <div class="col-md-4">
                   <label for="tarikhmohon">Tarikh Mohon</label>
@@ -131,7 +133,7 @@
 
                 </div>
 
-                <h6 class="text-left" style="color: white">MAKLUMAT CADANGAN MAJLIS AKAD NIKAH</h6>
+                <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT CADANGAN MAJLIS AKAD NIKAH</h6>
 
 
                 <div class="col-md-4">

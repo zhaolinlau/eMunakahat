@@ -143,7 +143,7 @@
 
                   <div class="col-12 mt-3">
                     <!-- Add margin-bottom to create spacing -->
-                    <button type="submit" class="btn btn-success" role="button" href="{{ route('user.MarriageCard2') }}">Hantar</button>
+                    <button type="submit" class="btn btn-success" role="button" href="">Hantar</button>
                   </div>
 
                 </div>
