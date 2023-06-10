@@ -54,7 +54,7 @@
                                     <td>28 - 29 JANUARI 2023</td>
                                     <td>100</td>
                                     <td>54</td>
-                                    <td><button class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></button></td>
+                                    <td><a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></a></td>
                                     <td><button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button></td>
                                   </tr>
                                   <tr>

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManagePreMarriageCourse\PreMarriageCourseController;
 use App\Http\Controllers\ManageMarriageApplication\MarriageApplicationController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\ManageMarriageRegistration\MarriageRegistrationController;
 use App\Http\Controllers\ManageMarriageCard\MarriageCardController;
 use App\Http\Controllers\MarriageApprovalInfo\MarriageApprovalController;
