@@ -8,39 +8,39 @@ use Illuminate\Http\Request;
 class PreMarriageCourseController extends Controller
 {
     public function indexCourse(){
-        return view ('ManagePreMarriageCourse.TermsCondition');
+        return view ('ManagePreMarriageCourse.user.TermsCondition');
     }
 
     public function indexOrganization(){
-        return view ('ManagePreMarriageCourse.OrganizationList');
+        return view ('ManagePreMarriageCourse.user.OrganizationList');
     }
 
     public function indexViewOrganization(){
-        return view ('ManagePreMarriageCourse.OrganizationView');
+        return view ('ManagePreMarriageCourse.user.OrganizationView');
     }
 
     public function indexCourseStatus(){
-        return view ('ManagePreMarriageCourse.CourseStatus');
+        return view ('ManagePreMarriageCourse.user.CourseStatus');
     }
 
     public function indexCourseForm(){
-        return view ('ManagePreMarriageCourse.CourseForm');
+        return view ('ManagePreMarriageCourse.user.CourseForm');
     }
 
     public function viewLocationList(){
-        return view ('ManagePreMarriageCourse.CourseLocationList');
+        return view ('ManagePreMarriageCourse.staff.CourseLocationList');
     }
 
     public function viewInfoList(){
-        return view ('ManagePreMarriageCourse.CourseInfoList');
+        return view ('ManagePreMarriageCourse.staff.CourseInfoList');
     }
 
     public function viewApplicantList(){
-        return view ('ManagePreMarriageCourse.CourseApplicantList');
+        return view ('ManagePreMarriageCourse.staff.CourseApplicantList');
     }
 
     public function viewApplicantAttendance(){
-        return view ('ManagePreMarriageCourse.CourseApplicantAttendance');
+        return view ('ManagePreMarriageCourse.staff.CourseApplicantAttendance');
     }
     
 }
