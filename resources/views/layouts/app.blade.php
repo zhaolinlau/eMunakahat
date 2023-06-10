@@ -69,7 +69,7 @@
 									{{ Auth::user()->User_Name }}
 								</a>
 
-								<div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+								<div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
 									<a class="dropdown-item" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -108,9 +108,7 @@
 					<br>
 					<a class="nav-link" href="">Profile</a>
 					@if (auth()->check() && auth()->user()->role == 'admin')
-
 					@elseif (auth()->check() && auth()->user()->role == 'staff')
-					
 						<div class="btn-group" role="group">
 							<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
 								aria-expanded="false">
@@ -152,7 +150,6 @@
 								<li><a class="dropdown-item" href="#">2</a></li>
 							</ul>
 						</div>
-
 					@elseif (auth()->check() && auth()->user()->role == 'user')
 						<a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
 						<a class="nav-link" href="">Permohonan Berkahwin</a>
@@ -178,18 +175,6 @@
 			<script>
 				const year = new Date().getFullYear()
 				document.getElementById('year').innerHTML = year;
-
-				document.querySelectorAll('.nav-item.dropdown').forEach(function(element) {
-        element.addEventListener('mouseenter', function() {
-          this.querySelector('.dropdown-menu').classList.add('show');
-          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', true);
-        });
-
-        element.addEventListener('mouseleave', function() {
-          this.querySelector('.dropdown-menu').classList.remove('show');
-          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
-        });
-      });
 			</script>
 		</div>
 
