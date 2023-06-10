@@ -8,6 +8,7 @@ use App\Http\Controllers\ManageMarriageApplication\MarriageApplicationController
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\ManageMarriageRegistration\MarriageRegistrationController;
 use App\Http\Controllers\ManageMarriageCard\MarriageCardController;
+use App\Http\Controllers\MarriageApprovalInfo\MarriageApprovalController;
 
 
 /*
@@ -78,4 +79,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 
 	Route::get('/MarriageCertificate&Card', [MarriageCardController::class, 'indexCard'])->name('user.MarriageCard');
 	Route::get('/MarriageCertificate&Card2', [MarriageCardController::class, 'indexCard2'])->name('user.MarriageCard2');
+
+	Route::get('/MarriageApproval_', [MarriageApprovalController::class, 'indexApproval'])->name('staf.MarriageApproval');
+
 });
