@@ -17,13 +17,11 @@ return new class extends Migration
             $table->string('Partner_Age');
             $table->string('Partner_Citizenship');
             $table->string('Partner_Address');
-            $table->string('Partner_Address');
             $table->string('Partner_EduLevel');
             $table->string('Partner_EmpInfo');
             $table->string('Partner_Income');
             $table->string('Partner_MaritalStatus');
             $table->string('Partner_MualafStatus');
-            $table->string('Partner_');
             $table->timestamps();
         });
     }
