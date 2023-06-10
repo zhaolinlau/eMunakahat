@@ -21,7 +21,8 @@
                                     <th>Bil</th>
                                     <th>Anjuran</th>
                                     <th>Tempat</th>
-                                    <th>Tarikh</th>
+                                    <th>Tarikh Mula</th>
+                                    <th>Tarikh Tamat</th>
                                     <th>Kapasiti Peserta</th>
                                     <th>Kekosongan</th>
                                     <th>Papar Lanjut</th>
@@ -34,7 +35,8 @@
                                     <td>1</td>
                                     <td>PEJABAT AGAMA ISLAM MARAN</td>
                                     <td>DEWAN AUDITORIUM AL-GHAZALI PAID MARAN</td>
-                                    <td>28 - 29 JANUARI 2023</td>
+                                    <td>28 JANUARI 2023</td>
+                                    <td>29 JANUARI 2023</td>
                                     <td>100</td>
                                     <td>54</td>
                                     <td><a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></a></td>
@@ -44,7 +46,8 @@
                                     <td>2</td>
                                     <td>PEJABAT AGAMA ISLAM TEMERLOH</td>
                                     <td>DEWAN KULIAH MASHAS TEMERLOH</td>
-                                    <td>28 - 29 JANUARI 2023</td>
+                                    <td>28 JANUARI 2023</td>
+                                    <td>29 JANUARI 2023</td>
                                     <td>84</td>
                                     <td>-</td>
                                     <td><a class="btn"><i class="fa-solid fa-eye fa-xl"></i></a></td>

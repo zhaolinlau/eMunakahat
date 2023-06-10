@@ -62,8 +62,6 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/CourseStatus',[PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
 	Route::get('/CourseForm',[PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
 
-	
-
 	Route::get('/ApplicationPemohon',[MarriageApplicationController::class, 'indexPemohon'])->name('user.ApplicationPemohon');
 	Route::get('/ApplicationPasangan',[MarriageApplicationController::class, 'indexPasangan'])->name('user.ApplicationPasangan');
 	Route::get('/ApplicationPerkahwinan',[MarriageApplicationController::class, 'indexPerkahwinan'])->name('user.ApplicationPerkahwinan');
@@ -72,8 +70,6 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/ApplicationResident',[MarriageApplicationController::class, 'indexResident'])->name('user.ApplicationResident');
 	Route::get('/ApplicationPermission',[MarriageApplicationController::class, 'indexPermission'])->name('user.ApplicationPermission');
 	Route::get('/ApplicationChecklist',[MarriageApplicationController::class, 'indexChecklist'])->name('user.ApplicationChecklist');
-
-	
 
 	Route::get('/MarriageRegistration',[MarriageRegistrationController::class,'indexRegister'])->name('user.Registerform');
 	Route::get('/RegistrationList',[MarriageRegistrationController::class,'indexList'])->name('user.RegisterList');
