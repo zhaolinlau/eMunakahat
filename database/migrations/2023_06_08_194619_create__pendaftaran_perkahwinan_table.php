@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('Registration_Type');
             $table->string('Registration_Date');
             $table->string('Registration_Status');
+			$table->foreignId('id')->references('id')->on('users');
             $table->string('Approval_ID');
             $table->string('PaymentNo');
               
