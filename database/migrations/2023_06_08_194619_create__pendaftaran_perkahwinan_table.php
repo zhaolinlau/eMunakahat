@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('_pendaftaran_perkahwinan', function (Blueprint $table) {
-            $table->id();
-            $table->string('No.KadPengenalan');
-            $table->string('Nama');
-            $table->string('No.Akuan');
-            $table->string('No.Akuan');
-            $table->string('No.Akuan');
+            $table->id('');
+            $table->string('RegistrationNo')->unique();
+            $table->string('Registration_Type');
+            $table->string('Registration_Date');
+            $table->string('Registration_Status');
+            $table->string('Approval_ID');
+            $table->string('PaymentNo');
               
         });
     }
