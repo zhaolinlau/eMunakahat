@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@fortawesome/fontawesome-free':
@@ -13,8 +17,8 @@ devDependencies:
     specifier: ^1.4.0
     version: 1.4.0
   bootstrap:
-    specifier: ^5.3.0
-    version: 5.3.0(@popperjs/core@2.11.8)
+    specifier: ^5.2.3
+    version: 5.2.3(@popperjs/core@2.11.8)
   laravel-vite-plugin:
     specifier: ^0.7.8
     version: 0.7.8(vite@4.3.9)
@@ -262,10 +266,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /bootstrap@5.3.0(@popperjs/core@2.11.8):
-    resolution: {integrity: sha512-UnBV3E3v4STVNQdms6jSGO2CvOkjUMdDAVR2V5N4uCMdaIkaQjbcEAMqRimDHIs4uqBYzDAKCQwCB+97tJgHQw==}
+  /bootstrap@5.2.3(@popperjs/core@2.11.8):
+    resolution: {integrity: sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==}
     peerDependencies:
-      '@popperjs/core': ^2.11.7
+      '@popperjs/core': ^2.11.6
     dependencies:
       '@popperjs/core': 2.11.8
     dev: true
@@ -538,7 +542,3 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
