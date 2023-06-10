@@ -23,7 +23,7 @@ class UserController extends Controller
 		$request->validate([
 			'ic' => 'required|unique:users,ic,|digits:12|numeric',
 			'staff_id' => 'required|unique:users,staff_id,|string',
-			'name' => 'required|string',
+			'username' => 'required|string',
 			'email' => 'required|email|unique:users,email,|string',
 			'contact' => 'required|digits_between:10,15,numeric',
 			'gender' => 'required|in:male,female',
@@ -33,7 +33,7 @@ class UserController extends Controller
 		$staff = new User();
 		$staff->staff_id = $request->staff_id;
 		$staff->ic = $request->staff_id;
-		$staff->name = $request->name;
+		$staff->username = $request->username;
 		$staff->email = $request->email;
 		$staff->gender = $request->gender;
 		$staff->contact = $request->contact;
@@ -55,7 +55,7 @@ class UserController extends Controller
 			'ic' => 'required|digits:12|unique:users,ic,' . $id,
 			'staff_id' => 'required|unique:users,staff_id,' . $id,
 			'email' => 'required|email|unique:users,email,' . $id,
-			'name' => 'required|string',
+			'username' => 'required|string',
 			'contact' => 'required|digits_between:10,15|numeric',
 			'gender' => 'required|in:male,female',
 			'password' => 'nullable|min:8|confirmed|string',

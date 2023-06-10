@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('_pendaftaran_perkahwinan', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->timestamps();
         });
     }
 

@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
 		$users = [
 			[
 				'ic' => '123456789012',
-				'name' => 'admin',
+				'username' => 'admin',
 				'gender' => 'male',
 				'staff_id' => 'stf000',
 				'email' => 'admin@gmail.com',
@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '111111111111',
-				'name' => 'staff1',
+				'username' => 'staff1',
 				'gender' => 'male',
 				'staff_id' => 'stf001',
 				'email' => 'staff1@gmail.com',
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '222222222222',
-				'name' => 'staff2',
+				'username' => 'staff2',
 				'gender' => 'female',
 				'staff_id' => 'stf002',
 				'email' => 'staff2@gmail.com',
@@ -49,7 +49,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '333333333333',
-				'name' => 'staff3',
+				'username' => 'staff3',
 				'gender' => 'male',
 				'staff_id' => 'stf003',
 				'email' => 'staff3@gmail.com',
@@ -60,7 +60,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '444444444444',
-				'name' => 'staff4',
+				'username' => 'staff4',
 				'gender' => 'female',
 				'staff_id' => 'stf004',
 				'email' => 'staff4@gmail.com',
@@ -71,7 +71,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '555555555555',
-				'name' => 'staff5',
+				'username' => 'staff5',
 				'gender' => 'male',
 				'staff_id' => 'stf005',
 				'email' => 'staff5@gmail.com',
@@ -82,7 +82,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '666666666666',
-				'name' => 'staff6',
+				'username' => 'staff6',
 				'gender' => 'female',
 				'staff_id' => 'stf006',
 				'email' => 'staff6@gmail.com',
@@ -93,7 +93,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '777777777777',
-				'name' => 'staff7',
+				'username' => 'staff7',
 				'gender' => 'male',
 				'staff_id' => 'stf007',
 				'email' => 'staff7@gmail.com',
@@ -104,7 +104,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '888888888888',
-				'name' => 'staff8',
+				'username' => 'staff8',
 				'gender' => 'female',
 				'staff_id' => 'stf008',
 				'email' => 'staff8@gmail.com',
@@ -115,7 +115,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '999999999999',
-				'name' => 'staff9',
+				'username' => 'staff9',
 				'gender' => 'male',
 				'staff_id' => 'stf009',
 				'email' => 'staff9@gmail.com',
@@ -126,7 +126,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '101010101010',
-				'name' => 'staff10',
+				'username' => 'staff10',
 				'gender' => 'female',
 				'staff_id' => 'stf010',
 				'email' => 'staff10@gmail.com',
@@ -137,7 +137,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				'ic' => '012345678901',
-				'name' => 'user123',
+				'username' => 'user123',
 				'gender' => 'female',
 				'email' => 'user123@gmail.com',
 				'email_verified_at' => '2023-05-24 11:17:08',

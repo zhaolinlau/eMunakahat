@@ -34,10 +34,10 @@
 				</div>
 
 				<div class="col-6">
-					<label class="form-label" for="name">Name</label>
-					<input type="text" id="name" value="{{ old('name') }}"
-						class="form-control @error('name') is-invalid @enderror" name="name" required>
-					@error('name')
+					<label class="form-label" for="username">Name</label>
+					<input type="text" id="username" value="{{ old('username') }}"
+						class="form-control @error('username') is-invalid @enderror" name="username" required>
+					@error('username')
 					<div class="invalid-feedback">
 						{{ $message }}
 					</div>
