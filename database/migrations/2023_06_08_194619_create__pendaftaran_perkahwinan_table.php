@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_pendaftaran_perkahwinan', function (Blueprint $table) {
+        Schema::create('Marriage_Registration', function (Blueprint $table) {
             $table->id('');
             $table->string('RegistrationNo')->unique();
             $table->string('Registration_Type');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_pendaftaran_perkahwinan');
+        Schema::dropIfExists('Marriage_Registration');
     }
 };

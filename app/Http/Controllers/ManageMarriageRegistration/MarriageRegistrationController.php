@@ -26,8 +26,14 @@ class MarriageRegistrationController extends Controller
         return view('ManageMarriageRegistration.MarriageRegistrationFormPasangan');
     }
 
-    public function indexMaklumat() {
+    public function indexMaklumat() 
+    {
         return view('ManageMarriageRegistration.MarriageRegistrationFormMaklumat');
+    }
+
+    public function indexMaklumat2() 
+    {
+        return view('ManageMarriageRegistration.MarriageRegistrationFormMaklumat2');
     }
 }
 
