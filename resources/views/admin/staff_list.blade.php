@@ -53,8 +53,8 @@
 					@foreach ($staff as $row)
 					<tr>
 						<td>{{ $loop->iteration }}</td>
-						<td>{{ $row->staff_id }}</td>
-						<td>{{ $row->username }}</td>
+						<td>{{ $row->Staff_ID }}</td>
+						<td>{{ $row->User_Name }}</td>
 						<td><a href="mailto:{{ $row->email }}">{{ $row->email }}</a></td>
 						<td>
 							<a href="{{ route('admin.staff_profile', $row->id) }}" class="btn btn-info">Profile</a>

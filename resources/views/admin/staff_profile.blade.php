@@ -13,10 +13,10 @@
 					<h3>Staff Profile</h3>
 				</div>
 				<div class="col-6">
-					<label class="form-label" for="staff_id">Staff ID</label>
-					<input type="text" id="staff_id" class="form-control @error('staff_id') is-invalid @enderror" name="staff_id"
-						value="{{ old('staff_id', $staff->staff_id) }}" required>
-					@error('staff_id')
+					<label class="form-label" for="Staff_ID">Staff ID</label>
+					<input type="text" id="Staff_ID" class="form-control @error('Staff_ID') is-invalid @enderror" name="Staff_ID"
+						value="{{ old('Staff_ID', $staff->Staff_ID) }}" required>
+					@error('Staff_ID')
 					<div class="invalid-feedback">
 						{{ $message }}
 					</div>
@@ -24,10 +24,10 @@
 				</div>
 
 				<div class="col-6">
-					<label class="form-label" for="staff_id">IC Number</label>
-					<input type="text" id="ic" class="form-control @error('ic') is-invalid @enderror" name="ic"
-						value="{{ old('ic', $staff->ic) }}" required>
-					@error('ic')
+					<label class="form-label" for="User_IC">IC Number</label>
+					<input type="text" id="User_IC" class="form-control @error('User_IC') is-invalid @enderror" name="User_IC"
+						value="{{ old('User_IC', $staff->User_IC) }}" required>
+					@error('User_IC')
 					<div class="invalid-feedback">
 						{{ $message }}
 					</div>
@@ -35,10 +35,10 @@
 				</div>
 
 				<div class="col-6">
-					<label class="form-label" for="username">Username</label>
-					<input type="text" id="username" class="form-control @error('username') is-invalid @enderror" name="username"
-						value="{{ old('username', $staff->username) }}" required>
-					@error('username')
+					<label class="form-label" for="User_Name">Username</label>
+					<input type="text" id="User_Name" class="form-control @error('User_Name') is-invalid @enderror" name="User_Name"
+						value="{{ old('User_Name', $staff->User_Name) }}" required>
+					@error('User_Name')
 					<div class="invalid-feedback">
 						{{ $message }}
 					</div>
@@ -46,12 +46,12 @@
 				</div>
 
 				<div class="col-6">
-					<label for="gender" class="form-label">Gender</label>
-					<select id="gender" class="form-select @error('gender') is-invalid @enderror" name="gender" required>
-						<option value="male" {{ old('gender', $staff->gender == 'male' ? 'selected' : '') }}>Male</option>
-						<option value="female" {{ old('gender', $staff->gender == 'female' ? 'selected' : '') }}>Female</option>
+					<label for="User_Gender" class="form-label">Gender</label>
+					<select id="User_Gender" class="form-select @error('User_Gender') is-invalid @enderror" name="User_Gender" required>
+						<option value="Male" {{ old('User_Gender', $staff->User_Gender == 'Male' ? 'selected' : '') }}>Male</option>
+						<option value="Female" {{ old('User_Gender', $staff->User_Gender == 'Female' ? 'selected' : '') }}>Female</option>
 					</select>
-					@error('gender')
+					@error('User_Gender')
 					<div class="invalid-feedback">
 						{{ $message }}
 					</div>
@@ -70,10 +70,10 @@
 				</div>
 
 				<div class="col-6">
-					<label class="form-label" for="contact">Contact</label>
-					<input type="tel" id="contact" class="form-control @error('contact') is-invalid @enderror" name="contact"
-						value="{{ old('contact', $staff->contact) }}" required>
-					@error('contact')
+					<label class="form-label" for="User_Phone_Number">Phone Number</label>
+					<input type="tel" id="User_Phone_Number" class="form-control @error('User_Phone_Number') is-invalid @enderror" name="User_Phone_Number"
+						value="{{ old('User_Phone_Number', $staff->User_Phone_Number) }}" required>
+					@error('User_Phone_Number')
 					<div class="invalid-feedback">
 						{{ $message }}
 					</div>

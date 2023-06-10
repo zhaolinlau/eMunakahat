@@ -44,11 +44,11 @@ class LoginController extends Controller
 		$input = $request->all();
 
 		$this->validate($request, [
-			'ic' => ['required', 'digits:12'],
+			'User_IC' => ['required', 'digits:12'],
 			'password' => 'required|min:8',
 		]);
 
-		if (auth()->attempt(array('ic' => $input['ic'], 'password' => $input['password']))) {
+		if (auth()->attempt(array('User_IC' => $input['User_IC'], 'password' => $input['password']))) {
 			if (auth()->user()->role == 'admin') {
 				return redirect()->route('admin.home');
 			} else if (auth()->user()->role == 'staff') {

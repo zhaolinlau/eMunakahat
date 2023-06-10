@@ -18,13 +18,13 @@
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 							</span>
 							@endif
-							<label for="ic" class="col-md-4 col-form-label text-md-end">{{ __('IC Number') }}</label>
+							<label for="User_IC" class="col-md-4 col-form-label text-md-end">{{ __('IC Number') }}</label>
 
 							<div class="col-md-6">
-								<input id="ic" type="ic" class="form-control @error('ic') is-invalid @enderror" name="ic"
-									value="{{ old('ic') }}" required autocomplete="ic" autofocus>
+								<input id="User_IC" type="text" class="form-control @error('User_IC') is-invalid @enderror" name="User_IC"
+									value="{{ old('User_IC') }}" required autocomplete="User_IC" autofocus>
 
-								@error('ic')
+								@error('User_IC')
 								<span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								</span>
