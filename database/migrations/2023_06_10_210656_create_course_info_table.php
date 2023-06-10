@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('course_info', function (Blueprint $table) {
             $table->id('Course_ID');
-            $table->string('Course_Organization');
-            $table->string('Course_DateStart');
-            $table->string('Course_DateEnd');
-            $table->string('Course_Slot');
-            $table->string('Course_Siri');
-            $table->string('Course_Rules');
-            $table->string('Course_Venue');
-            $table->string('Course_Location');
-            $table->integer('Course_Capacity');
-            $table->string('Course_Status');
-            $table->string('Course_Staff');
+            $table->string('Course_Organization')->nullable();
+            $table->string('Course_DateStart')->nullable();
+            $table->string('Course_DateEnd')->nullable();
+            $table->string('Course_Slot')->nullable();
+            $table->string('Course_Siri')->nullable();
+            $table->string('Course_Rules')->nullable();
+            $table->string('Course_Venue')->nullable();
+            $table->string('Course_Location')->nullable();
+            $table->integer('Course_Capacity')->nullable();
+            $table->string('Course_Status')->nullable();
+            $table->string('Course_Staff')->nullable();
             $table->timestamps();
         });
     }
