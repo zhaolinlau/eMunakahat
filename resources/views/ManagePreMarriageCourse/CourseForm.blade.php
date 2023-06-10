@@ -96,7 +96,7 @@
                             </form>
                             <br>
                             
-                            <a class="btn btn-success" href="{{ route('user.terms') }}">Kembali</a>  
+                            <a class="btn btn-success" href="{{ route('user.organization') }}">Kembali</a>  
                             <a class="btn btn-success float-end"  href="">Hantar</a>
                           </div>
                     </div> 

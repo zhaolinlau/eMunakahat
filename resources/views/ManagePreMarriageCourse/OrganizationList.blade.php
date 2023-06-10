@@ -38,7 +38,7 @@
                                     <td>100</td>
                                     <td>54</td>
                                     <td><a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></a></td>
-                                    <td><button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button></td>
+                                    <td><a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i></a></td>
                                   </tr>
                                   <tr>
                                     <td>2</td>
@@ -47,8 +47,8 @@
                                     <td>28 - 29 JANUARI 2023</td>
                                     <td>84</td>
                                     <td>-</td>
-                                    <td><button class="btn"><i class="fa-solid fa-eye fa-xl"></i></button></td>
-                                    <td><button class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></button></td>
+                                    <td><a class="btn"><i class="fa-solid fa-eye fa-xl"></i></a></td>
+                                    <td><a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i></a></td>
                                   </tr>
                                   <!-- Add more table rows here -->
                                 </tbody>

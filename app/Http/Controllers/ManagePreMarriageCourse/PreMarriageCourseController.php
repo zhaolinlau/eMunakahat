@@ -24,7 +24,7 @@ class PreMarriageCourseController extends Controller
     }
 
     public function indexCourseForm(){
-        return view ('ManagePreMarriageCourse.PreMarriageCourseForm');
+        return view ('ManagePreMarriageCourse.CourseForm');
     }
 
     public function viewLocationList(){
