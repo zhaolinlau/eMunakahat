@@ -31,27 +31,19 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+																	@foreach ($courses as $course)
                                   <tr>
-                                    <td>1</td>
-                                    <td>PEJABAT AGAMA ISLAM MARAN</td>
-                                    <td>DEWAN AUDITORIUM AL-GHAZALI PAID MARAN</td>
-                                    <td>28 - 29 JANUARI 2023</td>
-                                    <td>28 - 29 JANUARI 2023</td>
-                                    <td>100</td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $course->Course_Organization }}</td>
+                                    <td>{{ $course->Course_Venue }}</td>
+                                    <td>{{ $course->Course_DateStart }}</td>
+                                    <td>{{ $course->Course_DateEnd }}</td>
+                                    <td>{{ $course->Course_Capacity }}</td>
                                     <td>54</td>
                                     <td><a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></a></td>
                                     <td><a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i></a></td>
                                   </tr>
-                                  <tr>
-                                    <td>2</td>
-                                    <td>PEJABAT AGAMA ISLAM TEMERLOH</td>
-                                    <td>DEWAN KULIAH MASHAS TEMERLOH</td>
-                                    <td>28 - 29 JANUARI 2023</td>
-                                    <td>84</td>
-                                    <td>-</td>
-                                    <td><a class="btn"><i class="fa-solid fa-eye fa-xl"></i></a></td>
-                                    <td><a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i></a></td>
-                                  </tr>
+																	@endforeach
                                   <!-- Add more table rows here -->
                                 </tbody>
                               </table>
