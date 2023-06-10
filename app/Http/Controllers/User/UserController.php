@@ -82,4 +82,28 @@ class UserController extends Controller
 		$staff->delete();
 		return redirect()->route('admin.staff_list')->with('deleted', 'Staff deleted successfully!');
 	}
+
+
+
+	public function user_update(Request $request, $id)
+	{
+		$request->validate([
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$user = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$user->update($data);
+
+		return redirect()->route('user.home')->with('updated', 'You have updated successfully!');
+	}
 }

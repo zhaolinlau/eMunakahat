@@ -103,7 +103,7 @@
 						<a class="nav-link" id="admin_home" href="{{ route('admin.home') }}">Profil</a>
 						<a class="nav-link" id="staff_list" href="{{ route('admin.staff_list') }}">Senarai Staf</a>
 					@elseif (auth()->check() && auth()->user()->role == 'staff')
-						<a class="nav-link" href="{{ route('staff.home') }}">Profil</a>
+						<a class="nav-link" id="staff_home" href="{{ route('staff.home') }}">Profil</a>
 						<div class="btn-group" role="group">
 							<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
 								aria-expanded="false">
@@ -146,7 +146,7 @@
 							</ul>
 						</div>
 					@elseif (auth()->check() && auth()->user()->role == 'user')
-						<a class="nav-link" id="staff_home" href="{{ route('user.home') }}">Profil</a>
+						<a class="nav-link" id="user_home" href="{{ route('user.home') }}">Profil</a>
 						<a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
 						<a class="nav-link" href="{{ route('user.ApplicationPemohon')}}">Permohonan Berkahwin</a>
 						<div class="nav-item dropdown">

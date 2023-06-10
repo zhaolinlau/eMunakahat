@@ -54,6 +54,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
 	Route::get('/user', [HomeController::class, 'indexUser'])->name('user.home');
+	Route::put('/user/{id}/update', [UserController::class, 'user_update'])->name('user.update_profile');
 	Route::get('/Terms&Condition', [PreMarriageCourseController::class, 'indexCourse'])->name('user.terms');
 	Route::get('/Organization', [PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
 	Route::get('/ViewOrganization', [PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
