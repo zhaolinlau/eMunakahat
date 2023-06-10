@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Application_Info', function (Blueprint $table) {
+        Schema::create('Applicant_Info', function (Blueprint $table) {
             $table->id('Applicant_ID');
             $table->foreignId('id')->references('id')->on('users');
             $table->string('Applicant_DOB');
