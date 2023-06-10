@@ -60,21 +60,22 @@
     <div class="row ">
       <div class="col text-left g-5 ">
         <br>
-        <h5 style="color: rgb(254, 253, 253);">Pendaftaran Perkahwinan</h5>
+        <h5 style="color: rgb(254, 253, 253);">Pemohonan Pengesahan Nikah</h5>
         <br>
         <div class="container text-left">
           <div class="row ">
             <div class="col">
               <div class="border border-5 p-3 rounded-end rounded-start">
-                <h5 class="text-center" style="color: white">Carian Pendaftaran Perkahwinan</h5>
+                <h5 class="text-center" style="color: white">Senarai Pemohonan</h5>
                 <div class="container">
                   <table class="table" id="marriageTable">
                     <thead>
                       <tr>
                         <th>Bil</th>
-                        <th>No.Kad Pengenalan</th>
-                        <th>No.Slip Permohonan</th>
-                        <th>Tarikh Mohon</th>
+                        <th>No.KP Suami</th>
+                        <th>No.KP Isteri</th>
+                        <th>No.Akuan Terima</th>
+                        <th>Tarikh Terima</th>
                         <th>Status</th>
                         <th>Operasi</th>
                       </tr>
@@ -82,6 +83,7 @@
                     <tbody>
                       <tr>
                         <td>1</td>
+                        <td>90514015352</td>
                         <td>90514015352</td>
                         <td>M3/2020-0111112</td>
                         <td>23-10-2020</td>
@@ -119,6 +121,7 @@
                       <tr>
                         <td>2</td>
                         <td>90514015352</td>
+                        <td>90514015352</td>
                         <td>M3/2020-0112112</td>
                         <td>23-10-2020</td>
                         <td>TELAH HANTAR</td>
@@ -132,14 +135,14 @@
                       <!-- Add more table rows here -->
                     </tbody>
                   </table>
-                  <div class="col-12">
+                  {{-- <div class="col-12">
                     <button type="button" class="btn btn-success" onclick="navToForm()">Daftar Permohonan Baru </button>
                     <script>
                       function navToForm() {
                         window.location.href = "{{ route('user.Registerform') }}";
                       }
                     </script>
-                  </div>
+                  </div> --}}
                 </div>
 
                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
