@@ -15,10 +15,10 @@
 							<label for="ic" class="col-md-4 col-form-label text-md-end">{{ __('IC Number') }}</label>
 
 							<div class="col-md-6">
-								<input id="ic" type="text" class="form-control @error('ic') is-invalid @enderror" name="ic"
-									value="{{ old('ic') }}" required autocomplete="ic" autofocus>
+								<input id="ic" type="text" class="form-control @error('User_IC') is-invalid @enderror" name="User_IC"
+									value="{{ old('User_IC') }}" required autocomplete="User_IC" autofocus>
 
-								@error('ic')
+								@error('User_IC')
 								<span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								</span>
@@ -27,13 +27,13 @@
 						</div>
 
 						<div class="row mb-3">
-							<label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+							<label for="User_Name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
 							<div class="col-md-6">
-								<input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-									value="{{ old('name') }}" required autocomplete="name" autofocus>
+								<input id="User_Name" type="text" class="form-control @error('User_Name') is-invalid @enderror" name="User_Name"
+									value="{{ old('User_Name') }}" required autocomplete="User_Name" autofocus>
 
-								@error('name')
+								@error('User_Name')
 								<span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								</span>
@@ -42,17 +42,17 @@
 						</div>
 
 						<div class="row mb-3">
-							<label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
+							<label for="User_Gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
 
 							<div class="col-md-6">
-								<select id="gender" class="form-select @error('gender') is-invalid @enderror" name="gender" required
-									autocomplete="gender" autofocus>
+								<select id="User_Gender" class="form-select @error('User_Gender') is-invalid @enderror" name="User_Gender" required
+									autocomplete="User_Gender" autofocus>
 									<option value="" hidden selected></option>
-									<option value="male" {{ old('gender')==='male' ? 'selected' : '' }}>Male</option>
-									<option value="female" {{ old('gender')==='female' ? 'selected' : '' }}>Female</option>
+									<option value="Male" {{ old('User_Gender')==='Male' ? 'selected' : '' }}>Male</option>
+									<option value="Female" {{ old('User_Gender')==='Female' ? 'selected' : '' }}>Female</option>
 								</select>
 
-								@error('gender')
+								@error('User_Gender')
 								<span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								</span>
@@ -61,13 +61,13 @@
 						</div>
 
 						<div class="row mb-3">
-							<label for="contact" class="col-md-4 col-form-label text-md-end">{{ __('Contact') }}</label>
+							<label for="User_Phone_Number" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
 
 							<div class="col-md-6">
-								<input id="contact" type="text" class="form-control @error('contact') is-invalid @enderror"
-									name="contact" value="{{ old('contact') }}" required autocomplete="contact" autofocus>
+								<input id="User_Phone_Number" type="text" class="form-control @error('User_Phone_Number') is-invalid @enderror"
+									name="User_Phone_Number" value="{{ old('User_Phone_Number') }}" required autocomplete="User_Phone_Number" autofocus>
 
-								@error('contact')
+								@error('User_Phone_Number')
 								<span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								</span>

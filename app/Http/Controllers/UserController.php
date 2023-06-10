@@ -21,22 +21,22 @@ class UserController extends Controller
 	public function createStaff(Request $request)
 	{
 		$request->validate([
-			'ic' => 'required|unique:users,ic,|digits:12|numeric',
-			'staff_id' => 'required|unique:users,staff_id,|string',
-			'name' => 'required|string',
+			'User_IC' => 'required|unique:users,User_IC,|digits:12|numeric',
+			'Staff_ID' => 'required|unique:users,Staff_ID,|string',
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15,numeric',
+			'User_Gender' => 'required|in:Male,Female',
 			'email' => 'required|email|unique:users,email,|string',
-			'contact' => 'required|digits_between:10,15,numeric',
-			'gender' => 'required|in:male,female',
 			'password' => 'required|min:8|string|confirmed',
 		]);
 
 		$staff = new User();
-		$staff->staff_id = $request->staff_id;
-		$staff->ic = $request->staff_id;
-		$staff->name = $request->name;
+		$staff->Staff_ID = $request->Staff_ID;
+		$staff->User_IC = $request->User_IC;
+		$staff->User_Name = $request->User_Name;
+		$staff->User_Gender = $request->User_Gender;
+		$staff->User_Phone_Number = $request->User_Phone_Number;
 		$staff->email = $request->email;
-		$staff->gender = $request->gender;
-		$staff->contact = $request->contact;
 		$staff->password = bcrypt($request->password);
 		$staff->role = 1;
 		$staff->save();
@@ -52,12 +52,12 @@ class UserController extends Controller
 	public function updateStaff(Request $request, $id)
 	{
 		$request->validate([
-			'ic' => 'required|digits:12|unique:users,ic,' . $id,
-			'staff_id' => 'required|unique:users,staff_id,' . $id,
+			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
+			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'User_Gender' => 'required|in:Male,Female',
 			'email' => 'required|email|unique:users,email,' . $id,
-			'name' => 'required|string',
-			'contact' => 'required|digits_between:10,15|numeric',
-			'gender' => 'required|in:male,female',
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
 
