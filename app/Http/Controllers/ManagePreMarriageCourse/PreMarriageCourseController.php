@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ManagePreMarriageCourse;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Course_Info;
 
 class PreMarriageCourseController extends Controller
 {
@@ -12,7 +13,8 @@ class PreMarriageCourseController extends Controller
     }
 
     public function indexOrganization(){
-        return view ('ManagePreMarriageCourse.user.OrganizationList');
+        $Course_Info = Course_Info::all();
+        return view ('ManagePreMarriageCourse.user.OrganizationList', compact('Course_Info'));
     }
 
     public function indexViewOrganization(){

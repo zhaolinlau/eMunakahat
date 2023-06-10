@@ -111,9 +111,9 @@
 							</button>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{{ route('staff.LocationList') }}">Daftar Lokasi</a></li>
-								<li><a class="dropdown-item" href="#">Daftar Maklumat</a></li>
-								<li><a class="dropdown-item" href="#">Senarai Peserta</a></li>
-								<li><a class="dropdown-item" href="#">Kehadiran Peserta</a></li>
+								<li><a class="dropdown-item" href="{{ route('staff.InfoList') }}">Daftar Maklumat</a></li>
+								<li><a class="dropdown-item" href="{{ route('staff.ApplicantList') }}">Senarai Peserta</a></li>
+								<li><a class="dropdown-item" href="{{ route('staff.ApplicantAttendance') }}">Kehadiran Peserta</a></li>
 							</ul>
 						</div>
 						<div class="btn-group" role="group">
@@ -148,7 +148,7 @@
 					@elseif (auth()->check() && auth()->user()->role == 'user')
 						<a class="nav-link" id="staff_home" href="{{ route('user.home') }}">Profil</a>
 						<a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
-						<a class="nav-link" href="">Permohonan Berkahwin</a>
+						<a class="nav-link" href="{{ route('user.ApplicationPemohon')}}">Permohonan Berkahwin</a>
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="" id="pendaftaranDropdown" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>

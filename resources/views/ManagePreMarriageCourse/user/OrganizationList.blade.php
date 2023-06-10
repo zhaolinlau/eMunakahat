@@ -21,7 +21,8 @@
                                     <th>Bil</th>
                                     <th>Anjuran</th>
                                     <th>Tempat</th>
-                                    <th>Tarikh</th>
+                                    <th>Tarikh Mula</th>
+                                    <th>Tarikh Tamat</th>
                                     <th>Kapasiti Peserta</th>
                                     <th>Kekosongan</th>
                                     <th>Papar Lanjut</th>
@@ -34,6 +35,7 @@
                                     <td>1</td>
                                     <td>PEJABAT AGAMA ISLAM MARAN</td>
                                     <td>DEWAN AUDITORIUM AL-GHAZALI PAID MARAN</td>
+                                    <td>28 - 29 JANUARI 2023</td>
                                     <td>28 - 29 JANUARI 2023</td>
                                     <td>100</td>
                                     <td>54</td>
