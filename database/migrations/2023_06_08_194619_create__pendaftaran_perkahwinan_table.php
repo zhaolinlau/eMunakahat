@@ -22,11 +22,11 @@ return new class extends Migration
 		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 */
-	public function down(): void
-	{
-		Schema::dropIfExists('_pendaftaran_perkahwinan');
-	}
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('_pendaftaran_perkahwinan');
+    }
 };
