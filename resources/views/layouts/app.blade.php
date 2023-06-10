@@ -22,7 +22,7 @@
 	<div id="app">
 
 		<nav
-			class="navbar navbar-expand-md navbar-light shadow-sm 
+			class="navbar navbar-expand-md navbar-light sticky-top shadow-sm 
 		@if (auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'staff')) bg-secondary
 			@else
 				bg-primary @endif">
@@ -99,16 +99,11 @@
 			</div>
 			<div class="offcanvas-body">
 				<nav class="nav nav-pills flex-column">
-					<form action="" class="d-lg-none" method="get">
-						<div class="input-group">
-							<input class="form-control" type="text" placeholder="Search">
-							<button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-						</div>
-					</form>
-					<br>
-					<a class="nav-link" href="">Profile</a>
 					@if (auth()->check() && auth()->user()->role == 'admin')
+						<a class="nav-link" id="admin_home" href="{{ route('admin.home') }}">Profil</a>
+						<a class="nav-link" id="staff_list" href="{{ route('admin.staff_list') }}">Senarai Staf</a>
 					@elseif (auth()->check() && auth()->user()->role == 'staff')
+						<a class="nav-link" href="{{ route('staff.home') }}">Profil</a>
 						<div class="btn-group" role="group">
 							<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
 								aria-expanded="false">
@@ -151,6 +146,7 @@
 							</ul>
 						</div>
 					@elseif (auth()->check() && auth()->user()->role == 'user')
+						<a class="nav-link" id="staff_home" href="{{ route('user.home') }}">Profil</a>
 						<a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
 						<a class="nav-link" href="">Permohonan Berkahwin</a>
 						<div class="nav-item dropdown">

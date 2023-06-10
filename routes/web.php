@@ -41,44 +41,42 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
-Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
+	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
 
-Route::get('/LocationList',[PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
-Route::get('/InfoList',[PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
-Route::get('/ApplicantList',[PreMarriageCourseController::class, 'viewApplicantList'])->name('staff.ApplicantList');
-Route::get('/ApplicantAttendance',[PreMarriageCourseController::class, 'viewApplicantAttendance'])->name('staff.ApplicantAttendance');
+	Route::get('/LocationList', [PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
+	Route::get('/InfoList', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
+	Route::get('/ApplicantList', [PreMarriageCourseController::class, 'viewApplicantList'])->name('staff.ApplicantList');
+	Route::get('/ApplicantAttendance', [PreMarriageCourseController::class, 'viewApplicantAttendance'])->name('staff.ApplicantAttendance');
 
-Route::get('/ApplicationList',[MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
-Route::get('/ApplicationStatus',[MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
-
-
+	Route::get('/ApplicationList', [MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
+	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
 	Route::get('/user', [HomeController::class, 'indexUser'])->name('user.home');
-	Route::get('/Terms&Condition',[PreMarriageCourseController::class, 'indexCourse'])->name('user.terms');
-	Route::get('/Organization',[PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
-	Route::get('/ViewOrganization',[PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
-	Route::get('/CourseStatus',[PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
-	Route::get('/CourseForm',[PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
+	Route::get('/Terms&Condition', [PreMarriageCourseController::class, 'indexCourse'])->name('user.terms');
+	Route::get('/Organization', [PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
+	Route::get('/ViewOrganization', [PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
+	Route::get('/CourseStatus', [PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
+	Route::get('/CourseForm', [PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
 
-	
 
-	Route::get('/ApplicationPemohon',[MarriageApplicationController::class, 'indexPemohon'])->name('user.ApplicationPemohon');
-	Route::get('/ApplicationPasangan',[MarriageApplicationController::class, 'indexPasangan'])->name('user.ApplicationPasangan');
-	Route::get('/ApplicationPerkahwinan',[MarriageApplicationController::class, 'indexPerkahwinan'])->name('user.ApplicationPerkahwinan');
-	Route::get('/ApplicationConsent',[MarriageApplicationController::class, 'indexConsent'])->name('user.ApplicationConsent');
-	Route::get('/ApplicationHiv',[MarriageApplicationController::class, 'indexHiv'])->name('user.ApplicationHiv');
-	Route::get('/ApplicationResident',[MarriageApplicationController::class, 'indexResident'])->name('user.ApplicationResident');
-	Route::get('/ApplicationPermission',[MarriageApplicationController::class, 'indexPermission'])->name('user.ApplicationPermission');
-	Route::get('/ApplicationChecklist',[MarriageApplicationController::class, 'indexChecklist'])->name('user.ApplicationChecklist');
 
-	
+	Route::get('/ApplicationPemohon', [MarriageApplicationController::class, 'indexPemohon'])->name('user.ApplicationPemohon');
+	Route::get('/ApplicationPasangan', [MarriageApplicationController::class, 'indexPasangan'])->name('user.ApplicationPasangan');
+	Route::get('/ApplicationPerkahwinan', [MarriageApplicationController::class, 'indexPerkahwinan'])->name('user.ApplicationPerkahwinan');
+	Route::get('/ApplicationConsent', [MarriageApplicationController::class, 'indexConsent'])->name('user.ApplicationConsent');
+	Route::get('/ApplicationHiv', [MarriageApplicationController::class, 'indexHiv'])->name('user.ApplicationHiv');
+	Route::get('/ApplicationResident', [MarriageApplicationController::class, 'indexResident'])->name('user.ApplicationResident');
+	Route::get('/ApplicationPermission', [MarriageApplicationController::class, 'indexPermission'])->name('user.ApplicationPermission');
+	Route::get('/ApplicationChecklist', [MarriageApplicationController::class, 'indexChecklist'])->name('user.ApplicationChecklist');
 
-	Route::get('/MarriageRegistration',[MarriageRegistrationController::class,'indexRegister'])->name('user.Registerform');
-	Route::get('/RegistrationList',[MarriageRegistrationController::class,'indexList'])->name('user.RegisterList');
-	Route::get('/RegistrationForm',[MarriageRegistrationController::class,'indexForm'])->name('user.RegisterNewForm');
-	Route::get('/RegistrationFormPasangan',[MarriageRegistrationController::class,'indexFormPasangan'])->name('user.RegisterFormPasangan');
+
+
+	Route::get('/MarriageRegistration', [MarriageRegistrationController::class, 'indexRegister'])->name('user.Registerform');
+	Route::get('/RegistrationList', [MarriageRegistrationController::class, 'indexList'])->name('user.RegisterList');
+	Route::get('/RegistrationForm', [MarriageRegistrationController::class, 'indexForm'])->name('user.RegisterNewForm');
+	Route::get('/RegistrationFormPasangan', [MarriageRegistrationController::class, 'indexFormPasangan'])->name('user.RegisterFormPasangan');
 	Route::get('/RegistrationMaklumat', [MarriageRegistrationController::class, 'indexMaklumat'])->name('user.MaklumatPerkahwinan');
 	Route::get('/RegistrationMaklumat2', [MarriageRegistrationController::class, 'indexMaklumat2'])->name('user.MaklumatPerkahwinan2');
 
@@ -86,5 +84,4 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/MarriageCertificate&Card2', [MarriageCardController::class, 'indexCard2'])->name('user.MarriageCard2');
 
 	Route::get('/MarriageApproval_', [MarriageApprovalController::class, 'indexApproval'])->name('staf.MarriageApproval');
-
 });
