@@ -12,8 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('_pendaftaran_perkahwinan', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('');
+            $table->string('RegistrationNo')->unique();
+            $table->string('Registration_Type');
+            $table->string('Registration_Date');
+            $table->string('Registration_Status');
+			$table->foreignId('id')->references('id')->on('users');
+            $table->string('Approval_ID');
+            $table->string('PaymentNo');
+              
         });
     }
 
