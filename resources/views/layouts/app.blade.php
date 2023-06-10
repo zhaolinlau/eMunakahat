@@ -178,6 +178,18 @@
 			<script>
 				const year = new Date().getFullYear()
 				document.getElementById('year').innerHTML = year;
+
+				document.querySelectorAll('.nav-item.dropdown').forEach(function(element) {
+        element.addEventListener('mouseenter', function() {
+          this.querySelector('.dropdown-menu').classList.add('show');
+          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', true);
+        });
+
+        element.addEventListener('mouseleave', function() {
+          this.querySelector('.dropdown-menu').classList.remove('show');
+          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+        });
+      });
 			</script>
 		</div>
 

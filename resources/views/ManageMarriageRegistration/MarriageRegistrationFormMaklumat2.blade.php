@@ -30,26 +30,6 @@
     }
   </style>
 
-  <nav class="navbar shadow-sm fixed-top" style="background-color: #2F9577">
-    <div class="container-fluid">
-      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive"
-        aria-controls="offcanvasResponsive"><i class="fa-solid fa-bars fa-xl"></i></button>
-      <a class="navbar-brand d-none d-lg-flex" href="./">
-        e-Munakahat
-      </a>
-
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-user fa-xl"></i>
-          <span>test</span>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-          <li><a class="dropdown-item" href="">My Profile</a></li>
-          <li><a class="dropdown-item" href="">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <div class="container">
     <div class="row">
       <div class="col text-left g-5">
@@ -224,71 +204,6 @@
     </div>
   </div>
 
-
-
-
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasResponsive"
-    aria-labelledby="offcanvasResponsiveLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">
-        <span class="d-none d-lg-flex">Menu</span>
-        <span class="d-lg-none">e-Munakahat</span>
-      </h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
-        aria-label="Close"></button>
-    </div>
-
-    <div class="offcanvas-body">
-      <nav class="nav nav-pills flex-column">
-        <form action="" class="d-lg-none" method="get">
-          <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search">
-            <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-        </form>
-        <br>
-        <a class="nav-link" href="">Profile</a>
-        <a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
-        <a class="nav-link" href="">Permohonan Berkahwin</a>
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="pendaftaranDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>
-          <ul class="dropdown-menu" aria-labelledby="pendaftaranDropdown">
-            <li><a class="nav-link " href="{{ route('user.MarriageCard') }}">Kad Nikah</a></li>
-            <li><a class="nav-link" href="{{ route('user.RegisterList') }}">Carian Pendaftaran</a></li>
-          </ul>
-          <a class="nav-link" href="">Khidmat Nasihat</a>
-
-        </div>
-      </nav>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col text-center">
-          Copyright &COPY; <span id="year"></span> e-Munakahat. All Rights Reserved.
-        </div>
-      </div>
-    </div>
-    <script src="{{ mix('resources/js/validation.js') }}"></script>
-    <script>
-      const year = new Date().getFullYear()
-      document.getElementById('year').innerHTML = year;
-
-      // script for dropdown hover
-      document.querySelectorAll('.nav-item.dropdown').forEach(function(element) {
-        element.addEventListener('mouseenter', function() {
-          this.querySelector('.dropdown-menu').classList.add('show');
-          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', true);
-        });
-
-        element.addEventListener('mouseleave', function() {
-          this.querySelector('.dropdown-menu').classList.remove('show');
-          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
-        });
-      });
-    </script>
-  </div>
 
   <style>
     body {
