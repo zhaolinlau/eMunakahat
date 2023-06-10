@@ -61,9 +61,8 @@
 									<form action="{{ route('admin.delete_staff', $row->id) }}" method="POST">
 										@csrf
 										@method('DELETE')
-										<button type="submit" class="btn btn-danger" onclick="return confirm('Confirm to delete?')">Delete</button>
+										<button type="submit" class="btn btn-danger">Delete</button>
 									</form>
-
 								</td>
 							</tr>
 						@endforeach

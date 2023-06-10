@@ -106,4 +106,52 @@ class UserController extends Controller
 
 		return redirect()->route('user.home')->with('updated', 'You have updated successfully!');
 	}
+
+	public function staff_update(Request $request, $id)
+	{
+		$request->validate([
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$staff = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$staff->update($data);
+
+		return redirect()->route('staff.home')->with('updated', 'You have updated successfully!');
+	}
+
+
+	public function admin_update(Request $request, $id)
+	{
+		$request->validate([
+			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
+			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'User_Gender' => 'required|in:Male,Female',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$admin = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$admin->update($data);
+
+		return redirect()->route('admin.home')->with('updated', 'You have updated successfully!');
+	}
 }

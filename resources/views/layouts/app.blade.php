@@ -148,7 +148,7 @@
 					@elseif (auth()->check() && auth()->user()->role == 'user')
 						<a class="nav-link" id="user_home" href="{{ route('user.home') }}">Profil</a>
 						<a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
-						<a class="nav-link" href="{{ route('user.ApplicationPemohon')}}">Permohonan Berkahwin</a>
+						<a class="nav-link" href="{{ route('user.ApplicationPemohon') }}">Permohonan Berkahwin</a>
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="" id="pendaftaranDropdown" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>

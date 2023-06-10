@@ -32,6 +32,7 @@ Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function () {
 	Route::get('/admin', [HomeController::class, 'indexAdmin'])->name('admin.home');
+	Route::put('/admin/{id}/update', [UserController::class, 'admin_update'])->name('admin.update_profile');
 	Route::get('/admin/staff_list', [UserController::class, 'readStaff'])->name('admin.staff_list');
 	Route::get('/admin/staff_list/staff_form', [UserController::class, 'staffForm'])->name('admin.staff_form');
 	Route::post('/admin/staff_list/add_staff', [UserController::class, 'createStaff'])->name('admin.add_staff');
@@ -42,7 +43,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
 	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
-
+	Route::put('/staff/{id}/update', [UserController::class, 'staff_update'])->name('staff.update_profile');
 	Route::get('/LocationList', [PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
 	Route::get('/InfoList', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
 	Route::get('/ApplicantList', [PreMarriageCourseController::class, 'viewApplicantList'])->name('staff.ApplicantList');

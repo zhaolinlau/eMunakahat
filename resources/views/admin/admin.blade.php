@@ -4,9 +4,17 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col py-5">
-				<form action="" class="row p-5 g-3 bg-white shadow rounded-5 needs-validation" method="POST" novalidate>
+				<form action="{{ route('admin.update_profile', auth()->user()->id) }}" class="row p-5 g-3 bg-secondary shadow rounded-5 needs-validation" method="POST" novalidate>
 					@csrf
 					@method('PUT')
+					@if (session('updated'))
+						<div class="col-12">
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								<strong>{{ session('updated') }}</strong>
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						</div>
+					@endif
 					<div class="col-12">
 						<h3>Profil</h3>
 					</div>
@@ -45,14 +53,14 @@
 
 					<div class="col-6">
 						<label for="User_Gender" class="form-label">Gender</label>
-						<select id="User_Gender" class="form-select @error('User_Gender') is-invalid @enderror" name="User_Gender" required
-							disabled>
-							<option value="{{ auth()->user()->User_Gender }}" selected>{{ auth()->user()->User_Gender }}</option>
+						<select id="User_Gender" class="form-select @error('User_Gender') is-invalid @enderror" name="User_Gender" required>
+							<option value="Male" {{ old('User_Gender', auth()->user()->User_Gender == 'Male' ? 'selected' : '') }}>Male</option>
+							<option value="Female" {{ old('User_Gender', auth()->user()->User_Gender == 'Female' ? 'selected' : '') }}>Female</option>
 						</select>
 						@error('User_Gender')
-							<div class="invalid-feedback">
-								{{ $message }}
-							</div>
+						<div class="invalid-feedback">
+							{{ $message }}
+						</div>
 						@enderror
 					</div>
 
@@ -94,7 +102,7 @@
 					</div>
 
 					<div class="col-12">
-						<button type="submit" class="btn btn-primary" onclick="return confirm('Confirm to update?')">Update</button>
+						<button type="submit" class="btn btn-primary">Update</button>
 					</div>
 				</form>
 			</div>
