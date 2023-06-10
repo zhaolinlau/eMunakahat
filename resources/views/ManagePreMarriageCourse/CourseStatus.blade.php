@@ -65,7 +65,7 @@
                                 </tbody>
                                 </table>
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-success" role="button" href="{{ route('user.terms') }}">Kembali </button>
+                                    <a type="button" class="btn btn-success" role="button" href="{{ route('user.terms') }}">Kembali </a>
                                 </div>
                             </div>
                             <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

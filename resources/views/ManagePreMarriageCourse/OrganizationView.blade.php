@@ -94,7 +94,7 @@
                             </table>-->
                             </form>
                             <br>
-                            <a class="btn btn-success" href="{{ route('user.terms') }}">Kembali</a>  
+                            <a class="btn btn-success" href="{{ route('user.organization') }}">Kembali</a>  
                         </div>
                     </div> 
                 </div>
