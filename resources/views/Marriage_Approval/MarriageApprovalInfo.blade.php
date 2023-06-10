@@ -223,7 +223,7 @@
 
                   .border {
                     border: 5px solid #000;
-                    background-color: #56BFA0;
+                    background-color: #ADB0B2;
                     border-color: #D2F4EA;
                   }
                 </style>
