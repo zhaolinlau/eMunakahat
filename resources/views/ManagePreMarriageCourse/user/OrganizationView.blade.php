@@ -34,7 +34,11 @@
 										</div>
 			
 										<div class="col-12">
-											<label for="masa" class="col-sm col-form-label">Masa : </label> {{ $course->Course_Time }}
+											<label for="masa" class="col-sm col-form-label">Masa Dari: </label> {{ $course->Course_TimeStart }}
+										</div>
+
+										<div class="col-12">
+											<label for="masa" class="col-sm col-form-label">Masa Hingga: </label> {{ $course->Course_TimeEnd }}
 										</div>
 			
 										<div class="col-12">

@@ -13,6 +13,28 @@
 					<div class="row ">
 						<div class="col">
 							<div class="border border-5 p-3 rounded-end rounded-start" style="height: auto; width: auto;">
+								@if (session('created'))
+									<div class="col-12">
+										<div class="alert alert-success alert-dismissible fade show" role="alert">
+											<strong>{{ session('created') }}</strong>
+											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+										</div>
+									</div>
+								@elseif (session('updated'))
+									<div class="col-12">
+										<div class="alert alert-success alert-dismissible fade show" role="alert">
+											<strong>{{ session('updated') }}</strong>
+											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+										</div>
+									</div>
+								@elseif (session('deleted'))
+									<div class="col-12">
+										<div class="alert alert-success alert-dismissible fade show" role="alert">
+											<strong>{{ session('deleted') }}</strong>
+											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+										</div>
+									</div>
+								@endif
 								<div class="border border-5 p-1 text-bg-dark rounded-end rounded-start" style="height: auto;">
 									<h5 class="text-center" style="color: white">DAFTAR LOKASI</h5>
 								</div>
@@ -57,8 +79,13 @@
 													<td>{{ $course->Course_District }}</td>
 													<td>{{ $course->Course_StaffNo }}</td>
 													<td>
-														<a class="btn" href="{{ route('staff.InfoList', $course->Course_ID) }}"><i class="fa-solid fa-pen-to-square fa-sm "></i></a>
-														<a class="btn"><i class="fa-solid fa-trash-can fa-sm"></i></a>
+														<a class="btn" href="{{ route('staff.InfoList', $course->Course_ID) }}"><i
+																class="fa-solid fa-pen-to-square fa-sm "></i></a>
+														<form action="{{ route('staff.deleteCourse', $course->Course_ID) }}" method="POST">
+															@csrf
+															@method('DELETE')
+															<button type="submit" class="btn"><i class="fa-solid fa-trash-can fa-sm"></i></button>
+														</form>
 													</td>
 												</tr>
 											@endforeach
