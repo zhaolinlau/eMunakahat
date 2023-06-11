@@ -66,7 +66,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::put('/user/{id}/update', [UserController::class, 'user_update'])->name('user.update_profile');
 	Route::get('/Terms&Condition', [PreMarriageCourseController::class, 'indexCourse'])->name('user.terms');
 	Route::get('/Organization', [PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
-	Route::get('/ViewOrganization/{Course_ID}', [PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
+	Route::get('/ViewOrganization/{course_id}', [PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
 	Route::get('/CourseStatus', [PreMarriageCourseController::class, 'indexCourseStatus'])->name('user.courseStatus');
 	Route::get('/CourseForm', [PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
 

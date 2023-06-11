@@ -23,4 +23,6 @@ class Course extends Model
 			'Course_Staff',
 			'Course_StaffNo',
 		];
+
+		protected $primaryKey = 'course_id';
 }
