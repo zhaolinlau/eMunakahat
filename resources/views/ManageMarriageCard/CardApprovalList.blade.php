@@ -50,8 +50,8 @@
                         <td>
                           <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i
                               class="fa-solid fa-eye fa-lg"></i></a>
-                          <a class="btn" href="{{ route('staff.ApprovalInfo') }}"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
-                          <a class="btn" href="{{ route('staff.ApprovalInfo') }}"><i class="fa-solid fa-file-circle-check fa-lg "></i></a>
+                          <a class="btn" href="{{ route('staff.CardApprovalInfo') }}"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                          <a class="btn" href="{{ route('staff.CardApprovalInfo') }}"><i class="fa-solid fa-file-circle-check fa-lg "></i></a>
                           <a class="btn"><i class="fa-solid fa-print fa-lg"></i></a>
                           <a class="btn"><i class="fa-solid fa-trash-can fa-lg"></i></a>
                         </td>
