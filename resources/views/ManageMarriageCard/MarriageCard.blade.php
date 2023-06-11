@@ -46,8 +46,8 @@
                 <form action="" method="" class="row g-3 needs-validation" novalidate>
                   <!--form for name-->
                   <div class="col-md-7">
-                    <label for="name">Nama Suami:</label>
-                    <input type="text" class="form-control" id="name"{{--  placeholder="Sila Masukkan Nama Penuh* --}} required>
+                    <label for="namesuami">Nama Suami:</label>
+                    <input type="text" class="form-control" id="namesuami" required>
                     <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
                     <div class="invalid-feedback">
                       Sila masukkan Nama.
@@ -88,6 +88,7 @@
                   <div class="col-md-4">
                     <label for="Pendaftaran">No.Resit Bayaran:</label>
                     <div class="input-group">
+                      {{-- print--}}
                       <input type="text" class="form-control" id="Pendaftaran" required>
                       <button class="btn" onclick="printReceipt()"><i class="fa-solid fa-print fa-xl"></i></button>
                     </div>
@@ -95,7 +96,7 @@
                       Sila masukkan Nombor Sijil
                     </div>
 
-                    {{-- checkbox --}}
+                    
 
                     <div class="col-md-6">
                       <label for="PilihanPenghantaran">Pilihan Penghantaran:</label>
@@ -123,8 +124,7 @@
                     <div class="col-12 mt-3">
                       <!-- Add margin-bottom to create spacing -->
                       <a class="btn btn-success " href="{{ route('user.MarriageCard2') }}">Simpan</a>
-                      {{-- <a class="btn btn-success " href="#">Seterusnya</a> --}}
-                    </div>
+                      
                 </form>
               </div>
             </div>
