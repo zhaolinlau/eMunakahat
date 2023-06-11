@@ -61,6 +61,8 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
 
 	Route::get('/ApprovalMarriage', [MarriageRegistrationController::class, 'indexApproval'])->name('staff.Approval');
+	Route::get('/ApprovalInfo', [MarriageRegistrationController::class, 'indexApprovalInfo'])->name('staff.ApprovalInfo');
+
 
 });
 
