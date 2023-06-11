@@ -35,6 +35,11 @@ class MarriageRegistrationController extends Controller
     {
         return view('ManageMarriageRegistration.MarriageRegistrationFormMaklumat2');
     }
+
+    public function indexMaklumat3() 
+    {
+        return view('ManageMarriageRegistration.MarriageRegistrationFormMaklumat3');
+    }
 }
 
 

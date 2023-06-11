@@ -65,112 +65,164 @@
                     </a>
                   </li>
                 </ul>
-                <!--form for ic-->
-                <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT PERKAHWINAN</h6>
+
+                <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT WALI</h6>
                 <form action="" method="post" class="row g-3 needs-validation" novalidate>
-                  <div class="col-md-4">
-                    <label for="tarikhmohon">Tarikh Mohon</label>
-                    <input type="date" class="form-control" name="tarikhmohon" id="tarikhmohon">
-                  </div>
 
                   <!--form for name-->
                   <div class="col-md-7">
-                    <label for="name">Nama Pemohon:</label>
-                    <input type="text" class="form-control" id="name" required>
-                    <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
+                    <label for="namewali">Nama Wali:</label>
+                    <input type="text" class="form-control" id="namewali" required>
+                    <small class="form-text text-muted">Sila masukkan Nama Wali.</small>
                     <div class="invalid-feedback">
                       Sila masukkan Nama.
                     </div>
-
                   </div>
 
-                  <div class="col-md-7">
-                    <label for="name">Nama Pasangan:</label>
-                    <input type="text" class="form-control" id="name" required>
-                    <small class="form-text text-muted">Sila masukkan Nama Penuh.</small>
+                  <div class="col-7">
+                    <label for="icNumber">No.K/P Wali</label>
+                    <input type="text" class="form-control" id="icNumber" pattern="[0-9]{12}" required>
+                    <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
                     <div class="invalid-feedback">
-                      Sila masukkan Nama.
+                      Sila masukkan Nombor IC yang sah.
                     </div>
-
-                  </div>
-
-                  <div class="col-md-7">
-                    <label for="name">Negara:</label>
-                    <select class="form-select" id="Negara" required>
-                      <option value="" hidden selected>pilih</option>
-                      <option value="1">Melayu</option>
-                      <option value="2">Cina</option>
-                      <option value="3">India</option>
-                      <option value="4">Bangladesh</option>
-                      <option value="5">Pakistan</option>
-                      <option value="6">Indonesian</option>
-                      <option value="7">Arab</option>
-                      <option value="8">Bumiputera Sabah</option>
-                      <option value="9">Bumiputera Sarawak</option>
-                      <option value="10">Lain-lain</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Sila Pilih Negara.
-                    </div>
-
-
-                  </div>
-
-                  <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT CADANGAN MAJLIS AKAD
-                    NIKAH</h6>
-
-
-                  <div class="col-md-4">
-                    <label for="tarikh">Tarikh Akad Nikah</label>
-                    <input type="date" class="form-control" name="tarikh" id="tarikh">
                   </div>
 
                   <div class="col-12">
-                    <label for="AlamatKahwin ">Alamat Tempat Kahwin</label>
-                    <input type="text" class="form-control" id="AlamatKahwin " required>
+                    <label for="AlamatWali ">Alamat Wali</label>
+                    <input type="text" class="form-control" id="AlamatWali " required>
                     <small class="form-text text-muted">Sila masukkan Alamat</small>
                     <div class="invalid-feedback">
                       Sila masukkan Alamat.
                     </div>
+                  </div>
 
+                  <div class="col-md-6">
+                    <label for="tarikhlahirwali">Tarikh Lahir Wali</label>
+                    <input type="date" class="form-control" name="tarikhlahirwali" id="tarikhmohon">
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <label for="umurwali">Umur Wali:</label>
+                    <input type="text" class="form-control" id="umurwali" required>
+                    <small class="form-text text-muted">Sila masukkan Umur Wali.</small>
+                    <div class="invalid-feedback">
+                      Sila masukkan Umur.
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="hubungan">Hubungan:</label>
+                    <input type="text" class="form-control" id="hubungan" required>
+                    <small class="form-text text-muted">Sila Masukkan Hubungan wali .</small>
+                    <div class="invalid-feedback">
+                      Masukkan Hubungan Wali
+                    </div>
+
+                  </div>
+
+                  <h6 class="text-left" style="color: white; background-color: #2F9577;">MAKLUMAT SAKSI (Untuk
+                    Mengesahkan Borang Pemohonan Kebenaran Kahwin)</h6>
+                  <form action="" method="post" class="row g-3 needs-validation" novalidate>
+
+
+                    <div class="col-md-7">
+                      <label for="saksi1">Nama Saksi 1:</label>
+                      <input type="text" class="form-control" id="saksi1" required>
+                      <small class="form-text text-muted">Sila masukkan Nama Saksi.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nama Saksi.
+                      </div>
+                    </div>
+
+                    <div class="col-7">
+                      <label for="icNumbersaksi1">No.K/P Saksi 1</label>
+                      <input type="text" class="form-control" id="icNumbersaksi1" pattern="[0-9]{12}" required>
+                      <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor IC yang sah.
+                      </div>
+                    </div>
 
                     <div class="col-4">
-                      <label for="Maskahwin">Mas Kahwin</label>
-                      <input type="text" class="form-control" id="Maskahwin" required>
+                      <label for="umursaksi1">Umur Saksi 1</label>
+                      <input type="text" class="form-control" id="umursaksi1" required>
                       <div class="invalid-feedback">
-                        Sila masukkan Maskahwin.
+                        Sila masukkan Umur.
                       </div>
-
                     </div>
-                    <!--form for name-->
-                    <div class="col-md-4">
-                      <label for="JenisMaskahwin">Jenis Mas Kahwin</label>
-                      <input type="text" class="form-control" id="JenisMaskahwin" required>
+
+                    <div class="col-12">
+                      <label for="Alamatsaksi1 ">Alamat Saksi 1:</label>
+                      <input type="text" class="form-control" id="Alamatsaksi1 " required>
+                      <small class="form-text text-muted">Sila masukkan Alamat</small>
                       <div class="invalid-feedback">
-                        Sila masukkan Jenis Mas Kahwin.
+                        Sila masukkan Alamat.
                       </div>
-
                     </div>
 
-                    <div class="col-md-3">
-                      <label for="Mas_Kahwin" class="form-label">Mas Kahwin:</label>
-                      <input type="text" id="Mas_Kahwin" class="form-control" value="RM 22.50" readonly>
-                      <small class="form-text text-muted">*Tetapan Mas Kahwin Bagi Negeri Pahang</small>
+                    <div class="col-md-5">
+                      <label for="NoTelsaksi1">No Telefon Saksi 1</label>
+                      <input type="text" class="form-control" id="NoTelsaksi1" pattern="[0-9]{11}"required>
+                      <small class="form-text text-muted">Sila masukkan No telefon</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor Tel yang sah.
+                      </div>
                     </div>
 
-                    <div class="col-md-7">
-                      <label for="Hantaran">Hantaran</label>
-                      <input type="text" class="form-control" id="Hantaran" required>
+
+
+                    <div class="col-md-8">
+                      <label for="saksi2">Nama Saksi 2:</label>
+                      <input type="text" class="form-control" id="saksi2" required>
+                      <small class="form-text text-muted">Sila masukkan Nama Saksi.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nama Saksi.
+                      </div>
                     </div>
 
-                    <div class="col-md-7">
-                      <label for="Pemberian">Pemberian Lain</label>
-                      <input type="text" class="form-control" id="Pemberian" required>
-
+                    <div class="col-8">
+                      <label for="icNumbersaksi2">No.K/P Saksi 2</label>
+                      <input type="text" class="form-control" id="icNumbersaksi2" pattern="[0-9]{12}" required>
+                      <small class="form-text text-muted">Sila masukkan No IC 12 Digit.</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor IC yang sah.
+                      </div>
                     </div>
-                    <div class="col-md-7">
-                      <label for="Jurunikah">Nama Jurunikah</label>
-                      <input type="text" class="form-control" id="Jurunikah" required>
+
+                    <div class="col-5">
+                      <label for="umursaksi2">Umur Saksi 2</label>
+                      <input type="text" class="form-control" id="umursaksi2" required>
+                      <div class="invalid-feedback">
+                        Sila masukkan Umur.
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="Alamatsaksi2 ">Alamat Saksi 2:</label>
+                      <input type="text" class="form-control" id="Alamatsaksi2 " required>
+                      <small class="form-text text-muted">Sila masukkan Alamat</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Alamat.
+                      </div>
+                    </div>
+
+                    <div class="col-md-5">
+                      <label for="NoTelsaksi2">No Telefon Saksi 2</label>
+                      <input type="text" class="form-control" id="NoTelsaksi2" pattern="[0-9]{11}"required>
+                      <small class="form-text text-muted">Sila masukkan No telefon</small>
+                      <div class="invalid-feedback">
+                        Sila masukkan Nombor Tel yang sah.
+                      </div>
+                    </div>
+
+                    <div class="col-5">
+                      <label for="Lafaz">Lafaz Ta'liq</label>
+                      <input type="text" class="form-control" id="Lafaz" required>
+                      <div class="invalid-feedback">
+                        SilaLafaz Ta'liq
+                      </div>
                     </div>
 
 
@@ -183,26 +235,27 @@
                     <label for="inputField" class="float-right">Sila isi semua ruangan diatas</label>
 
 
-                  </div>
-              
+                    <div class="col-12 d-flex justify-content-center mt-3">
+                      <a class="btn btn-success " href="{{ route('user.MaklumatPerkahwinan') }}">Kembali</a>
+                      <a class="btn btn-success " href="{{ route('user.MaklumatPerkahwinan') }}">Seterusnya</a>
+                    </div>
+                    
+                  
 
-              <div class="d-flex justify-content-center mt-3">
-                <a class="btn btn-success" href="{{ route('user.MarriageCard2') }}">Seterusnya</a>
+
+                  </form>
               </div>
 
-              </form>
             </div>
 
+
           </div>
+
         </div>
 
 
-
       </div>
-
-
     </div>
-  </div>
 
 
   <style>
@@ -211,10 +264,10 @@
       background-size: cover;
     }
 
-    .border {
-      border: 5px solid #000;
-      background-color: #56BFA0;
-      border-color: #D2F4EA;
-    }
-  </style>
-@endsection
+      .border {
+        border: 5px solid #000;
+        background-color: #56BFA0;
+        border-color: #D2F4EA;
+      }
+    </style>
+  @endsection
