@@ -13,20 +13,44 @@
           <div class="col">
             <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto; width: auto;">
               <h5 class="text-center" style="color: white">Pengesahan Nikah >> Senarai Pemohon >> Maklumat Kelulusan</h5>
-              <div class="container">
+              <div class="col-5 mt-5">
                 <label for="namasuami">Nama Suami:</label>
-                <input type="text" class="form-control" id="name" required>
-                  
-                      
+                <input type="text" class="form-control" id="name" required>        
               </div>
-              <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-              <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-              <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-              <script>
-                $(document).ready(function() {
-                  $('#applicationStatusTable').DataTable();
-                });
-              </script>
+
+              <div class="col-5 mt-3">
+                <label for="namaisteri">Nama Isteri:</label>
+                <input type="text" class="form-control" id="name" required>        
+              </div>
+
+              <div class="col-5 mt-3">
+                <label for="namasuami">Tarikh Mohon:</label>
+                <input type="date" class="form-control" id="name" required>        
+              </div>
+
+              <div class="col-5 mt-3">
+                <label for="namasuami">No Pemohonan Online:</label>
+                <input type="text" class="form-control" id="name" required>        
+              </div>
+
+              <div class="col-5 mt-3">
+                <label for="namasuami">No Akuan Terima:</label>
+                <input type="text" class="form-control" id="name" required>        
+              </div>
+
+              <div class="col-5 mt-3">
+                <label for="status">Status</label>
+                <select id="status" name="dropdown">
+                  <option value="option1">LULUS</option>
+                  <option value="option2">GAGAL</option>
+                </select>  
+              </div> 
+                
+                <div class="col-5 mt-3">
+                  <label for="tarikhlulus">Tarikh Kelulusan</label>
+                  <input type="date" class="form-control" name="tariklulus" id="tarikhlulus">
+                </div>
+
             </div>
           </div>
         </div>
