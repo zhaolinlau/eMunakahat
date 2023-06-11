@@ -1,25 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-  <nav class="navbar shadow-sm fixed-top" style="background-color: #ADB0B2">
-    <div class="container-fluid">
-      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive"
-        aria-controls="offcanvasResponsive"><i class="fa-solid fa-bars fa-xl"></i></button>
-      <a class="navbar-brand d-none d-lg-flex" href="./">
-        e-Munakahat
-      </a>
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-user fa-xl"></i>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-          <li><a class="dropdown-item" href="">My Profile</a></li>
-          <li><a class="dropdown-item" href="">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
   <div class="container">
     <div class="row ">
       <div class="col text-left g-5 ">
@@ -54,7 +36,7 @@
                           <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i
                               class="fa-solid fa-eye fa-lg"></i></a>
                           <a class="btn"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
-                          <a class="btn" href=""><i class="fa-solid fa-file-circle-check fa-lg "></i></a>
+                          <a class="btn" href="{{ route('staff.ApprovalInfo') }}"><i class="fa-solid fa-file-circle-check fa-lg "></i></a>
                           <a class="btn"><i class="fa-solid fa-print fa-lg"></i></a>
                           <a class="btn"><i class="fa-solid fa-trash-can fa-lg"></i></a>
                         </td>
@@ -68,8 +50,8 @@
                         <td>
                           <a class="btn" href="{{ route('staff.ApplicationStatus') }}"><i
                               class="fa-solid fa-eye fa-lg"></i></a>
-                          <a class="btn"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
-                          <a class="btn" href=""><i class="fa-solid fa-file-circle-check fa-lg "></i></a>
+                          <a class="btn" href="{{ route('staff.ApprovalInfo') }}"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                          <a class="btn" href="{{ route('staff.ApprovalInfo') }}"><i class="fa-solid fa-file-circle-check fa-lg "></i></a>
                           <a class="btn"><i class="fa-solid fa-print fa-lg"></i></a>
                           <a class="btn"><i class="fa-solid fa-trash-can fa-lg"></i></a>
                         </td>
