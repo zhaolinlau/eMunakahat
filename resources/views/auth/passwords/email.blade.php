@@ -5,7 +5,7 @@
 	<div class="row justify-content-center h-100 align-items-center">
 		<div class="col-md-8 py-5">
 			<div class="card">
-				<div class="card-header">{{ __('Tetapan Semula Kata Laluan') }}</div>
+				<div class="card-header bg-primary">{{ __('Tetapan Semula Kata Laluan') }}</div>
 
 				<div class="card-body">
 					@if (session('status'))
