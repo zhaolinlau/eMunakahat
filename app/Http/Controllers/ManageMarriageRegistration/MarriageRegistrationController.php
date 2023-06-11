@@ -41,7 +41,7 @@ class MarriageRegistrationController extends Controller
         return view('ManageMarriageRegistration.MarriageRegistrationFormMaklumat3');
     }
 
-    public function Approval()
+    public function indexApproval()
     {
         return view('ManageMarriageRegistration.ApprovalMarriage');
     }
