@@ -22,9 +22,9 @@
                             <label for="SektorPekerjaan" class="col-sm col-form-label">No. Daftar</label>
                             <select class="form-select" id="SektorPekerjaan" required>
                                 <option value="" hidden selected>Sila Pilih</option>
-                                <option value="1">Sektor Awam</option>
-                                <option value="2">Sektor Swasta</option>
-                                <option value="3">Sendirian</option>
+                                <option value="1">NK23-001</option>
+                                <option value="2">NK23-002</option>
+                                <option value="3">NK23-003</option>
                             </select>
                         </div>
                         <div class="row">
@@ -42,9 +42,8 @@
                             <label for="SektorPekerjaan" class="col-sm col-form-label">Cara Perjumpaan</label>
                             <select class="form-select" id="SektorPekerjaan" required>
                                 <option value="" hidden selected>Sila Pilih</option>
-                                <option value="1">Sektor Awam</option>
-                                <option value="2">Sektor Swasta</option>
-                                <option value="3">Sendirian</option>
+                                <option value="1">Secara atas Talian</option>
+                                <option value="2">Secara fizikal</option>
                             </select>
 
 
@@ -54,8 +53,8 @@
 
                     <div class="col-12 mt-3">
                       <!-- Add margin-bottom to create spacing -->
-                      <button type="submit" class="btn btn-success" role="button"
-                       >Hantar</button>
+                      <a button type="submit" class="btn btn-success" role="button" href="{{route('staff.ConsultationSessionStatus')}}"
+                       >Hantar</a>
                     </div>
                 </form>
               </div>

@@ -14,29 +14,28 @@
                 <!-- Content -->
                 <div class="container text-left">
                     <div class="row">
-                        <div class="col">
+                        <div class="table" id="infoTable">
                             <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
                                 <ul class="nav nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                                     <li class="nav-item bg-dark-green border border-white" role="presentation">
-                                      <a class="nav-link text-white" href="{{ route('user.RegisterNewForm') }}">Maklumat
+                                      <a class="nav-link text-white" >Maklumat
                                         Pemohon
                                       </a>
                                     </li>
                                     <li class="nav-item border bg-dark-green border-white" role="presentation">
-                                        <a class="nav-link text-white" href="{{ route('user.RegisterFormPasangan') }}">
-                                          Maklumat Pasangan
-                                        </a>
+                                        <a class="nav-link text-white">Maklumat Pasangan</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="container">
         
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked">
+                        <label class="form-check-label text-white" for="flexCheckChecked" >
                           Jika Maklumat Diatas adalah benar dan terkini
                         </label>
                     </div>
@@ -78,4 +77,7 @@
     border-color: #D2F4EA;
   }
 </style>
+
+
+
 @endsection

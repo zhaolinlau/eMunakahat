@@ -144,8 +144,9 @@
 								Khidmat Nasihat
 							</button>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Permohonan Khidmat Nasihat</a></li>
-								<li><a class="dropdown-item" href="#">Semak Permohonan Khidmat Nasihat</a></li>
+								<li><a class="dropdown-item" href="{{route('staff.ConsultationApplicationApproval')}}">Senarai Permohonan</a></li>
+								<li><a class="dropdown-item" href="{{route('staff.ConsultationSessionStatus_S')}}">Semak Permohonan Khidmat Nasihat</a></li>
+								<li><a class="dropdown-item" href="{{route('staff.ConsultationSessionSchedule')}}">Jadual Sesi Khidmat Nasihat</a></li>
 							</ul>
 						</div>
 
