@@ -2,12 +2,6 @@
 
 @section('content')
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-	<style>
-		body {
-			background-image: url("img/bg.jpg");
-			background-size: cover;
-		}
-	</style>
 	<div class="container">
 		<div class="row g-3 w-100">
 
