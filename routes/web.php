@@ -59,6 +59,9 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 
 	Route::get('/ApplicationList', [MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
 	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
+
+	Route::get('/ApprovalMarriage', [MarriageRegistrationController::class, 'indexApproval'])->name('staff.Approval');
+
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
@@ -91,12 +94,11 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/RegistrationMaklumat2', [MarriageRegistrationController::class, 'indexMaklumat2'])->name('user.MaklumatPerkahwinan2');
 	Route::get('/RegistrationMaklumat3', [MarriageRegistrationController::class, 'indexMaklumat3'])->name('user.MaklumatPerkahwinan3');
 
-	Route::get('/ApprovalMarriage', [MarriageRegistrationController::class, 'Approval'])->name('staff.Approval');
-
+	
 
 
 	Route::get('/MarriageCertificate&Card', [MarriageCardController::class, 'indexCard'])->name('user.MarriageCard');
 	Route::get('/MarriageCertificate&Card2', [MarriageCardController::class, 'indexCard2'])->name('user.MarriageCard2');
 
-	Route::get('/MarriageApproval_', [MarriageApprovalController::class, 'indexApproval'])->name('staf.MarriageApproval');
+	
 });
