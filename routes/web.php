@@ -48,21 +48,24 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
-	Route::post('/addCourse', [PreMarriageCourseController::class, 'addCourse'])->name('staff.addCourse');
-	Route::get('/InfoList/{course_id}', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
-	Route::put('/InfoList/{course_id}/update', [PreMarriageCourseController::class, 'updateLocation'])->name('staff.updateLocation');
-	Route::delete('/InfoList/{course_id}/delete', [PreMarriageCourseController::class, 'deleteCourse'])->name('staff.deleteCourse');
+	
 	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
 	Route::get('/staff/user_list', [UserController::class, 'readUser'])->name('staff.user_list');
 	Route::get('/staff/user_list/profile/{id}', [UserController::class, 'readUserProfile'])->name('staff.user_profile');
 	Route::put('/staff/user_list/profile/{id}/update', [UserController::class, 'updateUser'])->name('staff.update_user');
 	Route::delete('/staff/user_list/profile/{id}/delete', [UserController::class, 'deleteUser'])->name('staff.delete_user');
 	Route::put('/staff/{id}/update', [UserController::class, 'staff_update'])->name('staff.update_profile');
+
+	// PreMarriage Course for staff
+	Route::post('/addCourse', [PreMarriageCourseController::class, 'addCourse'])->name('staff.addCourse');
+	Route::get('/InfoList/{course_id}', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
+	Route::put('/InfoList/{course_id}/update', [PreMarriageCourseController::class, 'updateLocation'])->name('staff.updateLocation');
+	Route::delete('/InfoList/{course_id}/delete', [PreMarriageCourseController::class, 'deleteCourse'])->name('staff.deleteCourse');
 	Route::get('/LocationList', [PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
-	
 	Route::get('/ApplicantList', [PreMarriageCourseController::class, 'viewApplicantList'])->name('staff.ApplicantList');
 	Route::get('/ApplicantAttendance', [PreMarriageCourseController::class, 'viewApplicantAttendance'])->name('staff.ApplicantAttendance');
 
+	// Marriage Application for staff
 	Route::get('/ApplicationList', [MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
 	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
 
@@ -85,6 +88,8 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
 	Route::get('/user', [HomeController::class, 'indexUser'])->name('user.home');
 	Route::put('/user/{id}/update', [UserController::class, 'user_update'])->name('user.update_profile');
+
+	// PreMarriage Course for user
 	Route::get('/Terms&Condition', [PreMarriageCourseController::class, 'indexCourse'])->name('user.terms');
 	Route::get('/Organization', [PreMarriageCourseController::class, 'indexOrganization'])->name('user.organization');
 	Route::get('/ViewOrganization/{course_id}', [PreMarriageCourseController::class, 'indexViewOrganization'])->name('user.viewOrganization');
@@ -92,7 +97,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/CourseForm', [PreMarriageCourseController::class, 'indexCourseForm'])->name('user.courseForm');
 
 
-
+// Marriage Application for user
 	Route::get('/ApplicationPemohon', [MarriageApplicationController::class, 'indexPemohon'])->name('user.ApplicationPemohon');
 	Route::get('/ApplicationPasangan', [MarriageApplicationController::class, 'indexPasangan'])->name('user.ApplicationPasangan');
 	Route::get('/ApplicationPerkahwinan', [MarriageApplicationController::class, 'indexPerkahwinan'])->name('user.ApplicationPerkahwinan');
