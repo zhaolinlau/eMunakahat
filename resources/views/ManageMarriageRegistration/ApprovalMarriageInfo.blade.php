@@ -25,18 +25,18 @@
                   </div>
 
                   <div class="col-5 mt-3">
-                    <label for="namasuami">Tarikh Mohon:</label>
-                    <input type="date" class="form-control" id="name" required>
+                    <label for="Tarikhmohon">Tarikh Mohon:</label>
+                    <input type="date" class="form-control" id="Tarikhmohon" required>
                   </div>
 
                   <div class="col-5 mt-3">
-                    <label for="namasuami">No Pemohonan Online:</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <label for="Nopermohonan">No Pemohonan Online:</label>
+                    <input type="text" class="form-control" id="Nopermohonan" required>
                   </div>
 
                   <div class="col-5 mt-3">
-                    <label for="namasuami">No Akuan Terima:</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <label for="Noakuan">No Akuan Terima:</label>
+                    <input type="text" class="form-control" id="Noakuan" required>
                   </div>
 
                   <div class="col-5 mt-3">
@@ -55,7 +55,7 @@
                   <div class="col-10 mt-3 text-end">
                     <button type="submit" class="btn btn-secondary btn-with-border">Simpan</button>
                     <a href="{{ route('staff.Approval') }}" class="btn btn-secondary btn-with-border">Kembali</a>
-                    <a href="{{ route('staff.Approval') }}" class="btn btn-secondary btn-with-border">Seterusnya</a>
+                    <a href="{{ route('staff.ApprovalDoc') }}" class="btn btn-secondary btn-with-border">Seterusnya</a>
                   </div>
                   <style>
                     /* ...existing styles... */

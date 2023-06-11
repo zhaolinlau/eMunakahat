@@ -136,7 +136,7 @@
 							</button>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{{ route('staff.Approval') }}">Pengesahan Pendaftaran Nikah</a></li>
-								<li><a class="dropdown-item" href="#">2</a></li>
+								<li><a class="dropdown-item" href="{{ route('user.CardApprovalList') }}">Pengesahan Kad Nikah</a></li>
 							</ul>
 						</div>
 						<div class="btn-group" role="group">
