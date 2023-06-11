@@ -8,12 +8,14 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+	//Retrieve a list of data of staff.
 	public function readStaff()
 	{
 		$staffs = User::where('role', 1)->orderBy('id', 'desc')->get();
 		return view('admin.staff_list', compact('staffs'));
 	}
 
+	//Retrieve a list of data of brides and grooms.
 	public function readUser()
 	{
 		$users = User::where('role', 0)->orderBy('id', 'desc')->get();
@@ -25,11 +27,13 @@ class UserController extends Controller
 		}
 	}
 
+	// Show staff account registration form.
 	public function staffForm()
 	{
 		return view('admin.staff_form');
 	}
 
+	// Create a new staff account.
 	public function createStaff(Request $request)
 	{
 		$request->validate([
@@ -55,12 +59,14 @@ class UserController extends Controller
 		return redirect()->route('admin.staff_list')->with('created', 'Akaun staf berjaya didaftar!');
 	}
 
+	// Show the specific staff profile information.
 	public function readStaffProfile($id)
 	{
 		$staff = User::findOrFail($id);
 		return view('admin.staff_profile', compact('staff'));
 	}
 
+	// Show a specific user profile.
 	public function readUserProfile($id)
 	{
 		$user = User::findOrFail($id);
@@ -72,6 +78,7 @@ class UserController extends Controller
 		}
 	}
 
+	// Update a specific staff profile.
 	public function updateStaff(Request $request, $id)
 	{
 		$request->validate([
@@ -97,6 +104,7 @@ class UserController extends Controller
 		return redirect()->route('admin.staff_list')->with('updated', 'Profil staf berjaya dikemaskini!');
 	}
 
+	// Update a specific user profile.
 	public function updateUser(Request $request, $id)
 	{
 		$request->validate([
@@ -126,6 +134,7 @@ class UserController extends Controller
 		}
 	}
 
+	// Delete a specific staff account.
 	public function deleteStaff($id)
 	{
 		$staff = User::findOrFail($id);
@@ -133,6 +142,7 @@ class UserController extends Controller
 		return redirect()->route('admin.staff_list')->with('deleted', 'Akaun staf berjaya dipadam!');
 	}
 
+	//Delete account of a groom or bride.
 	public function deleteUser($id)
 	{
 		$user = User::findOrFail($id);
@@ -145,6 +155,7 @@ class UserController extends Controller
 		}
 	}
 
+	// User update own profile information.
 	public function user_update(Request $request, $id)
 	{
 		$request->validate([
@@ -167,6 +178,7 @@ class UserController extends Controller
 		return redirect()->route('user.home')->with('updated', 'Anda berjaya kemaskini!');
 	}
 
+	// Staff update own profile.
 	public function staff_update(Request $request, $id)
 	{
 		$request->validate([
@@ -190,6 +202,7 @@ class UserController extends Controller
 	}
 
 
+	// Update admin profile information.
 	public function admin_update(Request $request, $id)
 	{
 		$request->validate([

@@ -21,16 +21,20 @@ class HomeController extends Controller
 	 *
 	 * @return \Illuminate\Contracts\Support\Renderable
 	 */
+	
+	 // Show admin dashboard.
 	public function indexAdmin()
 	{
 		return view('admin.admin');
 	}
 
+	// Show staff dashboard.
 	public function indexStaff()
 	{
 		return view('staff.staff');
 	}
 
+	// Show user dashboard.
 	public function indexUser()
 	{
 		return view('user.user');
