@@ -53,13 +53,13 @@
 						@guest
 							@if (Route::has('login'))
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+									<a class="nav-link" href="{{ route('login') }}">{{ __('Log Masuk') }}</a>
 								</li>
 							@endif
 
 							@if (Route::has('register'))
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+									<a class="nav-link" href="{{ route('register') }}">{{ __('Daftar') }}</a>
 								</li>
 							@endif
 						@else
@@ -73,7 +73,7 @@
 									<a class="dropdown-item" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-										{{ __('Logout') }}
+										{{ __('Log Keluar') }}
 									</a>
 
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

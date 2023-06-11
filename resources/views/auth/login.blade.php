@@ -18,7 +18,7 @@
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 							</span>
 							@endif
-							<label for="User_IC" class="col-md-4 col-form-label text-md-end">{{ __('IC Number') }}</label>
+							<label for="User_IC" class="col-md-4 col-form-label text-md-end">{{ __('Nombor Kad Pengenalan') }}</label>
 
 							<div class="col-md-6">
 								<input id="User_IC" type="text" class="form-control @error('User_IC') is-invalid @enderror" name="User_IC"
@@ -33,7 +33,7 @@
 						</div>
 
 						<div class="row mb-3">
-							<label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+							<label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Kata Laluan') }}</label>
 
 							<div class="col-md-6">
 								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
@@ -54,7 +54,7 @@
 										? 'checked' : '' }}>
 
 									<label class="form-check-label" for="remember">
-										{{ __('Remember Me') }}
+										{{ __('Ingat Saya') }}
 									</label>
 								</div>
 							</div>
@@ -63,12 +63,12 @@
 						<div class="row mb-0">
 							<div class="col-md-8 offset-md-4">
 								<button type="submit" class="btn btn-primary">
-									{{ __('Login') }}
+									{{ __('Log Masuk') }}
 								</button>
 
 								@if (Route::has('password.request'))
 								<a class="btn btn-link" href="{{ route('password.request') }}">
-									{{ __('Forgot Your Password?') }}
+									{{ __('Lupa Kata Laluan Anda?') }}
 								</a>
 								@endif
 							</div>
