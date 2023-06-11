@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-100">
 
 <head>
 	<meta charset="utf-8">
@@ -14,15 +14,17 @@
 	<link rel="dns-prefetch" href="//fonts.bunny.net">
 	<link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+	<link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
+
 	<!-- Scripts -->
 	@vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
-<body>
-	<div id="app">
+<body class="h-100">
+	<div id="app" class="h-100">
 
 		<nav
-			class="navbar navbar-expand-md navbar-light sticky-top shadow-sm 
+			class="navbar navbar-expand-md navbar-light fixed-top shadow-sm 
 		@if (auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'staff')) bg-secondary
 			@else
 				bg-primary @endif">
@@ -53,13 +55,13 @@
 						@guest
 							@if (Route::has('login'))
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+									<a class="nav-link" href="{{ route('login') }}">{{ __('Log Masuk') }}</a>
 								</li>
 							@endif
 
 							@if (Route::has('register'))
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+									<a class="nav-link" href="{{ route('register') }}">{{ __('Daftar') }}</a>
 								</li>
 							@endif
 						@else
@@ -73,7 +75,7 @@
 									<a class="dropdown-item" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-										{{ __('Logout') }}
+										{{ __('Log Keluar') }}
 									</a>
 
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -176,7 +178,7 @@
 			</script>
 		</div>
 
-		<main class="py-4">
+		<main class="h-100">
 			@yield('content')
 		</main>
 	</div>

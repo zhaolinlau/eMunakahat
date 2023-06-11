@@ -30,7 +30,7 @@
 
 			<div class="col-12">
 				<a class="btn btn-primary" href="{{ route('admin.staff_form') }}">
-					Add Staff
+					Tambah Staf
 				</a>
 			</div>
 
@@ -38,12 +38,12 @@
 				<table class="table full-width table-hover" id="staff_table">
 					<thead class="table-light">
 						<tr>
-							<th>No</th>
-							<th>Staff ID</th>
-							<th>Username</th>
-							<th>Email</th>
-							<th>View</th>
-							<th>Deletion</th>
+							<th>Bil</th>
+							<th>ID Staf</th>
+							<th>Nama Penuh</th>
+							<th>Emel</th>
+							<th>Lihat</th>
+							<th>Pemadaman</th>
 						</tr>
 					</thead>
 
@@ -55,13 +55,13 @@
 								<td>{{ $staff->User_Name }}</td>
 								<td><a href="mailto:{{ $staff->email }}">{{ $staff->email }}</a></td>
 								<td>
-									<a href="{{ route('admin.staff_profile', $staff->id) }}" class="btn btn-info">Profile</a>
+									<a href="{{ route('admin.staff_profile', $staff->id) }}" class="btn btn-info">Profil</a>
 								</td>
 								<td>
 									<form action="{{ route('admin.delete_staff', $staff->id) }}" method="POST">
 										@csrf
 										@method('DELETE')
-										<button type="submit" class="btn btn-danger">Delete</button>
+										<button type="submit" class="btn btn-danger">Padam</button>
 									</form>
 								</td>
 							</tr>
@@ -70,12 +70,12 @@
 
 					<tfoot>
 						<tr>
-							<th>No</th>
-							<th>Staff ID</th>
-							<th>Username</th>
-							<th>Email</th>
-							<th>View</th>
-							<th>Deletion</th>
+							<th>Bil</th>
+							<th>ID Staf</th>
+							<th>Nama Penuh</th>
+							<th>Emel</th>
+							<th>Lihat</th>
+							<th>Pemadaman</th>
 						</tr>
 					</tfoot>
 				</table>
