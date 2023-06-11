@@ -37,7 +37,7 @@ class UserController extends Controller
 			'Staff_ID' => 'required|unique:users,Staff_ID,|string',
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15,numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,|string',
 			'password' => 'required|min:8|string|confirmed',
 		]);
@@ -79,7 +79,7 @@ class UserController extends Controller
 			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,' . $id,
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
@@ -103,7 +103,7 @@ class UserController extends Controller
 			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,' . $id,
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
@@ -197,7 +197,7 @@ class UserController extends Controller
 			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,' . $id,
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
