@@ -31,11 +31,38 @@ class PreMarriageCourseController extends Controller
     }
 
     public function viewLocationList(){
-        return view ('ManagePreMarriageCourse.staff.CourseLocationList');
+        $courses = Course::all();
+        return view ('ManagePreMarriageCourse.staff.CourseLocationList', compact('courses'));
     }
 
-    public function viewInfoList(){
-        return view ('ManagePreMarriageCourse.staff.CourseInfoList');
+    public function viewInfoList($courseId){
+        $course = Course::findOrFail($courseId);
+        return view ('ManagePreMarriageCourse.staff.CourseInfoList', compact('course'));
+    }
+
+    public function updateLocation(Request $request, $courseId){
+        $request->validate([
+            'PAID' => 'required',
+            'Daerah' => 'required',
+            'TarikhMula' => 'required',
+            'MasaDari' => 'required',
+            'PegawaiBertugas' => 'required',
+            'NoTelPegawai' => 'required',
+            'TarikhTamat' => 'required',
+            'MasaHingga' => 'required',
+            'Kapasiti' => 'required',
+            'PaparUmum' => 'required',
+			'Tempat' => 'required',
+			'Alamat' => 'required',
+			'Daerah' => 'required',
+			'NoTelefon' => 'required',
+		]);
+
+		$course = Course::findOrFail($courseId);
+
+		$course->update();
+
+		return redirect()->route('staff.LocationList');
     }
 
     public function viewApplicantList(){
@@ -48,25 +75,18 @@ class PreMarriageCourseController extends Controller
     
     public function addCourse(Request $request){
         $request->validate([
-			'User_IC' => 'required|unique:users,User_IC,|digits:12|numeric',
-			'Staff_ID' => 'required|unique:users,Staff_ID,|string',
-			'User_Name' => 'required|string',
-			'User_Phone_Number' => 'required|digits_between:10,15,numeric',
-			'User_Gender' => 'required|in:Lelaki,Perempuan',
-			'email' => 'required|email|unique:users,email,|string',
-			'password' => 'required|min:8|string|confirmed',
+			'Tempat' => 'required|string',
+			'Alamat' => 'required|string',
+			'Daerah' => 'required|string',
+			'NoTelefon' => 'required|string',
 		]);
 
-		$staff = new User();
-		$staff->Staff_ID = $request->Staff_ID;
-		$staff->User_IC = $request->User_IC;
-		$staff->User_Name = $request->User_Name;
-		$staff->User_Gender = $request->User_Gender;
-		$staff->User_Phone_Number = $request->User_Phone_Number;
-		$staff->email = $request->email;
-		$staff->password = bcrypt($request->password);
-		$staff->role = 1;
-		$staff->save();
-		return redirect()->route('admin.staff_list')->with('created', 'Akaun staf berjaya didaftar!');
+		$course = new Course();
+		$course->Course_Venue = $request->Tempat;
+		$course->Course_Address = $request->Alamat;
+		$course->Course_District = $request->Daerah;
+		$course->Course_StaffNo = $request->NoTelefon;
+		$course->save();
+		return redirect()->route('staff.LocationList');
     }
 }
