@@ -105,6 +105,7 @@
 						<a class="nav-link" id="user_list" href="{{ route('admin.user_list') }}">Senarai Pengguna</a>
 					@elseif (auth()->check() && auth()->user()->role == 'staff')
 						<a class="nav-link" id="staff_home" href="{{ route('staff.home') }}">Profil</a>
+						<a class="nav-link" id="user_list" href="{{ route('staff.user_list') }}">Senarai Pengguna</a>
 						<div class="btn-group" role="group">
 							<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
 								aria-expanded="false">

@@ -47,6 +47,10 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
 	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
+	Route::get('/staff/user_list', [UserController::class, 'readUser'])->name('staff.user_list');
+	Route::get('/staff/user_list/profile/{id}', [UserController::class, 'readUserProfile'])->name('staff.user_profile');
+	Route::put('/staff/user_list/profile/{id}/update', [UserController::class, 'updateUser'])->name('staff.update_user');
+	Route::delete('/staff/user_list/profile/{id}/delete', [UserController::class, 'deleteUser'])->name('staff.delete_user');
 	Route::put('/staff/{id}/update', [UserController::class, 'staff_update'])->name('staff.update_profile');
 	Route::get('/LocationList', [PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
 	Route::get('/InfoList', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');

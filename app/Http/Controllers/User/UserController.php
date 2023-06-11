@@ -17,7 +17,12 @@ class UserController extends Controller
 	public function readUser()
 	{
 		$users = User::where('role', 0)->orderBy('id', 'desc')->get();
-		return view('admin.user_list', compact('users'));
+
+		if (auth()->user()->role == 'admin') {
+			return view('admin.user_list', compact('users'));
+		} elseif (auth()->user()->role == 'staff') {
+			return view('staff.user_list', compact('users'));
+		}
 	}
 
 	public function staffForm()
@@ -59,7 +64,12 @@ class UserController extends Controller
 	public function readUserProfile($id)
 	{
 		$user = User::findOrFail($id);
-		return view('admin.user_profile', compact('user'));
+
+		if (auth()->user()->role == 'admin') {
+			return view('admin.user_profile', compact('user'));
+		} elseif (auth()->user()->role == 'staff') {
+			return view('staff.user_profile', compact('user'));
+		}
 	}
 
 	public function updateStaff(Request $request, $id)
@@ -108,7 +118,12 @@ class UserController extends Controller
 
 		$user->update($data);
 
-		return redirect()->route('admin.user_list')->with('updated', 'User updated successfully!');
+
+		if (auth()->user()->role == 'admin') {
+			return redirect()->route('admin.user_list')->with('updated', 'User updated successfully!');
+		} elseif (auth()->user()->role == 'staff') {
+			return redirect()->route('staff.user_list')->with('updated', 'User updated successfully!');
+		}
 	}
 
 	public function deleteStaff($id)
@@ -122,7 +137,12 @@ class UserController extends Controller
 	{
 		$user = User::findOrFail($id);
 		$user->delete();
-		return redirect()->route('admin.user_list')->with('deleted', 'User deleted successfully!');
+
+		if (auth()->user()->role == 'admin') {
+			return redirect()->route('admin.user_list')->with('deleted', 'User deleted successfully!');
+		} elseif (auth()->user()->role == 'staff') {
+			return redirect()->route('staff.user_list')->with('deleted', 'User deleted successfully!');
+		}
 	}
 
 	public function user_update(Request $request, $id)
