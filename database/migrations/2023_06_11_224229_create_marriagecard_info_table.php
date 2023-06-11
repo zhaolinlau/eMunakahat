@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Witness_Info', function (Blueprint $table) {
-            $table->id('Witness_IC');
-            $table->string('Witness_Name');
-            $table->string('Witnes_Address');
-            $table->string('Witness_PhoneNo');
-            $table->string('Witness_MarriageCategory');
+        Schema::create('marriagecard_info', function (Blueprint $table) {
+            $table->id('card');
             $table->timestamps();
         });
     }
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Witness_Info');
+        Schema::dropIfExists('marriagecard_info');
     }
 };
