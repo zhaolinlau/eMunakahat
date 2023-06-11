@@ -59,7 +59,7 @@ class LoginController extends Controller
 		} else {
 			return redirect()
 				->route('login')
-				->with('error', 'Invalid ic number or password.');
+				->with('error', 'Nombor kad pengenalan atau kata laluan tidak sah.');
 		}
 	}
 }
