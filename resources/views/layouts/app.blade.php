@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-100">
 
 <head>
 	<meta charset="utf-8">
@@ -20,11 +20,11 @@
 	@vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
-<body>
-	<div id="app">
+<body class="h-100">
+	<div id="app" class="h-100">
 
 		<nav
-			class="navbar navbar-expand-md navbar-light sticky-top shadow-sm 
+			class="navbar navbar-expand-md navbar-light fixed-top shadow-sm 
 		@if (auth()->check() && (auth()->user()->role == 'admin' || auth()->user()->role == 'staff')) bg-secondary
 			@else
 				bg-primary @endif">
@@ -178,7 +178,7 @@
 			</script>
 		</div>
 
-		<main class="py-4">
+		<main class="h-100">
 			@yield('content')
 		</main>
 	</div>
