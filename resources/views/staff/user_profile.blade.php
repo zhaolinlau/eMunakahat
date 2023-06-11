@@ -93,8 +93,8 @@
 					</div>
 
 					<div class="col-12">
-						<button type="submit" class="btn btn-primary">Kemaskini</button>
-						<a class="btn btn-danger" href="{{ route('staff.user_list') }}">Batal</a>
+						<button type="submit" class="btn btn-primary" onclick="return confirm('Sahkan kemaskini?')">Kemaskini</button>
+						<a class="btn btn-danger" href="{{ route('staff.user_list') }}" onclick="return confirm('Sahkan padam?')">Batal</a>
 					</div>
 				</form>
 			</div>

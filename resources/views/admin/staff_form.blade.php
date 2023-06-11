@@ -111,7 +111,7 @@
 
 
 					<div class="col-12">
-						<button type="submit" class="btn btn-primary">Daftar</button>
+						<button type="submit" class="btn btn-primary" onclick="return confirm('Sahkan daftar?')">Daftar</button>
 						<a class="btn btn-danger" href="{{ route('admin.staff_list') }}">Batal</a>
 					</div>
 				</form>
