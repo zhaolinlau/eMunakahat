@@ -10,8 +10,14 @@ class UserController extends Controller
 {
 	public function readStaff()
 	{
-		$staff = User::where('role', 1)->orderBy('id', 'desc')->get();
-		return view('admin.staff_list', compact('staff'));
+		$staffs = User::where('role', 1)->orderBy('id', 'desc')->get();
+		return view('admin.staff_list', compact('staffs'));
+	}
+
+	public function readUser()
+	{
+		$users = User::where('role', 0)->orderBy('id', 'desc')->get();
+		return view('admin.user_list', compact('users'));
 	}
 
 	public function staffForm()
@@ -50,6 +56,12 @@ class UserController extends Controller
 		return view('admin.staff_profile', compact('staff'));
 	}
 
+	public function readUserProfile($id)
+	{
+		$user = User::findOrFail($id);
+		return view('admin.user_profile', compact('user'));
+	}
+
 	public function updateStaff(Request $request, $id)
 	{
 		$request->validate([
@@ -75,6 +87,29 @@ class UserController extends Controller
 		return redirect()->route('admin.staff_list')->with('updated', 'Staff updated successfully!');
 	}
 
+	public function updateUser(Request $request, $id)
+	{
+		$request->validate([
+			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'User_Gender' => 'required|in:Male,Female',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$user = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$user->update($data);
+
+		return redirect()->route('admin.user_list')->with('updated', 'User updated successfully!');
+	}
 
 	public function deleteStaff($id)
 	{
@@ -83,7 +118,12 @@ class UserController extends Controller
 		return redirect()->route('admin.staff_list')->with('deleted', 'Staff deleted successfully!');
 	}
 
-
+	public function deleteUser($id)
+	{
+		$user = User::findOrFail($id);
+		$user->delete();
+		return redirect()->route('admin.user_list')->with('deleted', 'User deleted successfully!');
+	}
 
 	public function user_update(Request $request, $id)
 	{

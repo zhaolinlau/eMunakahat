@@ -5,14 +5,7 @@
 	<div class="container">
 		<div class="row g-3 w-100">
 
-			@if (session('created'))
-				<div class="col-12">
-					<div class="alert alert-success alert-dismissible fade show" role="alert">
-						<strong>{{ session('created') }}</strong>
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-					</div>
-				</div>
-			@elseif (session('updated'))
+			@if (session('updated'))
 				<div class="col-12">
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
 						<strong>{{ session('updated') }}</strong>
@@ -28,18 +21,12 @@
 				</div>
 			@endif
 
-			<div class="col-12">
-				<a class="btn btn-primary" href="{{ route('admin.staff_form') }}">
-					Add Staff
-				</a>
-			</div>
-
 			<div class="col-12 table-responsive">
-				<table class="table full-width table-hover" id="staff_table">
+				<table class="table full-width table-hover" id="user_table">
 					<thead class="table-light">
 						<tr>
 							<th>No</th>
-							<th>Staff ID</th>
+							<th>IC</th>
 							<th>Username</th>
 							<th>Email</th>
 							<th>View</th>
@@ -48,17 +35,17 @@
 					</thead>
 
 					<tbody>
-						@foreach ($staffs as $staff)
+						@foreach ($users as $user)
 							<tr>
 								<td>{{ $loop->iteration }}</td>
-								<td>{{ $staff->Staff_ID }}</td>
-								<td>{{ $staff->User_Name }}</td>
-								<td><a href="mailto:{{ $staff->email }}">{{ $staff->email }}</a></td>
+								<td>{{ $user->User_IC }}</td>
+								<td>{{ $user->User_Name }}</td>
+								<td><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></td>
 								<td>
-									<a href="{{ route('admin.staff_profile', $staff->id) }}" class="btn btn-info">Profile</a>
+									<a href="{{ route('admin.user_profile', $user->id) }}" class="btn btn-info">Profile</a>
 								</td>
 								<td>
-									<form action="{{ route('admin.delete_staff', $staff->id) }}" method="POST">
+									<form action="{{ route('admin.delete_user', $user->id) }}" method="POST">
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger">Delete</button>
@@ -87,9 +74,9 @@
 	<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$('#staff_table').DataTable();
+			$('#user_table').DataTable();
 		});
 
-		document.getElementById('staff_list').classList.add('active');
+		document.getElementById('user_list').classList.add('active');
 	</script>
 @endsection

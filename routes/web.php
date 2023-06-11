@@ -34,11 +34,15 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 	Route::get('/admin', [HomeController::class, 'indexAdmin'])->name('admin.home');
 	Route::put('/admin/{id}/update', [UserController::class, 'admin_update'])->name('admin.update_profile');
 	Route::get('/admin/staff_list', [UserController::class, 'readStaff'])->name('admin.staff_list');
+	Route::get('/admin/user_list', [UserController::class, 'readUser'])->name('admin.user_list');
 	Route::get('/admin/staff_list/staff_form', [UserController::class, 'staffForm'])->name('admin.staff_form');
 	Route::post('/admin/staff_list/add_staff', [UserController::class, 'createStaff'])->name('admin.add_staff');
 	Route::get('/admin/staff_list/profile/{id}', [UserController::class, 'readStaffProfile'])->name('admin.staff_profile');
+	Route::get('/admin/user_list/profile/{id}', [UserController::class, 'readUserProfile'])->name('admin.user_profile');
 	Route::put('/admin/staff_list/profile/{id}/update', [UserController::class, 'updateStaff'])->name('admin.update_staff');
+	Route::put('/admin/user_list/profile/{id}/update', [UserController::class, 'updateUser'])->name('admin.update_user');
 	Route::delete('/admin/staff_list/profile/{id}/delete', [UserController::class, 'deleteStaff'])->name('admin.delete_staff');
+	Route::delete('/admin/user_list/profile/{id}/delete', [UserController::class, 'deleteUser'])->name('admin.delete_user');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {

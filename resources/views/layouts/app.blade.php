@@ -102,6 +102,7 @@
 					@if (auth()->check() && auth()->user()->role == 'admin')
 						<a class="nav-link" id="admin_home" href="{{ route('admin.home') }}">Profil</a>
 						<a class="nav-link" id="staff_list" href="{{ route('admin.staff_list') }}">Senarai Staf</a>
+						<a class="nav-link" id="user_list" href="{{ route('admin.user_list') }}">Senarai Pengguna</a>
 					@elseif (auth()->check() && auth()->user()->role == 'staff')
 						<a class="nav-link" id="staff_home" href="{{ route('staff.home') }}">Profil</a>
 						<div class="btn-group" role="group">
