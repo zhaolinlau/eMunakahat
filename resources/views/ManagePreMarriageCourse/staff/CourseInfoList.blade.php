@@ -16,14 +16,18 @@
                 <div class="border border-5 p-1 text-bg-dark rounded-end rounded-start" style="height: auto;">
                   <h5 class="text-center" style="color: white">DAFTAR MAKLUMAT</h5>
                 </div>
-                <form>
+                <form action="{{route('staff.updateLocation', $course->Course_ID)}}" method="post">
+                  @csrf
+                  @method('PUT')
                   <div class="row">
                     <div class="col-4" style="margin-left: auto; margin-right: auto;">
                       <label for="PAID" class="col-sm col-form-label">PAID</label>
-                      <input type="text" class="form-control" id="PAID" required>
+                      <input type="text" class="form-control" id="PAID" name="PAID" required>
                       <div class="invalid-feedback">
                         Sila pilih PAID
                       </div>
+                      <label for="Daerah" class="col-sm col-form-label">Daerah</label>
+                      <input type="text" class="form-control" value="{{$course->Course_District}}" id="Daerah" name="Daerah" required>
                       <label for="TarikhMula" class="col-sm col-form-label">Tarikh Mula</label>
                       <input type="date" class="form-control" name="TarikhMula" id="TarikhMula">
                       <label for="MasaDari" class="col-sm col-form-label">Masa Dari</label>
@@ -31,11 +35,14 @@
                       <label for="PegawaiBertugas" class="col-sm col-form-label">Pegawai Bertugas</label>
                       <input type="text" class="form-control" name="PegawaiBertugas" id="PegawaiBertugas">
                       <label for="NoTelPegawai" class="col-sm col-form-label">No Telefon</label>
-                      <input type="text" class="form-control" name="NoTelPegawai" id="NoTelPegawai">
+                      <input type="text" class="form-control" value="{{$course->Course_StaffNo}}" name="NoTelPegawai" id="NoTelPegawai">
                     </div>
                     <div class="col-4" style="margin-left: auto; margin-right: auto;">
                       <label for="Tempat" class="col-sm col-form-label">Tempat</label>
-                      <input type="text" class="form-control" id="Tempat" required>
+                      <input type="text" class="form-control" value="{{$course->Course_Venue}}" name="Tempat" id="Tempat" required>
+                      
+                      <label for="Alamat" class="col-sm col-form-label">Alamat</label>
+                      <input type="text" class="form-control" value="{{$course->Course_Address}}" name="Alamat" id="Alamat" required>
                       <label for="TarikhTamat" class="col-sm col-form-label">Tarikh Tamat</label>
                       <input type="date" class="form-control" name="TarikhTamat" id="TarikhTamat">
                       <label for="MasaHingga" class="col-sm col-form-label">Masa Hingga</label>
@@ -45,7 +52,7 @@
                       <label for="PaparUmum" class="col-sm col-form-label">Papar Umum</label>
                       <input type="text" class="form-control" name="PaparUmum" id="PaparUmum">
                       <br>
-                      <a class="btn btn-secondary float-end"  href="">Simpan</a>
+                      <button type="submit" class="btn btn-secondary float-end">Simpan</button>
                     </div>
                     
                    </div>
