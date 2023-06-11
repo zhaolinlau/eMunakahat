@@ -8,51 +8,51 @@ use Illuminate\Http\Request;
 class MarriageApplicationController extends Controller
 {
   
-    public function indexPemohon()
+    public function indexPemohon() //view the Marriage Application Applicant's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationPemohon');
     }
   
-    public function indexPasangan()
+    public function indexPasangan() //view the Marriage Application Partner's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationPasangan');
     }
   
-    public function indexPerkahwinan()
+    public function indexPerkahwinan() //view the Marriage Application Marriage details's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationPerkahwinan');
     }
-    public function indexConsent()
+    public function indexConsent() //view the Marriage Application Marriage details's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationConsent');
     }
 
-    public function indexHiv()
+    public function indexHiv() //view the Marriage Application HIV's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationHiv');
     }
 
-    public function indexResident()
+    public function indexResident() //view the Marriage Application Resident's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationResident');
     }
 
-    public function indexPermission()
+    public function indexPermission() //view the Marriage Application Marriage Permission's Form page
     {
         return view('ManageMarriageApplication.user.MarriageApplicationPermission');
     }
 
-    public function indexChecklist()
+    public function indexChecklist() //view the checklist dan the upload file form
     {
         return view('ManageMarriageApplication.user.MarriageApplicationChecklist');
     }
 
-    public function indexApplicantList()
+    public function indexApplicantList() //view the Applicant's list page
     {
         return view('ManageMarriageApplication.staff.MarriageApplicationList');
     }
 
-    public function indexApplicantStatus()
+    public function indexApplicantStatus() //view the Applicant's list and the application's status page
     {
         return view('ManageMarriageApplication.staff.MarriageApplicationStatus');
     }

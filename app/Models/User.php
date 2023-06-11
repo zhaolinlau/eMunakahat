@@ -49,6 +49,7 @@ class User extends Authenticatable implements MustVerifyEmail
 		'password' => 'hashed',
 	];
 
+	// Define the value for each role.
 	protected function role(): Attribute
 	{
 		return new Attribute(

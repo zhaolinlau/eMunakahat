@@ -8,33 +8,35 @@ use App\Models\Course;
 
 class PreMarriageCourseController extends Controller
 {
-	public function indexCourse()
+	public function indexCourse() 
 	{
 		return view('ManagePreMarriageCourse.user.TermsCondition');
 	}
 
-	public function indexOrganization()
+	public function indexOrganization() 
 	{
 		$courses = Course::all();
 		return view('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
 	}
 
-	public function indexViewOrganization($courseId)
+	// view specific organization info
+	public function indexViewOrganization($courseId) 
 	{
 		$course = Course::findOrFail($courseId);
 		return view('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
 	}
 
-	public function indexCourseStatus()
+	public function indexCourseStatus() 
 	{
 		return view('ManagePreMarriageCourse.user.CourseStatus');
 	}
 
-	public function indexCourseForm()
+	public function indexCourseForm() 
 	{
 		return view('ManagePreMarriageCourse.user.CourseForm');
 	}
 
+	// View specific course location info
 	public function viewLocationList()
 	{
 		$courses = Course::orderBy('Course_ID', 'desc')->get();
@@ -47,6 +49,8 @@ class PreMarriageCourseController extends Controller
 		return view('ManagePreMarriageCourse.staff.CourseInfoList', compact('course'));
 	}
 
+
+	// Update specific course location
 	public function updateLocation(Request $request, $courseId)
 	{
 		$request->validate([
@@ -71,6 +75,8 @@ class PreMarriageCourseController extends Controller
 		return redirect()->route('staff.LocationList')->with('updated', 'Anda telah berjaya kemaskini kursus!');
 	}
 
+
+	// Delete specific course
 	public function deleteCourse($courseId)
 	{
 		$course = Course::findOrFail($courseId);
@@ -88,6 +94,8 @@ class PreMarriageCourseController extends Controller
 		return view('ManagePreMarriageCourse.staff.CourseApplicantAttendance');
 	}
 
+
+	// Add new course
 	public function addCourse(Request $request)
 	{
 		$request->validate([
