@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+	body {
+		background-image: url("img/bg.jpg");
+		background-size: cover;
+	}
+</style>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-6 py-5">

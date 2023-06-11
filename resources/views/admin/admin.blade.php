@@ -1,10 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+	<style>
+		body {
+			background-image: url("img/bg.jpg");
+			background-size: cover;
+		}
+	</style>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col py-5">
-				<form action="{{ route('admin.update_profile', auth()->user()->id) }}" class="row p-5 g-3 bg-secondary shadow rounded-5 needs-validation" method="POST" novalidate>
+				<form action="{{ route('admin.update_profile', auth()->user()->id) }}"
+					class="row p-5 g-3 bg-secondary shadow rounded-5 needs-validation" method="POST" novalidate>
 					@csrf
 					@method('PUT')
 					@if (session('updated'))
@@ -53,14 +60,17 @@
 
 					<div class="col-6">
 						<label for="User_Gender" class="form-label">Jantina</label>
-						<select id="User_Gender" class="form-select @error('User_Gender') is-invalid @enderror" name="User_Gender" required>
-							<option value="Lelaki" {{ old('User_Gender', auth()->user()->User_Gender == 'Lelaki' ? 'selected' : '') }}>Lelaki</option>
-							<option value="Perempuan" {{ old('User_Gender', auth()->user()->User_Gender == 'Perempuan' ? 'selected' : '') }}>Perempuan</option>
+						<select id="User_Gender" class="form-select @error('User_Gender') is-invalid @enderror" name="User_Gender"
+							required>
+							<option value="Lelaki" {{ old('User_Gender', auth()->user()->User_Gender == 'Lelaki' ? 'selected' : '') }}>Lelaki
+							</option>
+							<option value="Perempuan" {{ old('User_Gender', auth()->user()->User_Gender == 'Perempuan' ? 'selected' : '') }}>
+								Perempuan</option>
 						</select>
 						@error('User_Gender')
-						<div class="invalid-feedback">
-							{{ $message }}
-						</div>
+							<div class="invalid-feedback">
+								{{ $message }}
+							</div>
 						@enderror
 					</div>
 
