@@ -52,7 +52,7 @@ class CourseSeeder extends Seeder
 				'Course_DateStart' => '7 MARCH 2023',
 				'Course_DateEnd' => '9 MARCH 2023',
 				'Course_Time' => '0830',
-				'Course_Slot' => 66,
+				'Course_Slot' => 89,
 				'Course_Siri' => 'MTN/7262/2023',
 				'Course_Capacity' => 100,
 				'Course_Staff' => 'ALI BIN ABU',
