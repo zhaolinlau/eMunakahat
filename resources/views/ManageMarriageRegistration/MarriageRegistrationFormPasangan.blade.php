@@ -269,7 +269,7 @@
                   </div>
 
                   <div class="col-12">
-                    <button type="submit" class="btn btn-success" role="button">Daftar</button>
+                    <button type="submit" class="btn btn-success" role="button">Simpan</button>
                     <a class="btn btn-success" href="{{ route('user.RegisterList') }}">Kembali</a>
                   </div>
                 </form>

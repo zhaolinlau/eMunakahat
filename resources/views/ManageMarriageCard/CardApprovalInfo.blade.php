@@ -30,6 +30,11 @@
                   </div>
 
                   <div class="col-5 mt-3">
+                    <label for="Tarikhterima">Tarikh Terima:</label>
+                    <input type="date" class="form-control" id="Tarikhterima" required>
+                  </div>
+
+                  <div class="col-5 mt-3">
                     <label for="Nopermohonan">No Pemohonan Online:</label>
                     <input type="text" class="form-control" id="Nopermohonan" required>
                   </div>
@@ -40,22 +45,51 @@
                   </div>
 
                   <div class="col-5 mt-3">
-                    <label for="status">Status</label>
-                    <select id="status" name="dropdown">
+                    <label for="Resit">Resit Bayaran:</label>
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                      <label for="image">Upload Image:</label>
+                      <input type="file" id="image" name="image">
+                      <br>
+                    </form>
+                    
+                  </div>
+
+                  <div class="col-5 mt-2">
+                    <label for="statuspendaftaran">Status Pendaftaran Nikah</label>
+                    <select id="statuspendaftaran" name="dropdown">
                       <option value="option1">LULUS</option>
                       <option value="option2">GAGAL</option>
                     </select>
                   </div>
 
-                  <div class="col-5 mt-3">
+                  
+                  <div class="col-5 mt-5">
+                    <label for="statuskadnikah">Status</label>
+                    <select id="statuskadnikah" name="dropdown">
+                      <option value="option1">LULUS</option>
+                      <option value="option2">GAGAL</option>
+                    </select>
+                  </div>
+
+                  <div class="col-5 mt-2">
                     <label for="tarikhlulus">Tarikh Kelulusan</label>
                     <input type="date" class="form-control" name="tariklulus" id="tarikhlulus">
                   </div>
 
+                  <div class="col-5 mt-2">
+                    <label for="tarikhpungut">Tarikh Pungutan</label>
+                    <input type="date" class="form-control" name="tarikhpungut" id="tarikhpungut">
+                  </div>
+
+                  <div class="col-5 mt-3">
+                    <label for="pejabat">Pejabat Pungutan:</label>
+                    <input type="text" class="form-control" id="pejabat" required>
+                  </div>
+
+
                   <div class="col-10 mt-3 text-end">
                     <button type="submit" class="btn btn-secondary btn-with-border">Simpan</button>
-                    <a href="{{ route('staff.Approval') }}" class="btn btn-secondary btn-with-border">Kembali</a>
-                    <a href="{{ route('staff.ApprovalDoc') }}" class="btn btn-secondary btn-with-border">Seterusnya</a>
+                    <a href="{{ route('staff.CardApprovalList') }}" class="btn btn-secondary btn-with-border">Kembali</a>
                   </div>
                   <style>
                     /* ...existing styles... */
