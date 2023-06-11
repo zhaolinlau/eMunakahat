@@ -7,8 +7,8 @@
 		background-size: cover;
 	}
 </style>
-	<div class="container">
-		<div class="row justify-content-center">
+	<div class="container h-100">
+		<div class="row justify-content-center h-100 align-items-center">
 			<div class="col py-5">
 				<form action="{{ route('staff.update_profile', auth()->user()->id) }}" class="row p-5 g-3 bg-secondary shadow rounded-5 needs-validation" method="POST" novalidate>
 					@csrf
