@@ -17,8 +17,9 @@ class PreMarriageCourseController extends Controller
         return view ('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
     }
 
-    public function indexViewOrganization(){
-        return view ('ManagePreMarriageCourse.user.OrganizationView');
+    public function indexViewOrganization($id){
+        $course = Course::findOrFail($id);
+        return view ('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
     }
 
     public function indexCourseStatus(){

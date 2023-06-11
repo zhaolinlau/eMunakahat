@@ -40,7 +40,7 @@
                                     <td>{{ $course->Course_DateEnd }}</td>
                                     <td>{{ $course->Course_Capacity }}</td>
                                     <td>54</td>
-                                    <td><a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"  ></i></a></td>
+                                    <td><a class="btn" href="{{ route('user.viewOrganization', $course->Course_ID) }}"><i class="fa-solid fa-eye fa-xl"  ></i></a></td>
                                     <td><a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i></a></td>
                                   </tr>
 																	@endforeach
