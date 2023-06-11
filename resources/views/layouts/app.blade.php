@@ -178,7 +178,7 @@
 			</script>
 		</div>
 
-		<main class="h-100 bg-white">
+		<main class="h-100">
 			@yield('content')
 		</main>
 	</div>
