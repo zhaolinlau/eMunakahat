@@ -50,6 +50,11 @@ class MarriageRegistrationController extends Controller
     {
         return view('ManageMarriageRegistration.ApprovalMarriageInfo');
     }
+
+    public function indexApprovalDoc()
+    {
+        return view('ManageMarriageRegistration.ApprovalMarriageDoc');
+    }
 }
 
 
