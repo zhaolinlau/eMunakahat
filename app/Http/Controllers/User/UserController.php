@@ -10,8 +10,19 @@ class UserController extends Controller
 {
 	public function readStaff()
 	{
-		$staff = User::where('role', 1)->orderBy('id', 'desc')->get();
-		return view('admin.staff_list', compact('staff'));
+		$staffs = User::where('role', 1)->orderBy('id', 'desc')->get();
+		return view('admin.staff_list', compact('staffs'));
+	}
+
+	public function readUser()
+	{
+		$users = User::where('role', 0)->orderBy('id', 'desc')->get();
+
+		if (auth()->user()->role == 'admin') {
+			return view('admin.user_list', compact('users'));
+		} elseif (auth()->user()->role == 'staff') {
+			return view('staff.user_list', compact('users'));
+		}
 	}
 
 	public function staffForm()
@@ -50,6 +61,17 @@ class UserController extends Controller
 		return view('admin.staff_profile', compact('staff'));
 	}
 
+	public function readUserProfile($id)
+	{
+		$user = User::findOrFail($id);
+
+		if (auth()->user()->role == 'admin') {
+			return view('admin.user_profile', compact('user'));
+		} elseif (auth()->user()->role == 'staff') {
+			return view('staff.user_profile', compact('user'));
+		}
+	}
+
 	public function updateStaff(Request $request, $id)
 	{
 		$request->validate([
@@ -75,11 +97,121 @@ class UserController extends Controller
 		return redirect()->route('admin.staff_list')->with('updated', 'Staff updated successfully!');
 	}
 
+	public function updateUser(Request $request, $id)
+	{
+		$request->validate([
+			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'User_Gender' => 'required|in:Male,Female',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$user = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$user->update($data);
+
+
+		if (auth()->user()->role == 'admin') {
+			return redirect()->route('admin.user_list')->with('updated', 'User updated successfully!');
+		} elseif (auth()->user()->role == 'staff') {
+			return redirect()->route('staff.user_list')->with('updated', 'User updated successfully!');
+		}
+	}
 
 	public function deleteStaff($id)
 	{
 		$staff = User::findOrFail($id);
 		$staff->delete();
 		return redirect()->route('admin.staff_list')->with('deleted', 'Staff deleted successfully!');
+	}
+
+	public function deleteUser($id)
+	{
+		$user = User::findOrFail($id);
+		$user->delete();
+
+		if (auth()->user()->role == 'admin') {
+			return redirect()->route('admin.user_list')->with('deleted', 'User deleted successfully!');
+		} elseif (auth()->user()->role == 'staff') {
+			return redirect()->route('staff.user_list')->with('deleted', 'User deleted successfully!');
+		}
+	}
+
+	public function user_update(Request $request, $id)
+	{
+		$request->validate([
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$user = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$user->update($data);
+
+		return redirect()->route('user.home')->with('updated', 'You have updated successfully!');
+	}
+
+	public function staff_update(Request $request, $id)
+	{
+		$request->validate([
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$staff = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$staff->update($data);
+
+		return redirect()->route('staff.home')->with('updated', 'You have updated successfully!');
+	}
+
+
+	public function admin_update(Request $request, $id)
+	{
+		$request->validate([
+			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
+			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
+			'User_Name' => 'required|string',
+			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
+			'User_Gender' => 'required|in:Male,Female',
+			'email' => 'required|email|unique:users,email,' . $id,
+			'password' => 'nullable|min:8|confirmed|string',
+		]);
+
+		$admin = User::findOrFail($id);
+
+		$data = $request->except('password');
+
+		if ($request->filled('password')) {
+			$data['password'] = bcrypt($request->password);
+		}
+
+		$admin->update($data);
+
+		return redirect()->route('admin.home')->with('updated', 'You have updated successfully!');
 	}
 }
