@@ -122,8 +122,8 @@
 
                     <div class="col-12 mt-3">
                       <!-- Add margin-bottom to create spacing -->
-                      <button type="submit" class="btn btn-success" role="button"
-                        href="{{ route('user.MarriageCard2') }}">Hantar</button>
+                      <a class="btn btn-success " href="{{ route('user.MarriageCard2') }}">Simpan</a>
+                      {{-- <a class="btn btn-success " href="#">Seterusnya</a> --}}
                     </div>
                 </form>
               </div>
@@ -134,16 +134,6 @@
 
       </div>
 
-
-      {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-                <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-                <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script> --}}
-
-      {{-- <script>
-                    $(document).ready(function() {
-                      $('#marriageTable').DataTable();
-                    });
-                  </script> --}}
 
 
       <style>
