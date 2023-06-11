@@ -157,7 +157,7 @@
 								data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>
 							<ul class="dropdown-menu" aria-labelledby="pendaftaranDropdown">
 								<li><a class="nav-link " href="{{ route('user.MarriageCard') }}">Kad Nikah</a></li>
-								<li><a class="nav-link" href="{{ route('user.RegisterList') }}">Carian Pendaftaran</a></li>
+								<li><a class="nav-link" href="{{ route('user.RegisterList') }}">Pendaftaran</a></li>
 							</ul>
 							<a class="nav-link" href="">Khidmat Nasihat</a>
 					@endif
