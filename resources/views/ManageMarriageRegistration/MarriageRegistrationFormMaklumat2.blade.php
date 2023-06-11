@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  {{-- style for drop-down at left tab --}}
+  {{-- style for drop-down at left tab
   <style>
     .dropdown-menu {
       background-color: #f0f0f0;
@@ -28,7 +28,7 @@
       background-color: #e9ecef;
       /* Set background color on focus */
     }
-  </style>
+  </style> --}}
 
   <div class="container">
     <div class="row">
@@ -237,7 +237,7 @@
 
                     <div class="col-12 d-flex justify-content-center mt-3">
                       <a class="btn btn-success " href="{{ route('user.MaklumatPerkahwinan') }}">Kembali</a>
-                      <a class="btn btn-success " href="{{ route('user.MaklumatPerkahwinan') }}">Seterusnya</a>
+                      <a class="btn btn-success " href="{{ route('user.MaklumatPerkahwinan3') }}">Seterusnya</a>
                     </div>
                     
                   
