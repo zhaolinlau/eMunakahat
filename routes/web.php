@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConsultationApplication\ConsultationApplicationController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -59,6 +60,8 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 
 	Route::get('/ApplicationList', [MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
 	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
+
+	Route::get('/ConsultApplicationStatus', [ConsultationApplicationController::class, 'indexConsultApplicantStatus'])->name('staff.ConsultationApplicationStatus');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
@@ -94,4 +97,12 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/MarriageCertificate&Card2', [MarriageCardController::class, 'indexCard2'])->name('user.MarriageCard2');
 
 	Route::get('/MarriageApproval_', [MarriageApprovalController::class, 'indexApproval'])->name('staf.MarriageApproval');
+
+
+	Route::get('/ConsultationApplication', [ConsultationApplicationController::class, 'indexConsultApplication'])->name('user.ConsultationApplication');
+	Route::get('/ConsultationApplicationStatus', [ConsultationApplicationController::class, 'indexConsultApplicationStatus'])->name('user.ConsultationApplicationStatus');
+	Route::get('/ConsultationComplaint', [ConsultationApplicationController::class, 'indexConsultComplaint'])->name('user.ConsultationComplaint');
+
+	Route::get('/ConsultationSession', [ConsultationSessionController::class, 'indexConsultSession'])->name('user.ConsultationSessionApplication');
+	
 });

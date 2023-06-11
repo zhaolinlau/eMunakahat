@@ -143,10 +143,11 @@
 								Khidmat Nasihat
 							</button>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">1</a></li>
-								<li><a class="dropdown-item" href="#">2</a></li>
+								<li><a class="dropdown-item" href="#">Permohonan Khidmat Nasihat</a></li>
+								<li><a class="dropdown-item" href="#">Semak Permohonan Khidmat Nasihat</a></li>
 							</ul>
 						</div>
+
 					@elseif (auth()->check() && auth()->user()->role == 'user')
 						<a class="nav-link" id="user_home" href="{{ route('user.home') }}">Profil</a>
 						<a class="nav-link" href="{{ route('user.terms') }}">Kursus Pra Perkahwinan</a>
@@ -158,7 +159,13 @@
 								<li><a class="nav-link " href="{{ route('user.MarriageCard') }}">Kad Nikah</a></li>
 								<li><a class="nav-link" href="{{ route('user.RegisterList') }}">Carian Pendaftaran</a></li>
 							</ul>
-							<a class="nav-link" href="">Khidmat Nasihat</a>
+						<div class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="" id="nasihatDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Khidmat Nasihat</a>
+							<ul class="dropdown-menu" aria-labelledby="nasihatDropdown">
+								<li><a class="nav-link " href="{{ route('user.ConsultationApplication') }}">Permohonan Khidmat Nasihat</a></li>
+								<li><a class="nav-link" href="{{ route('user.ConsultationSessionApplication') }}">Permohonan Sesi Khidmat Nasihat </a></li>
+							</ul>
 					@endif
 				</nav>
 			</div>
