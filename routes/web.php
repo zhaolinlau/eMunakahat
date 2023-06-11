@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
+	Route::post('/addCourse', [PreMarriageCourseController::class, 'addCourse'])->name('staff.addCourse');
 	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
 	Route::get('/staff/user_list', [UserController::class, 'readUser'])->name('staff.user_list');
 	Route::get('/staff/user_list/profile/{id}', [UserController::class, 'readUserProfile'])->name('staff.user_profile');
