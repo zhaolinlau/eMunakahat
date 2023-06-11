@@ -15,12 +15,15 @@
                         <form>
                             <div class="col-6" style="margin-left: auto; margin-right: auto;">
                                 <label for="anjuran" class="col-sm-2 col-form-label">Anjuran</label>
-                                <input type="text" class="form-control" name="anjuran" id="anjuran">
+                                <input type="text" class="form-control" name="anjuran" value="{{ $course->Course_Organization }}" id="anjuran">
                               
                                 <label for="Tempat" class="col-sm-2 col-form-label">Tempat</label>
                                 <input type="text" class="form-control" name="Tempat" id="Tempat">
                               
-                                <label for="tarikh" class="col-sm-2 col-form-label">Tarikh</label>
+                                <label for="tarikh" class="col-sm-2 col-form-label">Tarikh Mula </label>
+                                <input type="date" class="form-control" name="tarikh" id="tarikh">
+                                
+                                <label for="tarikh" class="col-sm-2 col-form-label">Tarikh Tamat</label>
                                 <input type="date" class="form-control" name="tarikh" id="tarikh">
                                 
                                 <label for="masa" class="col-sm-2 col-form-label">Masa</label>
