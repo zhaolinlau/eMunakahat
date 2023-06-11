@@ -37,7 +37,7 @@ class PreMarriageCourseController extends Controller
 
 	public function viewLocationList()
 	{
-		$courses = Course::all();
+		$courses = Course::orderBy('Course_ID', 'desc')->get();
 		return view('ManagePreMarriageCourse.staff.CourseLocationList', compact('courses'));
 	}
 
@@ -68,14 +68,14 @@ class PreMarriageCourseController extends Controller
 
 		$course->update($request->all());
 
-		return redirect()->route('staff.LocationList');
+		return redirect()->route('staff.LocationList')->with('updated', 'Anda telah berjaya kemaskini kursus!');
 	}
 
 	public function deleteCourse($courseId)
 	{
 		$course = Course::findOrFail($courseId);
 		$course->delete();
-		return redirect()->route('staff.LocationList');
+		return redirect()->route('staff.LocationList')->with('deleted', 'Anda telah berjaya padam kursus!');
 	}
 
 	public function viewApplicantList()
@@ -103,6 +103,6 @@ class PreMarriageCourseController extends Controller
 		$course->Course_District = $request->Daerah;
 		$course->Course_StaffNo = $request->NoTelefon;
 		$course->save();
-		return redirect()->route('staff.LocationList');
+		return redirect()->route('staff.LocationList')->with('created', 'Anda telah berjaya tambah kursus!');
 	}
 }
