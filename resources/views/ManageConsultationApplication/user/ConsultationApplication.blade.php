@@ -1,0 +1,81 @@
+@extends('layouts.app')
+
+@section('content')
+
+  
+<article>
+    <div class="container">
+        <!-- The Title -->
+        <div class="row">
+            <div class="col text-left g-5">
+                <br>
+                <h5 style="color: rgb(254, 253, 253);">Khidmat Nasihat</h5>
+                <br>
+                <!-- Content -->
+                <div class="container text-left">
+                    <div class="row">
+                        <div class="col">
+                            <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
+                                <ul class="nav nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
+                                    <li class="nav-item bg-dark-green border border-white" role="presentation">
+                                      <a class="nav-link text-white" href="{{ route('user.RegisterNewForm') }}">Maklumat
+                                        Pemohon
+                                      </a>
+                                    </li>
+                                    <li class="nav-item border bg-dark-green border-white" role="presentation">
+                                        <a class="nav-link text-white" href="{{ route('user.RegisterFormPasangan') }}">
+                                          Maklumat Pasangan
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+        
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Jika Maklumat Diatas adalah benar dan terkini
+                        </label>
+                    </div>
+
+                    <div class="button">
+                        <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Kembali</a>
+                        <a class="btn btn-primary" href="{{route('user.ConsultationComplaint')}}" role="button">Seterusnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                Copyright &COPY; <span id="year"></span> e-Munakahat. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+  <script src="{{ mix('resources/js/validation.js') }}"></script>
+  <script>
+    const year = new Date().getFullYear()
+    document.getElementById('year').innerHTML = year;
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+<style>
+  body {
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+  }
+
+  .border {
+    border: 5px solid #000;
+    background-color: #56BFA0;
+    border-color: #D2F4EA;
+  }
+</style>
+@endsection
