@@ -49,6 +49,9 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:admin']], function
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function () {
 	Route::post('/addCourse', [PreMarriageCourseController::class, 'addCourse'])->name('staff.addCourse');
+	Route::get('/InfoList/{course_id}', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
+	Route::put('/InfoList/{course_id}/update', [PreMarriageCourseController::class, 'updateLocation'])->name('staff.updateLocation');
+	Route::delete('/InfoList/{course_id}/delete', [PreMarriageCourseController::class, 'deleteCourse'])->name('staff.deleteCourse');
 	Route::get('/staff', [HomeController::class, 'indexStaff'])->name('staff.home');
 	Route::get('/staff/user_list', [UserController::class, 'readUser'])->name('staff.user_list');
 	Route::get('/staff/user_list/profile/{id}', [UserController::class, 'readUserProfile'])->name('staff.user_profile');
@@ -56,7 +59,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 	Route::delete('/staff/user_list/profile/{id}/delete', [UserController::class, 'deleteUser'])->name('staff.delete_user');
 	Route::put('/staff/{id}/update', [UserController::class, 'staff_update'])->name('staff.update_profile');
 	Route::get('/LocationList', [PreMarriageCourseController::class, 'viewLocationList'])->name('staff.LocationList');
-	Route::get('/InfoList', [PreMarriageCourseController::class, 'viewInfoList'])->name('staff.InfoList');
+	
 	Route::get('/ApplicantList', [PreMarriageCourseController::class, 'viewApplicantList'])->name('staff.ApplicantList');
 	Route::get('/ApplicantAttendance', [PreMarriageCourseController::class, 'viewApplicantAttendance'])->name('staff.ApplicantAttendance');
 
@@ -67,11 +70,10 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 	// Consultation Application
 	Route::get('/ConsultApplicationApproval', [ConsultationApplicationController::class, 'indexConsultApproval'])->name('staff.ConsultationApplicationStatus');
 
-	// Consultation Section
-	Route::get('/ConsultSessionStatus', [ConsultationSessionController::class, 'indexConsultSessionStatus_S'])->name('staff.ConsultationSessionStatus');
-	Route::get('/ConsultSessionSchedule', [ConsultationSessionController::class, 'indexConsultSessionSchedule'])->name('staff.ConsultationSessionSchedule');
-	Route::get('/ConsultSessionAddSchedule', [ConsultationSessionController::class, 'indexConsultSessionAddSchedule'])->name('staff.ConsultationSessionAddSchedule');
-	Route::get('/ConsultSessionReview', [ConsultationSessionController::class, 'indexConsultSessionReview_S'])->name('staff.ConsultationSessionReview');
+	Route::get('/CardApprovalList', [MarriageCardController::class, 'indexCardApprovalList'])->name('user.CardApprovalList');
+
+
+
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {

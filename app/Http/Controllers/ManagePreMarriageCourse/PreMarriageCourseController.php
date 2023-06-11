@@ -8,65 +8,101 @@ use App\Models\Course;
 
 class PreMarriageCourseController extends Controller
 {
-    public function indexCourse(){
-        return view ('ManagePreMarriageCourse.user.TermsCondition');
-    }
+	public function indexCourse()
+	{
+		return view('ManagePreMarriageCourse.user.TermsCondition');
+	}
 
-    public function indexOrganization(){
-        $courses = Course::all();
-        return view ('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
-    }
+	public function indexOrganization()
+	{
+		$courses = Course::all();
+		return view('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
+	}
 
-    public function indexViewOrganization($courseId){
-        $course = Course::findOrFail($courseId);
-        return view ('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
-    }
+	public function indexViewOrganization($courseId)
+	{
+		$course = Course::findOrFail($courseId);
+		return view('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
+	}
 
-    public function indexCourseStatus(){
-        return view ('ManagePreMarriageCourse.user.CourseStatus');
-    }
+	public function indexCourseStatus()
+	{
+		return view('ManagePreMarriageCourse.user.CourseStatus');
+	}
 
-    public function indexCourseForm(){
-        return view ('ManagePreMarriageCourse.user.CourseForm');
-    }
+	public function indexCourseForm()
+	{
+		return view('ManagePreMarriageCourse.user.CourseForm');
+	}
 
-    public function viewLocationList(){
-        return view ('ManagePreMarriageCourse.staff.CourseLocationList');
-    }
+	public function viewLocationList()
+	{
+		$courses = Course::orderBy('Course_ID', 'desc')->get();
+		return view('ManagePreMarriageCourse.staff.CourseLocationList', compact('courses'));
+	}
 
-    public function viewInfoList(){
-        return view ('ManagePreMarriageCourse.staff.CourseInfoList');
-    }
+	public function viewInfoList($courseId)
+	{
+		$course = Course::findOrFail($courseId);
+		return view('ManagePreMarriageCourse.staff.CourseInfoList', compact('course'));
+	}
 
-    public function viewApplicantList(){
-        return view ('ManagePreMarriageCourse.staff.CourseApplicantList');
-    }
-
-    public function viewApplicantAttendance(){
-        return view ('ManagePreMarriageCourse.staff.CourseApplicantAttendance');
-    }
-    
-    public function addCourse(Request $request){
-        $request->validate([
-			'User_IC' => 'required|unique:users,User_IC,|digits:12|numeric',
-			'Staff_ID' => 'required|unique:users,Staff_ID,|string',
-			'User_Name' => 'required|string',
-			'User_Phone_Number' => 'required|digits_between:10,15,numeric',
-			'User_Gender' => 'required|in:Lelaki,Perempuan',
-			'email' => 'required|email|unique:users,email,|string',
-			'password' => 'required|min:8|string|confirmed',
+	public function updateLocation(Request $request, $courseId)
+	{
+		$request->validate([
+			'Course_Organization' => 'required',
+			'Course_District' => 'required',
+			'Course_TimeStart' => 'required',
+			'Course_TimeEnd' => 'required',
+			'Course_Staff' => 'required',
+			'Course_StaffNo' => 'required',
+			'Course_DateStart' => 'required',
+			'Course_DateEnd' => 'required',
+			'Course_Capacity' => 'required|integer',
+			'Course_Public' => 'required',
+			'Course_Venue' => 'required',
+			'Course_Address' => 'required',
 		]);
 
-		$staff = new User();
-		$staff->Staff_ID = $request->Staff_ID;
-		$staff->User_IC = $request->User_IC;
-		$staff->User_Name = $request->User_Name;
-		$staff->User_Gender = $request->User_Gender;
-		$staff->User_Phone_Number = $request->User_Phone_Number;
-		$staff->email = $request->email;
-		$staff->password = bcrypt($request->password);
-		$staff->role = 1;
-		$staff->save();
-		return redirect()->route('admin.staff_list')->with('created', 'Akaun staf berjaya didaftar!');
-    }
+		$course = Course::findOrFail($courseId);
+
+		$course->update($request->all());
+
+		return redirect()->route('staff.LocationList')->with('updated', 'Anda telah berjaya kemaskini kursus!');
+	}
+
+	public function deleteCourse($courseId)
+	{
+		$course = Course::findOrFail($courseId);
+		$course->delete();
+		return redirect()->route('staff.LocationList')->with('deleted', 'Anda telah berjaya padam kursus!');
+	}
+
+	public function viewApplicantList()
+	{
+		return view('ManagePreMarriageCourse.staff.CourseApplicantList');
+	}
+
+	public function viewApplicantAttendance()
+	{
+		return view('ManagePreMarriageCourse.staff.CourseApplicantAttendance');
+	}
+
+	public function addCourse(Request $request)
+	{
+		$request->validate([
+			'Tempat' => 'required|string',
+			'Alamat' => 'required|string',
+			'Daerah' => 'required|string',
+			'NoTelefon' => 'required|string',
+		]);
+
+		$course = new Course();
+		$course->Course_Venue = $request->Tempat;
+		$course->Course_Address = $request->Alamat;
+		$course->Course_District = $request->Daerah;
+		$course->Course_StaffNo = $request->NoTelefon;
+		$course->save();
+		return redirect()->route('staff.LocationList')->with('created', 'Anda telah berjaya tambah kursus!');
+	}
 }

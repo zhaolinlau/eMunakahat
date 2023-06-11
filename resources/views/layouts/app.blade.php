@@ -115,7 +115,6 @@
 							</button>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{{ route('staff.LocationList') }}">Daftar Lokasi</a></li>
-								<li><a class="dropdown-item" href="{{ route('staff.InfoList') }}">Daftar Maklumat</a></li>
 								<li><a class="dropdown-item" href="{{ route('staff.ApplicantList') }}">Senarai Peserta</a></li>
 								<li><a class="dropdown-item" href="{{ route('staff.ApplicantAttendance') }}">Kehadiran Peserta</a></li>
 							</ul>
@@ -159,7 +158,7 @@
 								data-bs-toggle="dropdown" aria-expanded="false">Pendaftaran Perkahwinan</a>
 							<ul class="dropdown-menu" aria-labelledby="pendaftaranDropdown">
 								<li><a class="nav-link " href="{{ route('user.MarriageCard') }}">Kad Nikah</a></li>
-								<li><a class="nav-link" href="{{ route('user.RegisterList') }}">Carian Pendaftaran</a></li>
+								<li><a class="nav-link" href="{{ route('user.RegisterList') }}">Pendaftaran</a></li>
 							</ul>
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="" id="nasihatDropdown" role="button"
