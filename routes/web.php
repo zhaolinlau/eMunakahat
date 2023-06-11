@@ -93,7 +93,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
+  Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
 	Route::get('/user', [HomeController::class, 'indexUser'])->name('user.home');
 	Route::put('/user/{id}/update', [UserController::class, 'user_update'])->name('user.update_profile');
 
