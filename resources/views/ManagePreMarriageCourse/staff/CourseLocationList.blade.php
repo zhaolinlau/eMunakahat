@@ -58,7 +58,11 @@
 													<td>{{ $course->Course_StaffNo }}</td>
 													<td>
 														<a class="btn" href="{{ route('staff.InfoList', $course->Course_ID) }}"><i class="fa-solid fa-pen-to-square fa-sm "></i></a>
-														<a class="btn"><i class="fa-solid fa-trash-can fa-sm"></i></a>
+														<form action="{{ route('staff.deleteCourse', $course->Course_ID) }}" method="POST">
+															@csrf
+															@method('DELETE')
+															<button type="submit" class="btn"><i class="fa-solid fa-trash-can fa-sm"></i></button>
+														</form>
 													</td>
 												</tr>
 											@endforeach

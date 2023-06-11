@@ -16,7 +16,9 @@ class Course extends Model
 			'Course_District',
 			'Course_DateStart',
 			'Course_DateEnd',
-			'Course_Time',
+			'Course_TimeStart',
+			'Course_TimeEnd',
+			'Course_Public',
 			'Course_Slot',
 			'Course_Siri',
 			'Course_Capacity',
@@ -24,5 +26,5 @@ class Course extends Model
 			'Course_StaffNo',
 		];
 
-		protected $primaryKey = 'course_id';
+		protected $primaryKey = 'Course_ID';
 }

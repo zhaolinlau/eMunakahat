@@ -8,73 +8,89 @@ use App\Models\Course;
 
 class PreMarriageCourseController extends Controller
 {
-    public function indexCourse(){
-        return view ('ManagePreMarriageCourse.user.TermsCondition');
-    }
+	public function indexCourse()
+	{
+		return view('ManagePreMarriageCourse.user.TermsCondition');
+	}
 
-    public function indexOrganization(){
-        $courses = Course::all();
-        return view ('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
-    }
+	public function indexOrganization()
+	{
+		$courses = Course::all();
+		return view('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
+	}
 
-    public function indexViewOrganization($courseId){
-        $course = Course::findOrFail($courseId);
-        return view ('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
-    }
+	public function indexViewOrganization($courseId)
+	{
+		$course = Course::findOrFail($courseId);
+		return view('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
+	}
 
-    public function indexCourseStatus(){
-        return view ('ManagePreMarriageCourse.user.CourseStatus');
-    }
+	public function indexCourseStatus()
+	{
+		return view('ManagePreMarriageCourse.user.CourseStatus');
+	}
 
-    public function indexCourseForm(){
-        return view ('ManagePreMarriageCourse.user.CourseForm');
-    }
+	public function indexCourseForm()
+	{
+		return view('ManagePreMarriageCourse.user.CourseForm');
+	}
 
-    public function viewLocationList(){
-        $courses = Course::all();
-        return view ('ManagePreMarriageCourse.staff.CourseLocationList', compact('courses'));
-    }
+	public function viewLocationList()
+	{
+		$courses = Course::all();
+		return view('ManagePreMarriageCourse.staff.CourseLocationList', compact('courses'));
+	}
 
-    public function viewInfoList($courseId){
-        $course = Course::findOrFail($courseId);
-        return view ('ManagePreMarriageCourse.staff.CourseInfoList', compact('course'));
-    }
+	public function viewInfoList($courseId)
+	{
+		$course = Course::findOrFail($courseId);
+		return view('ManagePreMarriageCourse.staff.CourseInfoList', compact('course'));
+	}
 
-    public function updateLocation(Request $request, $courseId){
-        $request->validate([
-            'PAID' => 'required',
-            'Daerah' => 'required',
-            'TarikhMula' => 'required',
-            'MasaDari' => 'required',
-            'PegawaiBertugas' => 'required',
-            'NoTelPegawai' => 'required',
-            'TarikhTamat' => 'required',
-            'MasaHingga' => 'required',
-            'Kapasiti' => 'required',
-            'PaparUmum' => 'required',
-			'Tempat' => 'required',
-			'Alamat' => 'required',
-			'Daerah' => 'required',
-			'NoTelefon' => 'required',
+	public function updateLocation(Request $request, $courseId)
+	{
+		$request->validate([
+			'Course_Organization' => 'required',
+			'Course_District' => 'required',
+			'Course_TimeStart' => 'required',
+			'Course_TimeEnd' => 'required',
+			'Course_Staff' => 'required',
+			'Course_StaffNo' => 'required',
+			'Course_DateStart' => 'required',
+			'Course_DateEnd' => 'required',
+			'Course_Capacity' => 'required|integer',
+			'Course_Public' => 'required',
+			'Course_Venue' => 'required',
+			'Course_Address' => 'required',
 		]);
 
 		$course = Course::findOrFail($courseId);
 
-		$course->update();
+		$course->update($request->all());
 
 		return redirect()->route('staff.LocationList');
-    }
+	}
 
-    public function viewApplicantList(){
-        return view ('ManagePreMarriageCourse.staff.CourseApplicantList');
-    }
+	public function deleteCourse($courseId)
+	{
+		$course = Course::findOrFail($courseId);
+		$course->delete();
+		return redirect()->route('staff.LocationList');
+	}
 
-    public function viewApplicantAttendance(){
-        return view ('ManagePreMarriageCourse.staff.CourseApplicantAttendance');
-    }
-    
-    public function addCourse(Request $request){
-        $request->validate([
+	public function viewApplicantList()
+	{
+		return view('ManagePreMarriageCourse.staff.CourseApplicantList');
+	}
+
+	public function viewApplicantAttendance()
+	{
+		return view('ManagePreMarriageCourse.staff.CourseApplicantAttendance');
+	}
+
+	public function addCourse(Request $request)
+	{
+		$request->validate([
 			'Tempat' => 'required|string',
 			'Alamat' => 'required|string',
 			'Daerah' => 'required|string',
@@ -88,5 +104,5 @@ class PreMarriageCourseController extends Controller
 		$course->Course_StaffNo = $request->NoTelefon;
 		$course->save();
 		return redirect()->route('staff.LocationList');
-    }
+	}
 }
