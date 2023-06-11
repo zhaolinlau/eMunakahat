@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('Applicant_Info', function (Blueprint $table) {
             $table->id('Applicant_ID');
-            $table->foreignId('id')->references('id')->on('users');
+            $table->foreignId('User_ID')->references('id')->on('users');
             $table->string('Applicant_DOB');
             $table->string('Applicant_Race');
             $table->string('Applicant_Citizenship');
