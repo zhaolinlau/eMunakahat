@@ -2,7 +2,7 @@
 
 @section('content')
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-	<div class="container">
+	<div class="container mt-5 pt-5">
 		<div class="row g-3 w-100">
 
 			@if (session('updated'))
