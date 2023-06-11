@@ -8,29 +8,29 @@ use App\Models\Course;
 
 class PreMarriageCourseController extends Controller
 {
-	public function indexCourse()
+	public function indexCourse() // view the page of the terms and condition
 	{
 		return view('ManagePreMarriageCourse.user.TermsCondition');
 	}
 
-	public function indexOrganization()
+	public function indexOrganization() // view the list  of the organization
 	{
 		$courses = Course::all();
 		return view('ManagePreMarriageCourse.user.OrganizationList', compact('courses'));
 	}
 
-	public function indexViewOrganization($courseId)
+	public function indexViewOrganization($courseId) //display the details of the organization
 	{
 		$course = Course::findOrFail($courseId);
 		return view('ManagePreMarriageCourse.user.OrganizationView', compact('course'));
 	}
 
-	public function indexCourseStatus()
+	public function indexCourseStatus() //To display the applicant' course status
 	{
 		return view('ManagePreMarriageCourse.user.CourseStatus');
 	}
 
-	public function indexCourseForm()
+	public function indexCourseForm() // to display the premarriage course register form
 	{
 		return view('ManagePreMarriageCourse.user.CourseForm');
 	}
