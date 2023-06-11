@@ -69,6 +69,14 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 	Route::get('/ApplicationList', [MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
 	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
 
+	// Marriage Approval for staff
+	Route::get('/ApprovalMarriage', [MarriageRegistrationController::class, 'indexApproval'])->name('staff.Approval');
+	Route::get('/ApprovalInfo', [MarriageRegistrationController::class, 'indexApprovalInfo'])->name('staff.ApprovalInfo');
+	Route::get('/ApprovalDocument', [MarriageRegistrationController::class, 'indexApprovalDoc'])->name('staff.ApprovalDoc');
+	
+	
+
+
 	// Consultation oF Staff
 	// Consultation Application
 	Route::get('/ConsultApplicationApproval', [ConsultationApplicationController::class, 'indexConsultApproval'])->name('staff.ConsultationApplicationApproval');
@@ -108,7 +116,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 	Route::get('/ApplicationChecklist', [MarriageApplicationController::class, 'indexChecklist'])->name('user.ApplicationChecklist');
 
 	
-
+// Marriage Registration for user
 	Route::get('/MarriageRegistration',[MarriageRegistrationController::class,'indexRegister'])->name('user.Registerform');
 	Route::get('/RegistrationList',[MarriageRegistrationController::class,'indexList'])->name('user.RegisterList');
 	Route::get('/RegistrationForm',[MarriageRegistrationController::class,'indexForm'])->name('user.RegisterNewForm');
@@ -119,7 +127,7 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 
 	
 
-
+// Marriage card registration for user
 	Route::get('/MarriageCertificate&Card', [MarriageCardController::class, 'indexCard'])->name('user.MarriageCard');
 	Route::get('/MarriageCertificate&Card2', [MarriageCardController::class, 'indexCard2'])->name('user.MarriageCard2');
 

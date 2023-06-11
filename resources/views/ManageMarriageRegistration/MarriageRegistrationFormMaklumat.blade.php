@@ -95,7 +95,7 @@
                   </div>
 
                   <div class="col-md-7">
-                    <label for="name">Negara:</label>
+                    <label for="name">Warganegara:</label>
                     <select class="form-select" id="Negara" required>
                       <option value="" hidden selected>pilih</option>
                       <option value="1">Melayu</option>
@@ -110,7 +110,7 @@
                       <option value="10">Lain-lain</option>
                     </select>
                     <div class="invalid-feedback">
-                      Sila Pilih Negara.
+                      Sila Pilih warganegara.
                     </div>
 
 
@@ -134,15 +134,7 @@
                     </div>
 
 
-                    <div class="col-4">
-                      <label for="Maskahwin">Mas Kahwin</label>
-                      <input type="text" class="form-control" id="Maskahwin" required>
-                      <div class="invalid-feedback">
-                        Sila masukkan Maskahwin.
-                      </div>
 
-                    </div>
-                    <!--form for name-->
                     <div class="col-md-4">
                       <label for="JenisMaskahwin">Jenis Mas Kahwin</label>
                       <input type="text" class="form-control" id="JenisMaskahwin" required>
@@ -152,7 +144,9 @@
 
                     </div>
 
-                    <div class="col-md-3">
+
+                    <!--read only, not editable-->
+                    <div class="col-2 mt-2">
                       <label for="Mas_Kahwin" class="form-label">Mas Kahwin:</label>
                       <input type="text" id="Mas_Kahwin" class="form-control" value="RM 22.50" readonly>
                       <small class="form-text text-muted">*Tetapan Mas Kahwin Bagi Negeri Pahang</small>
@@ -168,12 +162,7 @@
                       <input type="text" class="form-control" id="Pemberian" required>
 
                     </div>
-                    <div class="col-md-7">
-                      <label for="Jurunikah">Nama Jurunikah</label>
-                      <input type="text" class="form-control" id="Jurunikah" required>
-                    </div>
-
-
+                    
                     <style>
                       .float-right {
                         float: right;
@@ -196,16 +185,11 @@
             </div>
           </div>
 
-
-
         </div>
 
 
       </div>
     </div>
-
-
-
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasResponsive"
       aria-labelledby="offcanvasResponsiveLabel">
