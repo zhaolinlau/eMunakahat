@@ -7,8 +7,8 @@
 		background-size: cover;
 	}
 </style>
-	<div class="container">
-		<div class="row justify-content-center">
+	<div class="container h-100">
+		<div class="row justify-content-center  h-100 align-items-center">
 			<div class="col-6 py-5">
 				<form action="{{ route('admin.add_staff') }}" class="row g-3 shadow p-5 bg-secondary rounded-5 needs-validation"
 					method="POST" novalidate>
