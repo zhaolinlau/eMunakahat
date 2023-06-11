@@ -23,4 +23,12 @@ class ConsultationApplicationController extends Controller
         return view('ManageConsultationApplication.user.ConsultationComplaint');
     }
 
+    // Staff section for Consultation Application
+
+    public function indexConsultApproval()
+    {
+        return view('ManageConsultationApplication.staff.ConsultationApplicationApproval');
+    }
+
+
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConsultationApplication\ConsultationApplicationController;
+use App\Http\Controllers\ConsultationSession\ConsultationSessionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -62,7 +63,15 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 	Route::get('/ApplicationList', [MarriageApplicationController::class, 'indexApplicantList'])->name('staff.ApplicationList');
 	Route::get('/ApplicationStatus', [MarriageApplicationController::class, 'indexApplicantStatus'])->name('staff.ApplicationStatus');
 
-	Route::get('/ConsultApplicationStatus', [ConsultationApplicationController::class, 'indexConsultApplicantStatus'])->name('staff.ConsultationApplicationStatus');
+	// Consultation oF Staff
+	// Consultation Application
+	Route::get('/ConsultApplicationApproval', [ConsultationApplicationController::class, 'indexConsultApproval'])->name('staff.ConsultationApplicationStatus');
+
+	// Consultation Section
+	Route::get('/ConsultSessionStatus', [ConsultationSessionController::class, 'indexConsultSessionStatus_S'])->name('staff.ConsultationSessionStatus');
+	Route::get('/ConsultSessionSchedule', [ConsultationSessionController::class, 'indexConsultSessionSchedule'])->name('staff.ConsultationSessionSchedule');
+	Route::get('/ConsultSessionAddSchedule', [ConsultationSessionController::class, 'indexConsultSessionAddSchedule'])->name('staff.ConsultationSessionAddSchedule');
+	Route::get('/ConsultSessionReview', [ConsultationSessionController::class, 'indexConsultSessionReview_S'])->name('staff.ConsultationSessionReview');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function () {
@@ -103,11 +112,16 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:user']], function 
 
 	Route::get('/MarriageApproval_', [MarriageApprovalController::class, 'indexApproval'])->name('staf.MarriageApproval');
 
+// Section Consultation of User
 
+	// Consultation Application
 	Route::get('/ConsultationApplication', [ConsultationApplicationController::class, 'indexConsultApplication'])->name('user.ConsultationApplication');
 	Route::get('/ConsultationApplicationStatus', [ConsultationApplicationController::class, 'indexConsultApplicationStatus'])->name('user.ConsultationApplicationStatus');
 	Route::get('/ConsultationComplaint', [ConsultationApplicationController::class, 'indexConsultComplaint'])->name('user.ConsultationComplaint');
 
+	// Consultation Session
 	Route::get('/ConsultationSession', [ConsultationSessionController::class, 'indexConsultSession'])->name('user.ConsultationSessionApplication');
+	Route::get('/ConsultationSessionReview', [ConsultationSessionController::class, 'indexConsultSessionReview'])->name('user.ConsultationSessionReview');
+	Route::get('/ConsultationSessionStatus', [ConsultationSessionController::class, 'indexConsultSessionStatus'])->name('user.ConsultationSessionStatus');
 	
 });

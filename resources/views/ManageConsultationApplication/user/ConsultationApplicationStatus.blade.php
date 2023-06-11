@@ -38,8 +38,8 @@
                                         <td></td>
                                         <td>
                                             <a class="btn" ><i class="fa-solid fa-trash fa-xl"></i>
-                                            <a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i>
-                                            <a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"></i>
+                                            <a class="btn" ><i class="fa-solid fa-pen-to-square fa-xl"></i>
+                                            <a class="btn" ><i class="fa-solid fa-eye fa-xl"></i>
                                         </td>
                                         <td></td>
                                     </tr>
@@ -52,8 +52,8 @@
                                       <td></td>
                                       <td>
                                         <a class="btn" ><i class="fa-solid fa-trash fa-xl"></i>
-                                        <a class="btn" href="{{ route('user.courseForm') }}"><i class="fa-solid fa-pen-to-square fa-xl"></i>
-                                        <a class="btn" href="{{ route('user.viewOrganization') }}"><i class="fa-solid fa-eye fa-xl"></i>
+                                        <a class="btn" ><i class="fa-solid fa-pen-to-square fa-xl"></i>
+                                        <a class="btn" ><i class="fa-solid fa-eye fa-xl"></i>
                                       </td>
                                       <td></td>
                                   </tr>
@@ -61,7 +61,7 @@
                                 </tbody>
                                 </table>
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-success" role="button" href="{{route('user.ConsultationApplicationj')}}">Permohonan Baru </button>
+                                    <a class="btn btn-primary" href="{{route('user.ConsultationApplication')}}" role="button">Permohonan Baru</a>
                                 </div>
                             </div>
                             <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

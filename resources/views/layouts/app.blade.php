@@ -165,7 +165,7 @@
 							<a class="nav-link dropdown-toggle" href="" id="nasihatDropdown" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false">Khidmat Nasihat</a>
 							<ul class="dropdown-menu" aria-labelledby="nasihatDropdown">
-								<li><a class="nav-link " href="{{ route('user.ConsultationApplication') }}">Permohonan Khidmat Nasihat</a></li>
+								<li><a class="nav-link " href="{{ route('user.ConsultationApplicationStatus') }}">Permohonan Khidmat Nasihat</a></li>
 								<li><a class="nav-link" href="{{ route('user.ConsultationSessionApplication') }}">Permohonan Sesi Khidmat Nasihat </a></li>
 							</ul>
 					@endif
