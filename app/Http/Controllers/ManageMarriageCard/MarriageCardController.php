@@ -17,4 +17,6 @@ class MarriageCardController extends Controller
         return view('ManageMarriageCard.MarriageCard2');
     }
 
+   
+
 }
