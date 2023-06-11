@@ -2,7 +2,7 @@
 
 @section('content')
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-	<div class="container">
+	<div class="container pt-5 mt-5">
 		<div class="row g-3 w-100">
 
 			@if (session('updated'))
@@ -25,12 +25,12 @@
 				<table class="table full-width table-hover" id="user_table">
 					<thead class="table-light">
 						<tr>
-							<th>No</th>
-							<th>IC</th>
-							<th>Username</th>
-							<th>Email</th>
-							<th>View</th>
-							<th>Deletion</th>
+							<th>Bil</th>
+							<th>Nombor Kad Pengenalan</th>
+							<th>Nama Penuh</th>
+							<th>Emel</th>
+							<th>Lihat</th>
+							<th>Pemadaman</th>
 						</tr>
 					</thead>
 
@@ -42,13 +42,13 @@
 								<td>{{ $user->User_Name }}</td>
 								<td><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></td>
 								<td>
-									<a href="{{ route('staff.user_profile', $user->id) }}" class="btn btn-info">Profile</a>
+									<a href="{{ route('staff.user_profile', $user->id) }}" class="btn btn-info">Profil</a>
 								</td>
 								<td>
 									<form action="{{ route('staff.delete_user', $user->id) }}" method="POST">
 										@csrf
 										@method('DELETE')
-										<button type="submit" class="btn btn-danger">Delete</button>
+										<button type="submit" class="btn btn-danger">Padam</button>
 									</form>
 								</td>
 							</tr>
@@ -57,12 +57,12 @@
 
 					<tfoot>
 						<tr>
-							<th>No</th>
-							<th>Staff ID</th>
-							<th>Username</th>
-							<th>Email</th>
-							<th>View</th>
-							<th>Deletion</th>
+							<th>Bil</th>
+							<th>Nombor Kad Pengenalan</th>
+							<th>Nama Penuh</th>
+							<th>Emel</th>
+							<th>Lihat</th>
+							<th>Pemadaman</th>
 						</tr>
 					</tfoot>
 				</table>

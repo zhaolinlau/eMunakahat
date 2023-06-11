@@ -16,7 +16,7 @@
                 <div class="border border-5 p-1 text-bg-dark rounded-end rounded-start" style="height: auto;">
                   <h5 class="text-center" style="color: white">DAFTAR LOKASI</h5>
                 </div>
-                <form>
+                <form action="" method="POST">
                   <div class="row">
                     <div class="col-4" style="margin-left: auto; margin-right: auto;">
                       <label for="Tempat" class="col-sm-2 col-form-label">Tempat</label>
@@ -28,7 +28,7 @@
                       <label for="NoTelefon" class="col-sm col-form-label">No Telefon</label>
                       <input type="text" class="form-control" name="NoTelefon" id="NoTelefon">
                       <br>
-                      <a class="btn btn-secondary float-end"  href="">Simpan</a>
+                      <button type="submit" class="btn btn-secondary float-end">Simpan</button>
                     </div>
                     
                    </div>

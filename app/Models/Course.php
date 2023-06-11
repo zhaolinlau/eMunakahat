@@ -12,8 +12,17 @@ class Course extends Model
 		protected $fillable = [
 			'Course_Organization',
 			'Course_Venue',
+			'Course_Address',
+			'Course_District',
 			'Course_DateStart',
 			'Course_DateEnd',
+			'Course_Time',
+			'Course_Slot',
+			'Course_Siri',
 			'Course_Capacity',
+			'Course_Staff',
+			'Course_StaffNo',
 		];
+
+		protected $primaryKey = 'course_id';
 }

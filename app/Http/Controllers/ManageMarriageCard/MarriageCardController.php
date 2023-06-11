@@ -17,4 +17,11 @@ class MarriageCardController extends Controller
         return view('ManageMarriageCard.MarriageCard2');
     }
 
+    public function indexCardApprovalList()
+    {
+        return view('ManageMarriageCard.CardApprovalList');
+    }
+
+   
+
 }

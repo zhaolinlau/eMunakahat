@@ -37,7 +37,7 @@ class UserController extends Controller
 			'Staff_ID' => 'required|unique:users,Staff_ID,|string',
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15,numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,|string',
 			'password' => 'required|min:8|string|confirmed',
 		]);
@@ -52,7 +52,7 @@ class UserController extends Controller
 		$staff->password = bcrypt($request->password);
 		$staff->role = 1;
 		$staff->save();
-		return redirect()->route('admin.staff_list')->with('created', 'Staff created successfully!');
+		return redirect()->route('admin.staff_list')->with('created', 'Akaun staf berjaya didaftar!');
 	}
 
 	public function readStaffProfile($id)
@@ -79,7 +79,7 @@ class UserController extends Controller
 			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,' . $id,
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
@@ -94,7 +94,7 @@ class UserController extends Controller
 
 		$staff->update($data);
 
-		return redirect()->route('admin.staff_list')->with('updated', 'Staff updated successfully!');
+		return redirect()->route('admin.staff_list')->with('updated', 'Profil staf berjaya dikemaskini!');
 	}
 
 	public function updateUser(Request $request, $id)
@@ -103,7 +103,7 @@ class UserController extends Controller
 			'User_IC' => 'required|digits:12|unique:users,User_IC,' . $id,
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,' . $id,
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
@@ -120,9 +120,9 @@ class UserController extends Controller
 
 
 		if (auth()->user()->role == 'admin') {
-			return redirect()->route('admin.user_list')->with('updated', 'User updated successfully!');
+			return redirect()->route('admin.user_list')->with('updated', 'Profile pengguna berjaya dikemaskini!');
 		} elseif (auth()->user()->role == 'staff') {
-			return redirect()->route('staff.user_list')->with('updated', 'User updated successfully!');
+			return redirect()->route('staff.user_list')->with('updated', 'Profile pengguna berjaya dikemaskini!');
 		}
 	}
 
@@ -130,7 +130,7 @@ class UserController extends Controller
 	{
 		$staff = User::findOrFail($id);
 		$staff->delete();
-		return redirect()->route('admin.staff_list')->with('deleted', 'Staff deleted successfully!');
+		return redirect()->route('admin.staff_list')->with('deleted', 'Akaun staf berjaya dipadam!');
 	}
 
 	public function deleteUser($id)
@@ -139,9 +139,9 @@ class UserController extends Controller
 		$user->delete();
 
 		if (auth()->user()->role == 'admin') {
-			return redirect()->route('admin.user_list')->with('deleted', 'User deleted successfully!');
+			return redirect()->route('admin.user_list')->with('deleted', 'Akaun pengguna berjaya dipadam!');
 		} elseif (auth()->user()->role == 'staff') {
-			return redirect()->route('staff.user_list')->with('deleted', 'User deleted successfully!');
+			return redirect()->route('staff.user_list')->with('deleted', 'Akaun pengguna berjaya dipadam!');
 		}
 	}
 
@@ -164,7 +164,7 @@ class UserController extends Controller
 
 		$user->update($data);
 
-		return redirect()->route('user.home')->with('updated', 'You have updated successfully!');
+		return redirect()->route('user.home')->with('updated', 'Anda berjaya kemaskini!');
 	}
 
 	public function staff_update(Request $request, $id)
@@ -186,7 +186,7 @@ class UserController extends Controller
 
 		$staff->update($data);
 
-		return redirect()->route('staff.home')->with('updated', 'You have updated successfully!');
+		return redirect()->route('staff.home')->with('updated', 'Anda berjaya kemaskini!');
 	}
 
 
@@ -197,7 +197,7 @@ class UserController extends Controller
 			'Staff_ID' => 'required|unique:users,Staff_ID,' . $id,
 			'User_Name' => 'required|string',
 			'User_Phone_Number' => 'required|digits_between:10,15|numeric',
-			'User_Gender' => 'required|in:Male,Female',
+			'User_Gender' => 'required|in:Lelaki,Perempuan',
 			'email' => 'required|email|unique:users,email,' . $id,
 			'password' => 'nullable|min:8|confirmed|string',
 		]);
@@ -212,6 +212,6 @@ class UserController extends Controller
 
 		$admin->update($data);
 
-		return redirect()->route('admin.home')->with('updated', 'You have updated successfully!');
+		return redirect()->route('admin.home')->with('updated', 'Anda berjaya kemaskini!');
 	}
 }
