@@ -16,10 +16,10 @@ return new class extends Migration
 			$table->string('Approval_Status');
 			$table->string('Approval_Date');
 			$table->foreignId('User_IC')->references('id')->on('users');
-			$table->foreignId('Partner_ID')->references('partner')->on('Partner_Info');
-			$table->foreignId('Applicant_ID')->references('applicant')->on('Applicant_Info');
-			$table->foreignId('Card_No')->references('card')->on('MarriageCard_Info');
-			$table->foreignId('RegistrationNo')->references('registration')->on('Marriage_Registration');
+			$table->foreignId('Partner_ID')->references('Partner_IC')->on('partner_info');
+			$table->foreignId('Applicant_ID')->references('Applicant_ID')->on('applicant_info');
+			$table->foreignId('Card_No')->references('cardNo')->on('marriagecard_info');
+			$table->foreignId('RegistrationNo');
 			$table->timestamps();
 		});
 	}
