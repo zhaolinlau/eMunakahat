@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('marriagecard_info', function (Blueprint $table) {
-            $table->id('card');
+            $table->id('cardNo');
+            $table->string('Card_Details');
+            $table->string('Card_Date');
+            $table->string('Card_Status');
+            $table->foreignId('RegistrationNo')->references('registration')->on('Marriage_Registration');
+            $table->foreignId('Partner_ID')->references('partner')->on('Partner_Info');
+			$table->foreignId('Applicant_ID')->references('applicant')->on('Applicant_Info');
+            $table->foreignId('Approval_ID')->references('approval')->on('Marriage_Approval');
             $table->timestamps();
         });
     }
