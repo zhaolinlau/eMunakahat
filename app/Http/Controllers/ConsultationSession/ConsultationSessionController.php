@@ -24,7 +24,7 @@ class ConsultationSessionController extends Controller
 
 
     // Staff section 
-    public function indexConsultSessionReview_S()
+    public function indexConsultSessionReview_s()
     {
         return view('ManageConsultationSession.staff.ConsultationSessionReview');
     }
@@ -39,7 +39,7 @@ class ConsultationSessionController extends Controller
         return view('ManageConsultationSession.staff.ConsultationSessionAddSchedule');
     }
 
-    public function indexConsultSessionStatus_S()
+    public function indexConsultSessionStatus_s()
     {
         return view('ManageConsultationSession.staff.ConsultationSessionStatus');
     }

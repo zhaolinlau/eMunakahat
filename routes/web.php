@@ -77,13 +77,12 @@ Route::group(['middleware' => ['auth', 'verified', 'user-role:staff']], function
 	
 
 	// Consultation oF Staff
-	// Consultation Application
 	Route::get('/ConsultApplicationApproval', [ConsultationApplicationController::class, 'indexConsultApproval'])->name('staff.ConsultationApplicationApproval');
 
-	Route::get('/ConsultSessionAddSchedule', [ConsultationSessionController::class, 'indexConsultAddSchedule'])->name('staff.ConsultationSessionAddSchedule');
-	Route::get('/ConsultSessionSchedule', [ConsultationSessionController::class, 'indexConsultSchedule'])->name('staff.ConsultationSessionSchedule');
-	Route::get('/ConsultSessionReview', [ConsultationSessionController::class, 'indexConsultReview_S'])->name('staff.ConsultationSessionReview');
-	Route::get('/ConsultSessionStatus', [ConsultationSessionController::class, 'indexConsultStatus_S'])->name('staff.ConsultationSessionStatus');
+	Route::get('/ConsultSessionAddSchedule', [ConsultationSessionController::class, 'indexConsultSessionAddSchedule'])->name('staff.ConsultationSessionAddSchedule');
+	Route::get('/ConsultSessionSchedule', [ConsultationSessionController::class, 'indexConsultSessionSchedule'])->name('staff.ConsultationSessionSchedule');
+	Route::get('/ConsultSessionReview', [ConsultationSessionController::class, 'indexConsultSessionReview_s'])->name('staff.ConsultationSessionReview');
+	Route::get('/ConsultSessionStatus', [ConsultationSessionController::class, 'indexConsultSessionStatus_s'])->name('staff.ConsultationSessionStatus');
 
 // Marriage card Approval for staff
 	Route::get('/CardApprovalList', [MarriageCardController::class, 'indexCardApprovalList'])->name('user.CardApprovalList');

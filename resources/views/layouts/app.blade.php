@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-100">
 
@@ -135,7 +136,7 @@
 							</button>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{{ route('staff.Approval') }}">Pengesahan Pendaftaran Nikah</a></li>
-								<li><a class="dropdown-item" href="{{ route('staff.CardApprovalList') }}">Pengesahan Kad Nikah</a></li>
+								{{-- <li><a class="dropdown-item" href="{{ route('staff.CardApprovalList') }}">Pengesahan Kad Nikah</a></li> --}} --}}
 							</ul>
 						</div>
 						<div class="btn-group" role="group">
@@ -145,7 +146,7 @@
 							</button>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{{route('staff.ConsultationApplicationApproval')}}">Senarai Permohonan</a></li>
-								<li><a class="dropdown-item" href="{{route('staff.ConsultationSessionStatus_S')}}">Semak Permohonan Khidmat Nasihat</a></li>
+								<li><a class="dropdown-item" href="{{route('staff.ConsultationSessionStatus')}}">Semak Permohonan Khidmat Nasihat</a></li>
 								<li><a class="dropdown-item" href="{{route('staff.ConsultationSessionSchedule')}}">Jadual Sesi Khidmat Nasihat</a></li>
 							</ul>
 						</div>
@@ -166,7 +167,7 @@
 								data-bs-toggle="dropdown" aria-expanded="false">Khidmat Nasihat</a>
 							<ul class="dropdown-menu" aria-labelledby="nasihatDropdown">
 								<li><a class="nav-link " href="{{ route('user.ConsultationApplicationStatus') }}">Permohonan Khidmat Nasihat</a></li>
-								<li><a class="nav-link" href="{{ route('user.ConsultationSessionApplication') }}">Permohonan Sesi Khidmat Nasihat </a></li>
+								<li><a class="nav-link" href="{{ route('user.ConsultationSessionStatus') }}">Permohonan Sesi Khidmat Nasihat </a></li>
 							</ul>
 					@endif
 				</nav>
