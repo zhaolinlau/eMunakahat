@@ -43,17 +43,36 @@
                 
                 <div class="container">
         
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label text-white" for="flexCheckChecked" >
-                          Jika Maklumat Diatas adalah benar dan terkini
-                        </label>
-                    </div>
-
-                    <div class="button">
-                        <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Kembali</a>
-                        <a class="btn btn-primary" href="{{route('user.ConsultationComplaint')}}" role="button">Seterusnya</a>
-                    </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label text-white" for="flexCheckChecked">
+                        Jika Maklumat Diatas adalah benar dan terkini
+                    </label>
+                </div>
+                
+                <div class="button">
+                    <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Kembali</a>
+                    <a class="btn btn-primary" href="{{route('user.ConsultationComplaint')}}" role="button" id="btn">Seterusnya</a>
+                </div>
+                
+                <script>
+                    var checkbox = document.getElementById("flexCheckChecked");
+                    var btn = document.getElementById("btn");
+                
+                    checkbox.addEventListener("change", function() {
+                        if (checkbox.checked) {
+                            btn.removeAttribute("disabled");
+                        } else {
+                            btn.setAttribute("disabled", "disabled");
+                        }
+                    });
+                </script>
+                
+                
+                
+                
+                
+                
                 </div>
             </div>
         </div>

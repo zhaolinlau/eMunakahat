@@ -56,7 +56,7 @@
 
                     <div class="col-12 mt-3">
                       <!-- Add margin-bottom to create spacing -->
-                      <a button type="submit" class="btn btn-success" role="button" href="{{route('staff.ConsultationSessionStatus')}}"
+                      <a button type="submit" class="btn btn-success" role="button" href="{{route('user.ConsultationSessionStatus')}}"
                        >Hantar</a>
                     </div>
                 </form>

@@ -59,11 +59,9 @@
                         <small class="form-text text-muted">Sila beri keterangan terperinci </small>
                     </div>
 
-                    <div class="col-12 mt-3">
-                      <!-- Add margin-bottom to create spacing -->
-                      <button type="submit" class="btn btn-success" role="button"
-                        >Hantar</button>
-                    </div>
+                    <div class="col-12">
+                      <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Hantar</a>
+                  </div>
                 </form>
               </div>
             </div>
