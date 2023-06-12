@@ -36,7 +36,38 @@
                         <button type="submit" class="btn btn-primary mb-3" style="right: auto">Tambah Sesi</button>
                     </div> 
                 </div>
-                
+                <div class="schedule">
+                  <h2>Jadual staff</h2>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Time</th>
+                              <th>Nama Pegawai</th>
+                              <th>Tarikh</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>8:00 AM-10.00AM</td>
+                              <td>HUSIN BIN KAMIL <br> ALIA BINTI AZNAD</td>
+                              <td>12/6/2023</td>
+                          </tr>
+                          <tr>
+                              <td>12.00 PM- 10.00 AM</td>
+                              <td>AHMAD BIN SULAIMAN</td>
+                              <td>12/6/2023</td>
+                          </tr>
+                          <tr>
+                              <td>2.00 PM- 4.00 PM</td>
+                              <td>MARIAH BINTI SAMSUL</td>
+                              <td>12/6/2023</td>
+                          </tr>
+
+                          <!-- Add more schedule rows here -->
+                      </tbody>
+                  </table>
+              </div>
+              
 
                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
                 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
@@ -63,6 +94,22 @@
       border: 5px solid #000;
       background-color: #ADB0B2;
       border-color: #D2F4EA;
+    }
+    .schedule{
+      font-size: 20px;
+      border-block: solid black 2px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #D2F4EA;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
     }
   </style>
 @endsection
