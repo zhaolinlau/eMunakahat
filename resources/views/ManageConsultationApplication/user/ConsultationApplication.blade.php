@@ -18,12 +18,22 @@
                             <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
                                 <ul class="nav nav-pills mb-4 nav-fill" id="pills-tab" role="tablist">
                                     <li class="nav-item bg-dark-green border border-white" role="presentation">
-                                      <a class="nav-link text-white" >Maklumat
+                                      <a class="nav-link text-white border border-black" >Maklumat
                                         Pemohon
                                       </a>
+                                      <p>Nama Pemohon: AHMAD AIMAN BIN ADAM</p>
+                                      <p>No. IC:990125060617</p>
+                                      <p>Alamat: No 4, Jalan Harmoni,Taman Harmoni, 
+                                        26600 Pekan Pahang </p>
+                                      <p>No. Phone:0196973197</p>
                                     </li>
-                                    <li class="nav-item border bg-dark-green border-white" role="presentation">
-                                        <a class="nav-link text-white">Maklumat Pasangan</a>
+                                    <li class="nav-item border bg-dark-green border-white " role="presentation">
+                                        <a class="nav-link text-white border border-black">Maklumat Pasangan</a>
+                                        <p>Nama Pasangan:FATIMAH ZAHRA BINTI MANAF</p>
+                                      <p>No. IC:990611102390</p>
+                                      <p>Alamat:No 4, Jalan Harmoni,Taman Harmoni, 
+                                        26600 Pekan Pahang</p>
+                                      <p>No. Phone: 0196367182</p>
                                     </li>
                                 </ul>
                             </div>
@@ -33,17 +43,36 @@
                 
                 <div class="container">
         
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label text-white" for="flexCheckChecked" >
-                          Jika Maklumat Diatas adalah benar dan terkini
-                        </label>
-                    </div>
-
-                    <div class="button">
-                        <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Kembali</a>
-                        <a class="btn btn-primary" href="{{route('user.ConsultationComplaint')}}" role="button">Seterusnya</a>
-                    </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label text-white" for="flexCheckChecked">
+                        Jika Maklumat Diatas adalah benar dan terkini
+                    </label>
+                </div>
+                
+                <div class="button">
+                    <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Kembali</a>
+                    <a class="btn btn-primary" href="{{route('user.ConsultationComplaint')}}" role="button" id="btn">Seterusnya</a>
+                </div>
+                
+                <script>
+                    var checkbox = document.getElementById("flexCheckChecked");
+                    var btn = document.getElementById("btn");
+                
+                    checkbox.addEventListener("change", function() {
+                        if (checkbox.checked) {
+                            btn.removeAttribute("disabled");
+                        } else {
+                            btn.setAttribute("disabled", "disabled");
+                        }
+                    });
+                </script>
+                
+                
+                
+                
+                
+                
                 </div>
             </div>
         </div>
@@ -75,6 +104,10 @@
     border: 5px solid #000;
     background-color: #56BFA0;
     border-color: #D2F4EA;
+  }
+  p{
+    font-size: 15px;
+    text-align: left;
   }
 </style>
 

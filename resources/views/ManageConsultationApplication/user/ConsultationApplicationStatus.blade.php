@@ -21,7 +21,7 @@
                                         <th>Bil</th>
                                         <th>Nama Isteri</th>
                                         <th>No. Kad Pengenalan</th>
-                                        <th>No. Slip Permohonan</th>
+                                        <th>No. Daftar</th>
                                         <th>Tarikh Mohon</th>
                                         <th>Status</th>
                                         <th>Operasi</th>
@@ -29,27 +29,35 @@
                                         </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    // Assuming you have fetched the data from the database into $rows variable
-                                    $records=DB::table('users')
-                                    /*
-                                    foreach ($user as $key) {
-                                        echo '<tr>';
-                                        echo '<td>' . $key['bil'] . '</td>';
-                                        echo '<td>' . $key['nama_isteri'] . '</td>';
-                                        echo '<td>' . $key['no_kad_pengenalan'] . '</td>';
-                                        echo '<td>' . $key['no_slip_permohonan'] . '</td>';
-                                        echo '<td>' . $key['tarikh_mohon'] . '</td>';
-                                        echo '<td>' . $key['status'] . '</td>';
-                                        echo '<td>
-                                                <a class="btn"><i class="fa-solid fa-trash fa-xl"></i></a>
-                                                <a class="btn"><i class="fa-solid fa-pen-to-square fa-xl"></i></a>
-                                                <a class="btn"><i class="fa-solid fa-eye fa-xl"></i></a>
-                                              </td>';
-                                        echo '<td>' . $key['ulasan'] . '</td>';
-                                        echo '</tr>';
-                                    }*/
-                                    ?>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <a class="btn" ><i class="fa-solid fa-trash fa-xl"></i>
+                                            <a class="btn" ><i class="fa-solid fa-pen-to-square fa-xl"></i>
+                                            <a class="btn" ><i class="fa-solid fa-eye fa-xl"></i>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>
+                                        <a class="btn" ><i class="fa-solid fa-trash fa-xl"></i>
+                                        <a class="btn" ><i class="fa-solid fa-pen-to-square fa-xl"></i>
+                                        <a class="btn" ><i class="fa-solid fa-eye fa-xl"></i>
+                                      </td>
+                                      <td></td>
+                                  </tr>
+                                    <!-- Add more table rows here -->
                                 </tbody>
                                 </table>
                                 <div class="col-12">

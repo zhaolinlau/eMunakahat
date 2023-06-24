@@ -22,9 +22,9 @@
                             <label for="SektorPekerjaan" class="col-sm col-form-label">Jenis Aduan</label>
                             <select class="form-select" id="SektorPekerjaan" required>
                                 <option value="" hidden selected>Sila Pilih</option>
-                                <option value="1">Sektor Awam</option>
-                                <option value="2">Sektor Swasta</option>
-                                <option value="3">Sendirian</option>
+                                <option value="1">Khidmat Nasihat</option>
+                                <option value="2">Penceraian</option>
+                                <option value="3">Wali Enggan</option>
                             </select>
                         </div>
                     </div>
@@ -59,11 +59,9 @@
                         <small class="form-text text-muted">Sila beri keterangan terperinci </small>
                     </div>
 
-                    <div class="col-12 mt-3">
-                      <!-- Add margin-bottom to create spacing -->
-                      <button type="submit" class="btn btn-success" role="button"
-                        >Hantar</button>
-                    </div>
+                    <div class="col-12">
+                      <a class="btn btn-primary" href="{{route('user.ConsultationApplicationStatus')}}" role="button">Hantar</a>
+                  </div>
                 </form>
               </div>
             </div>

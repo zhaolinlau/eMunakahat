@@ -99,7 +99,7 @@
 					</div>
 
 					<div class="col-12">
-						<button type="submit" class="btn btn-primary">Kemaskini</button>
+						<button type="submit" class="btn btn-primary" onclick="return confirm('Sahkan kemaskini?')">Kemaskini</button>
 					</div>
 				</form>
 			</div>

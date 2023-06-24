@@ -23,8 +23,6 @@
                             <select class="form-select" id="SektorPekerjaan" required>
                                 <option value="" hidden selected>Sila Pilih</option>
                                 <option value="1">NK23-001</option>
-                                <option value="2">NK23-002</option>
-                                <option value="3">NK23-003</option>
                             </select>
                         </div>
                         <div class="row">
@@ -34,10 +32,15 @@
                           </div>
                         </div>
 
-                            <div class="form-group">
-                              <label for="time">Masa:</label>
-                              <input type="time" class="form-control" id="time" name="time" placeholder="Select a time" required>
-                            </div>
+                        <div class="row">
+                          <label for="SektorPekerjaan" class="col-sm col-form-label">Sesi</label>
+                          <select class="form-select" id="SektorPekerjaan" required>
+                              <option value="" hidden selected>Sila Pilih</option>
+                              <option value="1">8.00 AM- 10.00 AM</option>
+                              <option value="1">10.00 AM- 12.00 PM</option>
+                              <option value="1">2.00 PM- 4.00 PM</option>
+                          </select>
+                      </div>
                             
                             <label for="SektorPekerjaan" class="col-sm col-form-label">Cara Perjumpaan</label>
                             <select class="form-select" id="SektorPekerjaan" required>
@@ -53,7 +56,7 @@
 
                     <div class="col-12 mt-3">
                       <!-- Add margin-bottom to create spacing -->
-                      <a button type="submit" class="btn btn-success" role="button" href="{{route('staff.ConsultationSessionStatus')}}"
+                      <a button type="submit" class="btn btn-success" role="button" href="{{route('user.ConsultationSessionStatus')}}"
                        >Hantar</a>
                     </div>
                 </form>

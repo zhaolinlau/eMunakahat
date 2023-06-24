@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
   <div class="container">
     <div class="row ">
@@ -12,83 +11,71 @@
         <div class="container text-left">
           <div class="row ">
             <div class="col">
-              <div class="border border-5 p-3 rounded-end rounded-start">
-                <h5 class="text-left" style="color: white">Borang Permohonan Sesi</h5>
-                <form action="" method="" class="row g-3 needs-validation" novalidate>
-                  <!--form for name-->
+              <div class="border border-5 p-3 rounded-end rounded-start" style="height: auto;">
+                <h5 class="text-left" style="color: white">Ulasan Khidmat Nasihat</h5>
+                <br>
+                <!--upper tab-->
+                <div class="col-4-center" >
+                    <div class="border border-5 p-1 text-bg-dark rounded-end rounded-start" style="height: auto;">
+                        <h5 class="text-left " style="color: white">Maklumat Pengadu</h5>
+                        
+                    </div>
+                    <br>
+                    <p>Nama* : NAZRIN BIN MAHARI</p>
+                        <p>No. IC* : 000213060457</p>
+                        <p>Alamat* : LOT 17 TAMAN RASHIDAH BALOK, KUANTAN, PAHANG</p>
+                        <p>No. Phone* : 010-656 7660</p>
                     
-                    <div class="col-md-5">
-                        <div class="row">
-                            <label for="SektorPekerjaan" class="col-sm col-form-label">No. Daftar</label>
-                            <select class="form-select" id="SektorPekerjaan" required>
-                                <option value="" hidden selected>Sila Pilih</option>
-                                <option value="1">Sektor Awam</option>
-                                <option value="2">Sektor Swasta</option>
-                                <option value="3">Sendirian</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                          <div class="form-group">
-                            <label for="date">Tarikh:</label>
-                            <input type="date" class="form-control" id="date" name="date" placeholder="Sila Pilih Tarikh" required>
-                          </div>
-                        </div>
-
-                            <div class="form-group">
-                              <label for="time">Masa:</label>
-                              <input type="time" class="form-control" id="time" name="time" placeholder="Select a time" required>
-                            </div>
+                        <div class="col-12">
+                          <p>Nama Pengawai: Maznil Bin Nazwil</p>
+                          <label for="masalah">Penyataan Masalah:</label>
+                          <input type="text" class="form-control" id="pegawai" value="Masalah salah faham antara pasangan ini" required>
+                      </div>
+                      
+                        <br>
+                        <div class="col-12">
                             
-                            <label for="SektorPekerjaan" class="col-sm col-form-label">Cara Perjumpaan</label>
-                            <select class="form-select" id="SektorPekerjaan" required>
-                                <option value="" hidden selected>Sila Pilih</option>
-                                <option value="1">Sektor Awam</option>
-                                <option value="2">Sektor Swasta</option>
-                                <option value="3">Sendirian</option>
-                            </select>
+                            <label for="masalah">Ulasan Pengawai Penasihat:</label>
+                            <input type="text" class="form-control" value="Hubungan mereka semakin baik " id="ulasan" required>
+                        </div>
+                        <div class="col-10 mt-3 text-end">
 
+                            <a href="{{ route('user.ConsultationSessionStatus') }}" class="btn btn-primary btn-with-border">Kembali</a>
 
                         </div>
-                    </div>
+                </div>
+                
 
-
-                    <div class="col-12 mt-3">
-                      <!-- Add margin-bottom to create spacing -->
-                      <button type="submit" class="btn btn-success" role="button"
-                       >Hantar</button>
-                    </div>
-                </form>
+                <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+                <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+                <script>
+                  $(document).ready(function() {
+                    $('#applicationStatusTable').DataTable();
+                  });
+                </script>
               </div>
             </div>
           </div>
         </div>
-
-
       </div>
-
-
-      {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-                <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-                <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script> --}}
-
-      {{-- <script>
-                    $(document).ready(function() {
-                      $('#marriageTable').DataTable();
-                    });
-                  </script> --}}
-
-
-      <style>
-        body {
-          background-image: url("img/bg.jpg");
-          background-size: cover;
-        }
-
-        .border {
-          border: 5px solid #000;
-          background-color: #56BFA0;
-          border-color: #D2F4EA;
-        }
-      </style>
     </div>
-  @endsection
+  </div>
+
+  <style>
+
+    body {
+        background-image: url("img/bg.jpg");
+        background-size: cover;
+    }
+    .border {
+        border: 5px solid #000;
+        background-color: #56BFA0;
+        border-color: #D2F4EA;
+    }    
+    .col-12 {
+        font-size: 20px;
+    }
+    
+  </style>
+@endsection

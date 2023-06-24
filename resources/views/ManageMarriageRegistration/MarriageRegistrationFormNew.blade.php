@@ -190,20 +190,12 @@
                   </div>
 
                   <div class="col-12">
-                    <label for="AlamatKP ">Alamat K/P</label>
+                    <label for="AlamatKP ">Alamat</label>
                     <input type="text" class="form-control" id="AlamatKP " required>
-                    <small class="form-text text-muted">Sila masukkan Alamat mengikut kad Pengenalan.</small>
+                    <small class="form-text text-muted">Sila masukkan Alamat</small>
                     <div class="invalid-feedback">
                       Sila masukkan Alamat.
                     </div>
-
-                    <div class="col-12">
-                      <label for="Alamat ">Alamat Semasa</label>
-                      <input type="text" class="form-control" id="Alamat " required>
-                      <small class="form-text text-muted">Sila masukkan Alamat Semasa anda.</small>
-                      <div class="invalid-feedback">
-                        Sila masukkan Alamat.
-                      </div>
 
                       <div class="col-md-5">
                         <label for="NoTel">No Telefon</label>
